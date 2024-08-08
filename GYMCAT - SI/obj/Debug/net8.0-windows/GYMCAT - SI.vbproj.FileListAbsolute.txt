@@ -1,0 +1,43 @@
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.exe
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.deps.json
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.runtimeconfig.json
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.pdb
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.vbproj.AssemblyReference.cache
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Form2.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Form3.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormEmpleados.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Formempleados2.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Login.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.MDIPrincipal.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CRUDEMPLEADOS.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Resources.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.vbproj.GenerateResource.cache
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.AssemblyInfoInputs.cache
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.AssemblyInfo.vb
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.vbproj.CoreCompileInputs.cache
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT -.1CFAF2DA.Up2Date
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\refint\GYMCAT - SI.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.pdb
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.genruntimeconfig.cache
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\ref\GYMCAT - SI.dll
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormCursos.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormCursospopup.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Horarios.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CrudMiembros.resources
+C:\Users\vik\Downloads\GYMCAT - SI-20240724T214340Z-001\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.nuevoMiembro.resources

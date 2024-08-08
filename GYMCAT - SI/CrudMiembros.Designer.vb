@@ -1,0 +1,176 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class CrudMiembros
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        dgvListadoMiembros = New DataGridView()
+        cbBuscar = New ComboBox()
+        tbBuscar = New TextBox()
+        PictureBox1 = New PictureBox()
+        btnNuevo = New Button()
+        btnEditar = New Button()
+        btnBorrar = New Button()
+        Label1 = New Label()
+        GroupBox1 = New GroupBox()
+        CType(dgvListadoMiembros, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        GroupBox1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' dgvListadoMiembros
+        ' 
+        dgvListadoMiembros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvListadoMiembros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvListadoMiembros.Location = New Point(19, 64)
+        dgvListadoMiembros.MultiSelect = False
+        dgvListadoMiembros.Name = "dgvListadoMiembros"
+        dgvListadoMiembros.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvListadoMiembros.Size = New Size(739, 377)
+        dgvListadoMiembros.TabIndex = 3
+        ' 
+        ' cbBuscar
+        ' 
+        cbBuscar.FormattingEnabled = True
+        cbBuscar.Items.AddRange(New Object() {"Nombre", "Apellido", "DNI", "Edad", "Telefono", "Correo"})
+        cbBuscar.Location = New Point(440, 27)
+        cbBuscar.Name = "cbBuscar"
+        cbBuscar.Size = New Size(214, 24)
+        cbBuscar.TabIndex = 6
+        ' 
+        ' tbBuscar
+        ' 
+        tbBuscar.Location = New Point(60, 27)
+        tbBuscar.Name = "tbBuscar"
+        tbBuscar.Size = New Size(374, 21)
+        tbBuscar.TabIndex = 4
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(19, 23)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(35, 31)
+        PictureBox1.TabIndex = 5
+        PictureBox1.TabStop = False
+        ' 
+        ' btnNuevo
+        ' 
+        btnNuevo.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        btnNuevo.FlatStyle = FlatStyle.Popup
+        btnNuevo.Font = New Font("Cascadia Mono", 12.0F)
+        btnNuevo.ForeColor = SystemColors.ButtonFace
+        btnNuevo.ImageAlign = ContentAlignment.MiddleRight
+        btnNuevo.Location = New Point(27, 91)
+        btnNuevo.Name = "btnNuevo"
+        btnNuevo.Size = New Size(94, 44)
+        btnNuevo.TabIndex = 5
+        btnNuevo.Text = "Nuevo"
+        btnNuevo.TextAlign = ContentAlignment.MiddleLeft
+        btnNuevo.UseVisualStyleBackColor = False
+        ' 
+        ' btnEditar
+        ' 
+        btnEditar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        btnEditar.FlatStyle = FlatStyle.Popup
+        btnEditar.Font = New Font("Cascadia Mono", 12.0F)
+        btnEditar.ForeColor = SystemColors.ButtonFace
+        btnEditar.ImageAlign = ContentAlignment.MiddleRight
+        btnEditar.Location = New Point(127, 91)
+        btnEditar.Name = "btnEditar"
+        btnEditar.Size = New Size(101, 44)
+        btnEditar.TabIndex = 5
+        btnEditar.Text = "Editar"
+        btnEditar.TextAlign = ContentAlignment.MiddleLeft
+        btnEditar.UseVisualStyleBackColor = False
+        ' 
+        ' btnBorrar
+        ' 
+        btnBorrar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        btnBorrar.FlatStyle = FlatStyle.Popup
+        btnBorrar.Font = New Font("Cascadia Mono", 12.0F)
+        btnBorrar.ForeColor = SystemColors.ButtonFace
+        btnBorrar.ImageAlign = ContentAlignment.MiddleRight
+        btnBorrar.Location = New Point(234, 91)
+        btnBorrar.Name = "btnBorrar"
+        btnBorrar.Size = New Size(101, 44)
+        btnBorrar.TabIndex = 5
+        btnBorrar.Text = "Borrar"
+        btnBorrar.TextAlign = ContentAlignment.MiddleLeft
+        btnBorrar.UseVisualStyleBackColor = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Cascadia Mono SemiBold", 20.0F, FontStyle.Bold)
+        Label1.ForeColor = SystemColors.Control
+        Label1.Location = New Point(27, 21)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(143, 35)
+        Label1.TabIndex = 16
+        Label1.Text = "Miembros"
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(dgvListadoMiembros)
+        GroupBox1.Controls.Add(cbBuscar)
+        GroupBox1.Controls.Add(tbBuscar)
+        GroupBox1.Controls.Add(PictureBox1)
+        GroupBox1.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        GroupBox1.ForeColor = Color.White
+        GroupBox1.Location = New Point(27, 158)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(779, 456)
+        GroupBox1.TabIndex = 12
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Listado de Empleados"
+        ' 
+        ' CrudMiembros
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
+        ClientSize = New Size(833, 646)
+        Controls.Add(Label1)
+        Controls.Add(GroupBox1)
+        Controls.Add(btnBorrar)
+        Controls.Add(btnEditar)
+        Controls.Add(btnNuevo)
+        Name = "CrudMiembros"
+        Text = "CrudMiembros"
+        CType(dgvListadoMiembros, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
+    End Sub
+    Friend WithEvents dgvListadoMiembros As DataGridView
+    Friend WithEvents btnNuevo As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnBorrar As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents cbBuscar As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents tbBuscar As TextBox
+
+End Class
+

@@ -1,0 +1,416 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formempleados2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formempleados2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formempleados2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formempleados2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formcursospopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursospopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formcursospopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursospopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formcursospopup.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursospopup.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\nuevomiembro.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:nuevomiembro.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\crudmiembros.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:crudmiembros.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\gymcat - si.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:gymcat - si.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\vik\\downloads\\gymcat - si-20240724t214340z-001\\gymcat - si\\formempleados.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formempleados.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 321,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Login.vb",
+              "RelativeDocumentMoniker": "Login.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Login.vb",
+              "RelativeToolTip": "Login.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-24T19:24:56.099Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MDIPrincipal.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\MDIPrincipal.vb",
+              "RelativeDocumentMoniker": "MDIPrincipal.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\MDIPrincipal.vb [Dise\u00F1o]",
+              "RelativeToolTip": "MDIPrincipal.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-24T07:25:00.987Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCursos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursos.vb",
+              "RelativeDocumentMoniker": "FormCursos.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormCursos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-31T20:16:35.356Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Formempleados2.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Formempleados2.vb",
+              "RelativeDocumentMoniker": "Formempleados2.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Formempleados2.vb",
+              "RelativeToolTip": "Formempleados2.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T21:03:12.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Formempleados2.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Formempleados2.vb",
+              "RelativeDocumentMoniker": "Formempleados2.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Formempleados2.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Formempleados2.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T20:44:57.734Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CrudMiembros.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\CrudMiembros.vb",
+              "RelativeDocumentMoniker": "CrudMiembros.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\CrudMiembros.vb [Dise\u00F1o]",
+              "RelativeToolTip": "CrudMiembros.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T18:52:57.744Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrudMiembros.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\CrudMiembros.vb",
+              "RelativeDocumentMoniker": "CrudMiembros.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\CrudMiembros.vb",
+              "RelativeToolTip": "CrudMiembros.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T18:55:17.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormEmpleados.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormEmpleados.vb",
+              "RelativeDocumentMoniker": "FormEmpleados.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormEmpleados.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormEmpleados.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-30T19:43:37.538Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormEmpleados.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormEmpleados.vb",
+              "RelativeDocumentMoniker": "FormEmpleados.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormEmpleados.vb",
+              "RelativeToolTip": "FormEmpleados.vb",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAwwEQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-30T19:43:43.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Login.vb",
+              "RelativeDocumentMoniker": "Login.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Login.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Login.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-24T19:33:33.549Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MDIPrincipal.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\MDIPrincipal.vb",
+              "RelativeDocumentMoniker": "MDIPrincipal.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\MDIPrincipal.vb",
+              "RelativeToolTip": "MDIPrincipal.vb",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAYwG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-24T05:34:10.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormCursos.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursos.vb",
+              "RelativeDocumentMoniker": "FormCursos.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursos.vb",
+              "RelativeToolTip": "FormCursos.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAACKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-31T20:19:44.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormCursospopup.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursospopup.vb",
+              "RelativeDocumentMoniker": "FormCursospopup.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursospopup.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormCursospopup.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-31T20:20:30.864Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Horarios.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Horarios.vb",
+              "RelativeDocumentMoniker": "Horarios.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Horarios.vb",
+              "RelativeToolTip": "Horarios.vb",
+              "ViewState": "AQIAACkAAAAAAAAAAAAIwD8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-01T19:29:40.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormCursospopup.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursospopup.vb",
+              "RelativeDocumentMoniker": "FormCursospopup.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursospopup.vb",
+              "RelativeToolTip": "FormCursospopup.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T19:51:04.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormCursospopup.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursospopup.Designer.vb",
+              "RelativeDocumentMoniker": "FormCursospopup.Designer.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormCursospopup.Designer.vb",
+              "RelativeToolTip": "FormCursospopup.Designer.vb",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T19:53:05.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "nuevoMiembro.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\nuevoMiembro.Designer.vb",
+              "RelativeDocumentMoniker": "nuevoMiembro.Designer.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\nuevoMiembro.Designer.vb",
+              "RelativeToolTip": "nuevoMiembro.Designer.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T19:50:17.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "nuevoMiembro.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\nuevoMiembro.vb",
+              "RelativeDocumentMoniker": "nuevoMiembro.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\nuevoMiembro.vb [Dise\u00F1o]",
+              "RelativeToolTip": "nuevoMiembro.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T18:56:40.729Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "nuevoMiembro.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\nuevoMiembro.vb",
+              "RelativeDocumentMoniker": "nuevoMiembro.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\nuevoMiembro.vb",
+              "RelativeToolTip": "nuevoMiembro.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T18:56:43.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CrudMiembros.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\CrudMiembros.Designer.vb",
+              "RelativeDocumentMoniker": "CrudMiembros.Designer.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\CrudMiembros.Designer.vb",
+              "RelativeToolTip": "CrudMiembros.Designer.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-06T18:53:07.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GYMCAT - SI",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+              "RelativeDocumentMoniker": "GYMCAT - SI.vbproj",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+              "RelativeToolTip": "GYMCAT - SI.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2024-07-26T19:40:00.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Horarios.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Horarios.vb",
+              "RelativeDocumentMoniker": "Horarios.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\Horarios.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Horarios.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-01T20:55:32.359Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormEmpleados.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormEmpleados.Designer.vb",
+              "RelativeDocumentMoniker": "FormEmpleados.Designer.vb",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\FormEmpleados.Designer.vb",
+              "RelativeToolTip": "FormEmpleados.Designer.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-30T19:44:45.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\My Project\\Resources.resx",
+              "RelativeDocumentMoniker": "My Project\\Resources.resx",
+              "ToolTip": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\My Project\\Resources.resx",
+              "RelativeToolTip": "My Project\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-07-26T19:40:08.877Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
