@@ -16,7 +16,7 @@ Public Class FormCursos
         GymcatDataSet = New DataSet()
         GymcatDataSet.Tables.Add("TCursos")
 
-        CursosDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey  'para kos errores del id
+        CursosDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey  'para kos errores del id sos feo
 
         CursosDataAdapter.Fill(GymcatDataSet.Tables("TCursos"))
 
