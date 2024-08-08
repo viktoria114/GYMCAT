@@ -25,6 +25,12 @@
     <Compile Update="Horarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Inscripciones1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inscripciones2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.vb">
       <SubType>Form</SubType>
     </Compile>

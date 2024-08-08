@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8uZaCGAZnck=",
+  "dgSpecHash": "h1e6zURXJvk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+  "projectFilePath": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\vik\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\vik\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

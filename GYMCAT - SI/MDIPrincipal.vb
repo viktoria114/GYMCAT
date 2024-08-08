@@ -67,6 +67,11 @@ Public Class MDIPrincipal
         '.BringToFront()
     End Sub
 
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnInscripciones.Click
+        Panel4.Visible = False
+        Inscripciones1.BringToFront()
+    End Sub
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnHorario.Click
         Panel4.Visible = False
         Horarios.BringToFront()
@@ -87,7 +92,7 @@ Public Class MDIPrincipal
         abrirform(FormCursos)
         abrirform(CrudMiembros)
         abrirform(Horarios)
-        'abrirform(Inscripciones)
+        abrirform(Inscripciones1)
         'abrirform(inventario)
         'abrirform(ingresos)
         'abrirform(egresos)
@@ -111,9 +116,6 @@ Public Class MDIPrincipal
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnInscripciones.Click
-
-    End Sub
 
 
 #End Region

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj": {}
+    "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj": {
+    "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+        "projectUniqueName": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
         "projectName": "GYMCAT - SI",
-        "projectPath": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+        "projectPath": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
         "packagesPath": "C:\\Users\\vik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vik\\Downloads\\GYMCAT - SI-20240724T214340Z-001\\GYMCAT - SI\\obj\\",
+        "outputPath": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vik\\AppData\\Roaming\\NuGet\\NuGet.Config",
