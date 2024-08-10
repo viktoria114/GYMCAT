@@ -39,7 +39,7 @@ Public Class FormEmpleados
         Formempleados2.ShowDialog()
     End Sub
 
-    Public Sub btnGuardar_Click()
+    Public Sub Guardar()
         Dim fila As DataRow
         Dim cmd As String
 
