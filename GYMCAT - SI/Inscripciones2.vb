@@ -1,10 +1,4 @@
-﻿Imports System.Data.Common
-Imports System.Diagnostics.Eventing
-Imports System.Net.Mail
-Imports System.Runtime.InteropServices.JavaScript.JSType
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports MySql.Data.MySqlClient
-Imports Mysqlx
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Inscripciones2
     Private miConexion As MySqlConnection

@@ -22,6 +22,7 @@ Partial Class Horarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Horarios))
         Label1 = New Label()
         MonthCalendar1 = New MonthCalendar()
         Cajita = New TabControl()
@@ -54,7 +55,7 @@ Partial Class Horarios
         Label1.AutoSize = True
         Label1.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.Control
-        Label1.Location = New Point(36, 40)
+        Label1.Location = New Point(27, 21)
         Label1.Name = "Label1"
         Label1.Size = New Size(143, 35)
         Label1.TabIndex = 12
@@ -64,7 +65,7 @@ Partial Class Horarios
         ' 
         MonthCalendar1.BackColor = SystemColors.Control
         MonthCalendar1.Font = New Font("Cascadia Mono", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        MonthCalendar1.Location = New Point(468, 40)
+        MonthCalendar1.Location = New Point(564, 46)
         MonthCalendar1.MaxSelectionCount = 1
         MonthCalendar1.Name = "MonthCalendar1"
         MonthCalendar1.ShowToday = False
@@ -79,7 +80,7 @@ Partial Class Horarios
         Cajita.Location = New Point(26, 213)
         Cajita.Name = "Cajita"
         Cajita.SelectedIndex = 0
-        Cajita.Size = New Size(716, 335)
+        Cajita.Size = New Size(786, 335)
         Cajita.TabIndex = 16
         ' 
         ' TabPage1
@@ -89,7 +90,7 @@ Partial Class Horarios
         TabPage1.Location = New Point(4, 29)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(819, 302)
+        TabPage1.Size = New Size(778, 302)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Mañana"
         TabPage1.UseVisualStyleBackColor = True
@@ -169,7 +170,7 @@ Partial Class Horarios
         TabPage3.Location = New Point(4, 29)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(819, 302)
+        TabPage3.Size = New Size(708, 302)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Noche"
         TabPage3.UseVisualStyleBackColor = True
@@ -207,7 +208,7 @@ Partial Class Horarios
         Label2.AutoSize = True
         Label2.Font = New Font("Cascadia Mono", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonFace
-        Label2.Location = New Point(36, 105)
+        Label2.Location = New Point(30, 78)
         Label2.Name = "Label2"
         Label2.Size = New Size(63, 20)
         Label2.TabIndex = 17
@@ -218,18 +219,18 @@ Partial Class Horarios
         Label5.AutoSize = True
         Label5.Font = New Font("Cascadia Mono", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = SystemColors.ButtonFace
-        Label5.Location = New Point(36, 142)
+        Label5.Location = New Point(30, 115)
         Label5.Name = "Label5"
-        Label5.Size = New Size(378, 20)
+        Label5.Size = New Size(360, 20)
         Label5.TabIndex = 18
-        Label5.Text = "Mañana: 6am - 2pm    Tarde: 2pm - 10pm   "
+        Label5.Text = "Mañana: 6am - 2pm  Tarde: 2pm - 10pm   "
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Cascadia Mono", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = SystemColors.ButtonFace
-        Label6.Location = New Point(36, 162)
+        Label6.Location = New Point(379, 115)
         Label6.Name = "Label6"
         Label6.Size = New Size(162, 20)
         Label6.TabIndex = 19
@@ -240,7 +241,7 @@ Partial Class Horarios
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-        ClientSize = New Size(765, 584)
+        ClientSize = New Size(844, 584)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label2)
@@ -248,7 +249,7 @@ Partial Class Horarios
         Controls.Add(MonthCalendar1)
         Controls.Add(Label1)
         Name = "Horarios"
-        Text = "Horarios"
+        Text = resources.GetString("$this.Text")
         Cajita.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()

@@ -32,9 +32,7 @@ Public Class FormCursos
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         esNuevo = True
-        MsgBox(esNuevo)
         FormCursospopup.ShowDialog()
-        MsgBox(esNuevo)
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
@@ -93,7 +91,7 @@ Public Class FormCursos
 
             '3. Crear el comando para odificar la Fila
             cmd = "UPDATE cursos 
-                   SET nombre=@nom, horario=@hor, precio=@pre, cantidad_inscriptos=@cant, dias_clase=@dias, FK_empleados=@empl, turno=@tur
+                   SET nombre=@nom, horario=@hor, precio=@pre, cantidad_inscriptos=@cant, dias_clase=@dias, FK_empleados=@empl, turno=@tur                                       
                    WHERE ID_cursos=@id"
             CursosDataAdapter.UpdateCommand = New MySqlCommand(cmd, miConexion)
             CursosDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre") 'NO OLVIDAR EL UPDATECOMMAND

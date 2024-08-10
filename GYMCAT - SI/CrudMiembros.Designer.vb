@@ -22,6 +22,8 @@ Partial Class CrudMiembros
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoMiembros = New DataGridView()
         cbBuscar = New ComboBox()
         tbBuscar = New TextBox()
@@ -39,7 +41,23 @@ Partial Class CrudMiembros
         ' dgvListadoMiembros
         ' 
         dgvListadoMiembros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvListadoMiembros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvListadoMiembros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        dgvListadoMiembros.DefaultCellStyle = DataGridViewCellStyle2
         dgvListadoMiembros.Location = New Point(19, 64)
         dgvListadoMiembros.MultiSelect = False
         dgvListadoMiembros.Name = "dgvListadoMiembros"
@@ -75,7 +93,7 @@ Partial Class CrudMiembros
         ' 
         btnNuevo.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnNuevo.FlatStyle = FlatStyle.Popup
-        btnNuevo.Font = New Font("Cascadia Mono", 12.0F)
+        btnNuevo.Font = New Font("Cascadia Mono", 12F)
         btnNuevo.ForeColor = SystemColors.ButtonFace
         btnNuevo.ImageAlign = ContentAlignment.MiddleRight
         btnNuevo.Location = New Point(27, 91)
@@ -90,7 +108,7 @@ Partial Class CrudMiembros
         ' 
         btnEditar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnEditar.FlatStyle = FlatStyle.Popup
-        btnEditar.Font = New Font("Cascadia Mono", 12.0F)
+        btnEditar.Font = New Font("Cascadia Mono", 12F)
         btnEditar.ForeColor = SystemColors.ButtonFace
         btnEditar.ImageAlign = ContentAlignment.MiddleRight
         btnEditar.Location = New Point(127, 91)
@@ -105,7 +123,7 @@ Partial Class CrudMiembros
         ' 
         btnBorrar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnBorrar.FlatStyle = FlatStyle.Popup
-        btnBorrar.Font = New Font("Cascadia Mono", 12.0F)
+        btnBorrar.Font = New Font("Cascadia Mono", 12F)
         btnBorrar.ForeColor = SystemColors.ButtonFace
         btnBorrar.ImageAlign = ContentAlignment.MiddleRight
         btnBorrar.Location = New Point(234, 91)
@@ -119,7 +137,7 @@ Partial Class CrudMiembros
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Cascadia Mono SemiBold", 20.0F, FontStyle.Bold)
+        Label1.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.Control
         Label1.Location = New Point(27, 21)
         Label1.Name = "Label1"
@@ -133,18 +151,18 @@ Partial Class CrudMiembros
         GroupBox1.Controls.Add(cbBuscar)
         GroupBox1.Controls.Add(tbBuscar)
         GroupBox1.Controls.Add(PictureBox1)
-        GroupBox1.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        GroupBox1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         GroupBox1.ForeColor = Color.White
         GroupBox1.Location = New Point(27, 158)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(779, 456)
         GroupBox1.TabIndex = 12
         GroupBox1.TabStop = False
-        GroupBox1.Text = "Listado de Empleados"
+        GroupBox1.Text = "Listado de Miembros"
         ' 
         ' CrudMiembros
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
         ClientSize = New Size(833, 646)

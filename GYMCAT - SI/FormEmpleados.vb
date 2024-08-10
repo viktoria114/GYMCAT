@@ -31,16 +31,11 @@ Public Class FormEmpleados
     End Sub
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         esNuevo = True
-        MsgBox(esNuevo)
-        Dim fila As DataGridViewRow = dgvListadoEmpleados.CurrentRow
-        MsgBox(fila.Cells(0).Value)
-
         Formempleados2.ShowDialog()
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         esNuevo = False
-        MsgBox(esNuevo)
         Formempleados2.ShowDialog()
     End Sub
 

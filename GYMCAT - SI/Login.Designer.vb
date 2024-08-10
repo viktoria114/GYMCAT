@@ -40,7 +40,7 @@ Partial Class Login
         Label1.AutoSize = True
         Label1.Font = New Font("Cascadia Mono SemiBold", 11.25F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.Control
-        Label1.Location = New Point(78, 204)
+        Label1.Location = New Point(78, 232)
         Label1.Name = "Label1"
         Label1.Size = New Size(81, 20)
         Label1.TabIndex = 2
@@ -51,7 +51,7 @@ Partial Class Login
         Label2.AutoSize = True
         Label2.Font = New Font("Cascadia Mono SemiBold", 11.25F, FontStyle.Bold)
         Label2.ForeColor = SystemColors.Control
-        Label2.Location = New Point(51, 246)
+        Label2.Location = New Point(51, 274)
         Label2.Name = "Label2"
         Label2.Size = New Size(108, 20)
         Label2.TabIndex = 2
@@ -59,10 +59,10 @@ Partial Class Login
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.GYMCAT_logo
-        PictureBox1.Location = New Point(93, 33)
+        PictureBox1.Image = My.Resources.Resources.GYM_CAT__1_
+        PictureBox1.Location = New Point(78, 26)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(170, 130)
+        PictureBox1.Size = New Size(195, 172)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 3
         PictureBox1.TabStop = False
@@ -70,7 +70,7 @@ Partial Class Login
         ' tbUsuario
         ' 
         tbUsuario.Font = New Font("Cascadia Mono SemiBold", 11.25F, FontStyle.Bold)
-        tbUsuario.Location = New Point(165, 201)
+        tbUsuario.Location = New Point(165, 229)
         tbUsuario.Name = "tbUsuario"
         tbUsuario.Size = New Size(156, 25)
         tbUsuario.TabIndex = 4
@@ -79,7 +79,7 @@ Partial Class Login
         ' tbContraseña
         ' 
         tbContraseña.Font = New Font("Cascadia Mono SemiBold", 11.25F, FontStyle.Bold)
-        tbContraseña.Location = New Point(165, 241)
+        tbContraseña.Location = New Point(165, 269)
         tbContraseña.Name = "tbContraseña"
         tbContraseña.PasswordChar = "*"c
         tbContraseña.Size = New Size(156, 25)
@@ -92,6 +92,7 @@ Partial Class Login
         btnIngresar.FlatAppearance.BorderSize = 0
         btnIngresar.FlatStyle = FlatStyle.Popup
         btnIngresar.Font = New Font("Cascadia Mono SemiBold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnIngresar.ForeColor = Color.White
         btnIngresar.Location = New Point(110, 327)
         btnIngresar.Name = "btnIngresar"
         btnIngresar.Size = New Size(141, 52)
@@ -102,7 +103,7 @@ Partial Class Login
         ' PictureBoxSHOW
         ' 
         PictureBoxSHOW.Image = My.Resources.Resources.view_show_icon_124811
-        PictureBoxSHOW.Location = New Point(298, 244)
+        PictureBoxSHOW.Location = New Point(298, 272)
         PictureBoxSHOW.Name = "PictureBoxSHOW"
         PictureBoxSHOW.Size = New Size(22, 20)
         PictureBoxSHOW.SizeMode = PictureBoxSizeMode.Zoom
@@ -112,7 +113,7 @@ Partial Class Login
         ' PictureBoxHIDE
         ' 
         PictureBoxHIDE.Image = My.Resources.Resources.view_hide_icon_124813
-        PictureBoxHIDE.Location = New Point(298, 244)
+        PictureBoxHIDE.Location = New Point(298, 272)
         PictureBoxHIDE.Name = "PictureBoxHIDE"
         PictureBoxHIDE.Size = New Size(22, 20)
         PictureBoxHIDE.SizeMode = PictureBoxSizeMode.Zoom
@@ -135,9 +136,9 @@ Partial Class Login
         Controls.Add(PictureBoxHIDE)
         MaximumSize = New Size(380, 450)
         MinimumSize = New Size(380, 450)
-        Name = "Login"
+        Name = "Login GymCat"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Login"
+        Text = "Login GymCat"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBoxSHOW, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBoxHIDE, ComponentModel.ISupportInitialize).EndInit()

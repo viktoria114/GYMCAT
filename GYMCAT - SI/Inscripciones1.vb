@@ -1,9 +1,4 @@
-﻿Imports System.Data.Common
-Imports System.Diagnostics.Eventing
-Imports System.Net.Mail
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports MySql.Data.MySqlClient
-Imports Mysqlx
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Inscripciones1
     Private miConexion As MySqlConnection

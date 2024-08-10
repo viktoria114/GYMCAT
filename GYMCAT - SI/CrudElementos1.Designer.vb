@@ -1,5 +1,5 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FormEmpleados
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class CrudElementos1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,7 +25,7 @@ Partial Class FormEmpleados
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        dgvListadoEmpleados = New DataGridView()
+        dgvListadoElementos = New DataGridView()
         GroupBox2 = New GroupBox()
         cbOpciones = New ComboBox()
         tbBuscar = New TextBox()
@@ -33,62 +33,63 @@ Partial Class FormEmpleados
         btnBorrar = New Button()
         btnEditar = New Button()
         Label1 = New Label()
-        CType(dgvListadoEmpleados, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvListadoElementos, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox2.SuspendLayout()
         SuspendLayout()
         ' 
-        ' dgvListadoEmpleados
+        ' dgvListadoElementos
         ' 
-        dgvListadoEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dgvListadoEmpleados.BackgroundColor = SystemColors.ButtonShadow
+        dgvListadoElementos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvListadoElementos.BackgroundColor = SystemColors.ButtonShadow
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = Color.Black
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListadoEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        dgvListadoEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvListadoElementos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        dgvListadoElementos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvListadoEmpleados.DefaultCellStyle = DataGridViewCellStyle2
-        dgvListadoEmpleados.Location = New Point(19, 64)
-        dgvListadoEmpleados.MultiSelect = False
-        dgvListadoEmpleados.Name = "dgvListadoEmpleados"
+        dgvListadoElementos.DefaultCellStyle = DataGridViewCellStyle2
+        dgvListadoElementos.Location = New Point(19, 64)
+        dgvListadoElementos.MultiSelect = False
+        dgvListadoElementos.Name = "dgvListadoElementos"
         DataGridViewCellStyle3.ForeColor = Color.Black
-        dgvListadoEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle3
-        dgvListadoEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvListadoEmpleados.Size = New Size(739, 379)
-        dgvListadoEmpleados.TabIndex = 3
+        dgvListadoElementos.RowsDefaultCellStyle = DataGridViewCellStyle3
+        dgvListadoElementos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvListadoElementos.Size = New Size(751, 379)
+        dgvListadoElementos.TabIndex = 3
         ' 
         ' GroupBox2
         ' 
         GroupBox2.Controls.Add(cbOpciones)
         GroupBox2.Controls.Add(tbBuscar)
-        GroupBox2.Controls.Add(dgvListadoEmpleados)
-        GroupBox2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        GroupBox2.Controls.Add(dgvListadoElementos)
+        GroupBox2.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         GroupBox2.ForeColor = Color.White
         GroupBox2.Location = New Point(27, 158)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(779, 456)
+        GroupBox2.Size = New Size(788, 456)
         GroupBox2.TabIndex = 5
         GroupBox2.TabStop = False
-        GroupBox2.Text = "Listado de Empleados"
+        GroupBox2.Text = "Listado de Elementos y Máquinas"
         ' 
         ' cbOpciones
         ' 
         cbOpciones.FormattingEnabled = True
-        cbOpciones.Items.AddRange(New Object() {"Nombre", "Apellido", "DNI", "Fecha de Nacimiento", "Sueldo", "Cargo", "Turno", "Teléfono", "Correo"})
+        cbOpciones.Items.AddRange(New Object() {"Nombre", "Modelo", "Precio", "Tipo", "Fecha de Compra", "Stock", "Marca", "Estado"})
         cbOpciones.Location = New Point(440, 27)
         cbOpciones.Name = "cbOpciones"
         cbOpciones.Size = New Size(214, 24)
         cbOpciones.TabIndex = 5
+        cbOpciones.Text = "Nombre"
         ' 
         ' tbBuscar
         ' 
@@ -102,11 +103,11 @@ Partial Class FormEmpleados
         btnAgregar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnAgregar.FlatStyle = FlatStyle.Popup
         btnAgregar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-        btnAgregar.ForeColor = Color.White
+        btnAgregar.ForeColor = Color.WhiteSmoke
         btnAgregar.ImageAlign = ContentAlignment.MiddleRight
         btnAgregar.Location = New Point(27, 91)
         btnAgregar.Name = "btnAgregar"
-        btnAgregar.Size = New Size(91, 44)
+        btnAgregar.Size = New Size(94, 44)
         btnAgregar.TabIndex = 6
         btnAgregar.Text = "Agregar"
         btnAgregar.TextAlign = ContentAlignment.MiddleLeft
@@ -119,9 +120,9 @@ Partial Class FormEmpleados
         btnBorrar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnBorrar.ForeColor = Color.White
         btnBorrar.ImageAlign = ContentAlignment.MiddleRight
-        btnBorrar.Location = New Point(237, 91)
+        btnBorrar.Location = New Point(127, 91)
         btnBorrar.Name = "btnBorrar"
-        btnBorrar.Size = New Size(91, 44)
+        btnBorrar.Size = New Size(101, 44)
         btnBorrar.TabIndex = 7
         btnBorrar.Text = "Eliminar"
         btnBorrar.TextAlign = ContentAlignment.MiddleLeft
@@ -134,9 +135,9 @@ Partial Class FormEmpleados
         btnEditar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnEditar.ForeColor = Color.White
         btnEditar.ImageAlign = ContentAlignment.MiddleRight
-        btnEditar.Location = New Point(134, 91)
+        btnEditar.Location = New Point(234, 91)
         btnEditar.Name = "btnEditar"
-        btnEditar.Size = New Size(91, 44)
+        btnEditar.Size = New Size(101, 44)
         btnEditar.TabIndex = 8
         btnEditar.Text = "Editar"
         btnEditar.TextAlign = ContentAlignment.MiddleLeft
@@ -145,28 +146,28 @@ Partial Class FormEmpleados
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
+        Label1.Font = New Font("Cascadia Mono SemiBold", 20.0F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.Control
         Label1.Location = New Point(27, 21)
         Label1.Name = "Label1"
-        Label1.Size = New Size(159, 35)
+        Label1.Size = New Size(335, 35)
         Label1.TabIndex = 11
-        Label1.Text = "Empleados"
+        Label1.Text = "Elementos Deportivos"
         ' 
-        ' FormEmpleados
+        ' CrudElementos1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-        ClientSize = New Size(818, 626)
+        ClientSize = New Size(835, 626)
         Controls.Add(Label1)
         Controls.Add(btnEditar)
         Controls.Add(btnBorrar)
         Controls.Add(btnAgregar)
         Controls.Add(GroupBox2)
-        Name = "FormEmpleados"
-        Text = "FormEmpleados"
-        CType(dgvListadoEmpleados, ComponentModel.ISupportInitialize).EndInit()
+        Name = "CrudElementos1"
+        Text = "CrudElementos1"
+        CType(dgvListadoElementos, ComponentModel.ISupportInitialize).EndInit()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
         ResumeLayout(False)
@@ -177,7 +178,7 @@ Partial Class FormEmpleados
 
     End Sub
 
-    Friend WithEvents dgvListadoEmpleados As DataGridView
+    Friend WithEvents dgvListadoElementos As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnBorrar As Button

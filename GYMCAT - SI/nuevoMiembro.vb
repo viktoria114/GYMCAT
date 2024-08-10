@@ -1,10 +1,7 @@
-﻿Imports System.Data.Common
-Imports System.Net.Mail
-Imports MySql.Data.MySqlClient
-
-Public Class nuevoMiembro
+﻿Public Class nuevoMiembro
     Private Sub nuevoMiembro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If CrudMiembros.esNuevo Then
+            Me.Text = ("Nuevo Miembro")
             tbNombre.Text = ""
             tbApellido.Text = ""
             tbDNI.Text = ""
@@ -19,6 +16,7 @@ Public Class nuevoMiembro
             tbPuntos.Text = ""
         Else
             Dim fila As DataGridViewRow = CrudMiembros.dgvListadoMiembros.CurrentRow
+            Me.Text = ("Editar Miembro")
             CrudMiembros.idFila = fila.Cells(0).Value
             tbNombre.Text = fila.Cells(1).Value
             tbApellido.Text = fila.Cells(2).Value

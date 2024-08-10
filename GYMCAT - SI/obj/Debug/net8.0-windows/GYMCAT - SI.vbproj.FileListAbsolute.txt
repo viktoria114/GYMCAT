@@ -87,3 +87,5 @@ C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\refint
 C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.pdb
 C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.genruntimeconfig.cache
 C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\ref\GYMCAT - SI.dll
+C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CrudElementos1.resources
+C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CrudElementos2.resources

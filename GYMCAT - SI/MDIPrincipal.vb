@@ -77,6 +77,11 @@ Public Class MDIPrincipal
         Horarios.BringToFront()
     End Sub
 
+    Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
+        Panel4.Visible = False
+        CrudElementos1.BringToFront()
+    End Sub
+
     Private Sub MDIPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Login.Close()
     End Sub
@@ -93,7 +98,7 @@ Public Class MDIPrincipal
         abrirform(CrudMiembros)
         abrirform(Horarios)
         abrirform(Inscripciones1)
-        'abrirform(inventario)
+        abrirform(CrudElementos1)
         'abrirform(ingresos)
         'abrirform(egresos)
         'abrirform(finanzas)
@@ -115,6 +120,14 @@ Public Class MDIPrincipal
 
 
     End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Login.Show()
+        Hide()
+
+    End Sub
+
+
 
 
 

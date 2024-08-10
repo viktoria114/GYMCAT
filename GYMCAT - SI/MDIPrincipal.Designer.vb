@@ -24,7 +24,6 @@ Partial Class MDIPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIPrincipal))
         ToolTip = New ToolTip(components)
         Button11 = New Button()
         PanelLateral = New Panel()
@@ -279,10 +278,10 @@ Partial Class MDIPrincipal
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(46, 34)
+        PictureBox1.Image = My.Resources.Resources.GYM_CAT__1_
+        PictureBox1.Location = New Point(31, 12)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(93, 79)
+        PictureBox1.Size = New Size(118, 110)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -295,7 +294,7 @@ Partial Class MDIPrincipal
         Panel4.Dock = DockStyle.Fill
         Panel4.Location = New Point(191, 0)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(754, 705)
+        Panel4.Size = New Size(826, 705)
         Panel4.TabIndex = 15
         ' 
         ' Labelinfo
@@ -303,7 +302,7 @@ Partial Class MDIPrincipal
         Labelinfo.AutoSize = True
         Labelinfo.Font = New Font("Cascadia Mono", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Labelinfo.ForeColor = SystemColors.Control
-        Labelinfo.Location = New Point(40, 92)
+        Labelinfo.Location = New Point(39, 106)
         Labelinfo.Name = "Labelinfo"
         Labelinfo.Size = New Size(118, 21)
         Labelinfo.TabIndex = 0
@@ -314,7 +313,7 @@ Partial Class MDIPrincipal
         Labelbienvenido.AutoSize = True
         Labelbienvenido.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
         Labelbienvenido.ForeColor = SystemColors.Control
-        Labelbienvenido.Location = New Point(40, 34)
+        Labelbienvenido.Location = New Point(39, 48)
         Labelbienvenido.Name = "Labelbienvenido"
         Labelbienvenido.Size = New Size(191, 35)
         Labelbienvenido.TabIndex = 0
@@ -324,14 +323,14 @@ Partial Class MDIPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(945, 705)
+        ClientSize = New Size(1017, 705)
         Controls.Add(Panel4)
         Controls.Add(PanelLateral)
         IsMdiContainer = True
         Margin = New Padding(4, 3, 4, 3)
         MinimumSize = New Size(650, 450)
         Name = "MDIPrincipal"
-        Text = "GYMCAT Sistema de Gestion"
+        Text = "Gym Cat Sistema de Gestión"
         PanelLateral.ResumeLayout(False)
         PanelFinanzas.ResumeLayout(False)
         PanelMembresias.ResumeLayout(False)
