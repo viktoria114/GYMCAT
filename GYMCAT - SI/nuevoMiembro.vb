@@ -34,7 +34,7 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        CrudMiembros.btnGuardar_Click()
+        CrudMiembros.Guardar()
         Me.Close()
     End Sub
 
