@@ -16,6 +16,7 @@ Public Class Inscripciones1
     Public idFila As Integer
     Public numero As Integer
     Public nombre As String
+
     'Public Fila As DataGridViewRow
     Private Sub Inscripciones2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         miConexion = New MySqlConnection()

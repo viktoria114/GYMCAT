@@ -33,6 +33,7 @@ Partial Class FormCursos
         btnBorrar = New Button()
         btnEditar = New Button()
         Label1 = New Label()
+        Button1 = New Button()
         CType(dgvListadoCursos, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox2.SuspendLayout()
         SuspendLayout()
@@ -154,12 +155,22 @@ Partial Class FormCursos
         Label1.TabIndex = 11
         Label1.Text = "Cursos"
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(481, 50)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 12
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' FormCursos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
         ClientSize = New Size(818, 626)
+        Controls.Add(Button1)
         Controls.Add(Label1)
         Controls.Add(btnEditar)
         Controls.Add(btnBorrar)
@@ -186,4 +197,5 @@ Partial Class FormCursos
     Friend WithEvents tbBuscar As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cbOpciones As ComboBox
+    Friend WithEvents Button1 As Button
 End Class

@@ -1,29 +1,23 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormCursos
+    Private myConexion As Conexion
     Private miConexion As MySqlConnection
     Private CursosDataAdapter As MySqlDataAdapter
     Private GymcatDataSet As DataSet
     Private vistaDatos As DataView
     Public esNuevo As Boolean
     Public idFila As Integer
+    Public Tabla As String
 
     Private Sub FormCursos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        miConexion = New MySqlConnection()
-        miConexion.ConnectionString = "Server=localhost; Database=gymcat; Uid=root; Pwd=;"
-        CursosDataAdapter = New MySqlDataAdapter()
-        CursosDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM cursos", miConexion)
-        GymcatDataSet = New DataSet()
-        GymcatDataSet.Tables.Add("TCursos")
+        Dim consulta As String = "SELECT * FROM cursos"
+        Tabla = "TCursos"
 
-        CursosDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey  'para kos errores del id sos feo
-
-        CursosDataAdapter.Fill(GymcatDataSet.Tables("TCursos"))
+        myConexion = New Conexion(consulta, Tabla)
 
 
-        vistaDatos = GymcatDataSet.Tables("TCursos").DefaultView
-
-        dgvListadoCursos.DataSource = vistaDatos
+        dgvListadoCursos.DataSource = myConexion.vistaDatos
         dgvListadoCursos.Columns(0).Visible = False
         dgvListadoCursos.Columns(4).Width = 115
         dgvListadoCursos.CurrentCell = dgvListadoCursos.Rows(0).Cells(1)
@@ -146,4 +140,7 @@ Public Class FormCursos
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
 End Class

@@ -27,7 +27,7 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        FormEmpleados.btnGuardar_Click()
+        FormEmpleados.Guardar()
         Me.Close()
     End Sub
 
