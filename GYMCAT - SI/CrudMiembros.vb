@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class CrudMiembros
+    Implements CRUD
     Private miConexion As MySqlConnection
     Private miembrosDataAdapter As MySqlDataAdapter
     Private gymcatDataSet As DataSet
@@ -28,17 +29,30 @@ Public Class CrudMiembros
         dgvListadoMiembros.CurrentCell = dgvListadoMiembros.Rows(0).Cells(1)
     End Sub
 
+
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        Agregar()
+    End Sub
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Editar()
+    End Sub
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        Borrar()
+    End Sub
+    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs)
+        Buscar()
+    End Sub
+
+    Private Sub Agregar() Implements CRUD.Agregar
         esNuevo = True
         nuevoMiembro.ShowDialog()
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+    Private Sub Editar() Implements CRUD.Editar
         esNuevo = False
         nuevoMiembro.ShowDialog()
     End Sub
-
-    Public Sub btnGuardar_Click()
+    Public Sub Guardar() Implements CRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -125,7 +139,7 @@ Public Class CrudMiembros
         End If
     End Sub
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+    Private Sub Borrar() Implements CRUD.Borrar
         Dim fila = dgvListadoMiembros.CurrentRow
         idFila = fila.Cells(0).Value
         If MessageBox.Show("¿Está seguro de eliminar este Miembro?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
@@ -136,7 +150,7 @@ Public Class CrudMiembros
         End If
     End Sub
 
-    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs)
+    Private Sub Buscar() Implements CRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada = cbBuscar.SelectedItem.ToString
 
@@ -155,5 +169,4 @@ Public Class CrudMiembros
                 vistaDatos.RowFilter = "correo LIKE '" + tbBuscar.Text + "%'"
         End Select
     End Sub
-
 End Class
