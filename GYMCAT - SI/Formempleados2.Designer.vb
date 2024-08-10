@@ -200,7 +200,7 @@ Partial Class Formempleados2
         ' 
         ' tbTelefono
         ' 
-        tbTelefono.Location = New Point(196, 222)
+        tbTelefono.Location = New Point(196, 225)
         tbTelefono.Name = "tbTelefono"
         tbTelefono.Size = New Size(183, 23)
         tbTelefono.TabIndex = 30
@@ -218,7 +218,7 @@ Partial Class Formempleados2
         ' 
         ' tbCorreo
         ' 
-        tbCorreo.Location = New Point(196, 251)
+        tbCorreo.Location = New Point(196, 254)
         tbCorreo.Name = "tbCorreo"
         tbCorreo.Size = New Size(183, 23)
         tbCorreo.TabIndex = 34

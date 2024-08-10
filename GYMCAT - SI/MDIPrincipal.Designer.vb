@@ -44,6 +44,7 @@ Partial Class MDIPrincipal
         Panel4 = New Panel()
         Labelinfo = New Label()
         Labelbienvenido = New Label()
+        btnConsultas = New Button()
         PanelLateral.SuspendLayout()
         PanelFinanzas.SuspendLayout()
         PanelMembresias.SuspendLayout()
@@ -74,6 +75,7 @@ Partial Class MDIPrincipal
         ' 
         PanelLateral.AutoScroll = True
         PanelLateral.BackColor = Color.FromArgb(CByte(11), CByte(7), CByte(17))
+        PanelLateral.Controls.Add(btnConsultas)
         PanelLateral.Controls.Add(PanelFinanzas)
         PanelLateral.Controls.Add(btnFinanzas)
         PanelLateral.Controls.Add(btnInventario)
@@ -319,6 +321,22 @@ Partial Class MDIPrincipal
         Labelbienvenido.TabIndex = 0
         Labelbienvenido.Text = "Bienvenido "
         ' 
+        ' btnConsultas
+        ' 
+        btnConsultas.Dock = DockStyle.Top
+        btnConsultas.FlatAppearance.BorderSize = 0
+        btnConsultas.FlatStyle = FlatStyle.Flat
+        btnConsultas.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold)
+        btnConsultas.ForeColor = SystemColors.Control
+        btnConsultas.Location = New Point(0, 466)
+        btnConsultas.Name = "btnConsultas"
+        btnConsultas.Padding = New Padding(10, 0, 0, 0)
+        btnConsultas.Size = New Size(191, 40)
+        btnConsultas.TabIndex = 15
+        btnConsultas.Text = "Consultas"
+        btnConsultas.TextAlign = ContentAlignment.MiddleLeft
+        btnConsultas.UseVisualStyleBackColor = True
+        ' 
         ' MDIPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -362,5 +380,6 @@ Partial Class MDIPrincipal
 	Friend WithEvents btnInventario As Button
     Friend WithEvents Labelinfo As Label
     Friend WithEvents Labelbienvenido As Label
+    Friend WithEvents btnConsultas As Button
 
 End Class
