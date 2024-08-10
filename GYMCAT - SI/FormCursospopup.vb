@@ -1,7 +1,7 @@
 ﻿Public Class FormCursospopup
     Private Sub FormCursospopup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        If FormCursos.esNuevo Then
+        If FormCursos._Conexion.esNuevo Then
             Me.Text = ("Nuevo Curso")
             tbNombreCurso.Text = ""
             tbHorarioCurso.Text = ""
@@ -12,7 +12,7 @@
         Else
             Dim fila As DataGridViewRow = FormCursos.dgvListadoCursos.CurrentRow
             Me.Text = ("Editar Curso")
-            FormCursos.idFila = fila.Cells(0).Value
+            FormCursos._Conexion.idFila = fila.Cells(0).Value
             tbNombreCurso.Text = fila.Cells(1).Value
             tbHorarioCurso.Text = fila.Cells(2).Value
             tbPrecioCurso.Text = fila.Cells(3).Value

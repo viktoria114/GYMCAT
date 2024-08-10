@@ -125,6 +125,7 @@ Public Class FormEmpleados
             EmpleadosDataAdapter.UpdateCommand.Parameters.Add("@suel", MySqlDbType.Int32, 20, "sueldo")
             EmpleadosDataAdapter.UpdateCommand.Parameters.Add("@tur", MySqlDbType.VarChar, 50, "turno")
             EmpleadosDataAdapter.UpdateCommand.Parameters.Add("@carg", MySqlDbType.VarChar, 50, "cargo")
+            EmpleadosDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_empleados")
 
             '4. Guardar los cambios en la base de datos
             EmpleadosDataAdapter.Update(GymcatDataSet.Tables("TEmpleados"))

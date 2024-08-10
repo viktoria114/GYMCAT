@@ -18,8 +18,8 @@
             FormEmpleados.idFila = fila.Cells(0).Value
             tbNombre.Text = fila.Cells(1).Value
             tbApellido.Text = fila.Cells(2).Value
-            tbDNI.Text = fila.Cells(3).Value
-            tbFechaNac.Text = fila.Cells(4).Value
+            tbFechaNac.Text = fila.Cells(3).Value
+            tbDNI.Text = fila.Cells(4).Value
             tbSueldo.Text = fila.Cells(5).Value
             tbTurno.Text = fila.Cells(6).Value
             tbCargo.Text = fila.Cells(7).Value
