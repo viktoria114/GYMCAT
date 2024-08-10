@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\matif\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\matif\\.nuget\\packages"
+      "C:\\Users\\vik\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\vik\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

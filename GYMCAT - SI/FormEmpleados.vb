@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormEmpleados
+    Implements CRUD
     Public miConexion As MySqlConnection
     Public EmpleadosDataAdapter As MySqlDataAdapter
     Public GymcatDataSet As DataSet
@@ -30,16 +31,32 @@ Public Class FormEmpleados
 
     End Sub
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Agregar()
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Editar()
+    End Sub
+
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        Borrar()
+    End Sub
+
+    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
+        Buscar()
+    End Sub
+
+    Private Sub Agregar() Implements CRUD.Agregar
         esNuevo = True
         Formempleados2.ShowDialog()
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+    Private Sub Editar() Implements CRUD.Editar
         esNuevo = False
         Formempleados2.ShowDialog()
     End Sub
 
-    Public Sub Guardar()
+    Public Sub Guardar() Implements CRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -115,7 +132,7 @@ Public Class FormEmpleados
 
     End Sub
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+    Private Sub Borrar() Implements CRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoEmpleados.CurrentRow
         idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Empleado?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -126,7 +143,7 @@ Public Class FormEmpleados
         End If
     End Sub
 
-    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
+    Private Sub Buscar() Implements CRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 

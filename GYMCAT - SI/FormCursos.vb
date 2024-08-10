@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormCursos
+    Implements CRUD
     Private myConexion As Conexion
     Private miConexion As MySqlConnection
     Private CursosDataAdapter As MySqlDataAdapter
@@ -10,12 +11,12 @@ Public Class FormCursos
     Public idFila As Integer
     Public Tabla As String
 
+
     Private Sub FormCursos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim consulta As String = "SELECT * FROM cursos"
         Tabla = "TCursos"
 
         myConexion = New Conexion(consulta, Tabla)
-
 
         dgvListadoCursos.DataSource = myConexion.vistaDatos
         dgvListadoCursos.Columns(0).Visible = False
@@ -25,16 +26,37 @@ Public Class FormCursos
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Agregar()
+    End Sub
+
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        Borrar()
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Editar()
+    End Sub
+
+    Public Sub btnGuardar_Click()
+        Guardar()
+    End Sub
+
+    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
+        Buscar()
+    End Sub
+
+
+    Private Sub Agregar() Implements CRUD.Agregar
         esNuevo = True
         FormCursospopup.ShowDialog()
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+    Private Sub Editar() Implements CRUD.Editar
         esNuevo = False
         FormCursospopup.ShowDialog()
     End Sub
 
-    Public Sub btnGuardar_Click()
+    Public Sub Guardar() Implements CRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -103,7 +125,7 @@ Public Class FormCursos
 
     End Sub
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+    Private Sub Borrar() Implements CRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoCursos.CurrentRow
         idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Curso?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -114,7 +136,7 @@ Public Class FormCursos
         End If
     End Sub
 
-    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
+    Private Sub Buscar() Implements CRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 
@@ -138,7 +160,5 @@ Public Class FormCursos
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-    End Sub
 End Class
