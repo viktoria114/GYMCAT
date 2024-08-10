@@ -1,9 +1,8 @@
 ﻿Public Class FormCursospopup
-    Public esnuevo2 As Boolean
     Private Sub FormCursospopup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        esnuevo2 = FormCursos.esNuevo
-        MsgBox(FormCursos.esNuevo)
+
         If FormCursos.esNuevo Then
+            Me.Text = ("Nuevo Curso")
             tbNombreCurso.Text = ""
             tbHorarioCurso.Text = ""
             tbPrecioCurso.Text = ""
@@ -12,6 +11,7 @@
             tbIdTurno.Text = ""
         Else
             Dim fila As DataGridViewRow = FormCursos.dgvListadoCursos.CurrentRow
+            Me.Text = ("Editar Curso")
             FormCursos.idFila = fila.Cells(0).Value
             tbNombreCurso.Text = fila.Cells(1).Value
             tbHorarioCurso.Text = fila.Cells(2).Value

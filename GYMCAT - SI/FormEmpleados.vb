@@ -1,7 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormEmpleados
-    Implements CRUD
     Public miConexion As MySqlConnection
     Public EmpleadosDataAdapter As MySqlDataAdapter
     Public GymcatDataSet As DataSet
@@ -31,14 +30,16 @@ Public Class FormEmpleados
 
     End Sub
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Agregar()
+        esNuevo = True
+        Formempleados2.ShowDialog()
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Editar()
+        esNuevo = False
+        Formempleados2.ShowDialog()
     End Sub
 
-    Public Sub Guardar() Implements CRUD.Guardar
+    Public Sub btnGuardar_Click()
         Dim fila As DataRow
         Dim cmd As String
 
@@ -115,24 +116,6 @@ Public Class FormEmpleados
     End Sub
 
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Borrar()
-    End Sub
-
-    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
-        Buscar()
-    End Sub
-
-    Public Sub Agregar() Implements CRUD.Agregar
-        esNuevo = True
-        Formempleados2.ShowDialog()
-    End Sub
-
-    Public Sub Editar() Implements CRUD.Editar
-        esNuevo = False
-        Formempleados2.ShowDialog()
-    End Sub
-
-    Public Sub Borrar() Implements CRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoEmpleados.CurrentRow
         idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Empleado?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -143,7 +126,7 @@ Public Class FormEmpleados
         End If
     End Sub
 
-    Public Sub Buscar() Implements CRUD.Buscar
+    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 
@@ -168,5 +151,7 @@ Public Class FormEmpleados
             Case "Correo"
                 vistaDatos.RowFilter = "correo LIKE '" + tbBuscar.Text + "%'"
         End Select
+
     End Sub
+
 End Class

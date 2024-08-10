@@ -1,6 +1,4 @@
-﻿Imports System.Data.Common
-Imports System.Net.Mail
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class CrudMiembros
     Private miConexion As MySqlConnection
