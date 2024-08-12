@@ -22,40 +22,40 @@ Partial Class FormConsultas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridView1 = New DataGridView()
+        dgvResultados = New DataGridView()
         GroupBox1 = New GroupBox()
-        Label1 = New Label()
+        dtpMemb = New DateTimePicker()
+        cbCursos = New ComboBox()
+        cbMejMiemb = New ComboBox()
+        cbCurMiembro = New ComboBox()
+        btnEjecutar = New Button()
         Panel1 = New Panel()
-        btnGuardar = New Button()
-        Splitter1 = New Splitter()
-        rbMiembrosenCursos = New RadioButton()
-        rbMiembrosconDeudas = New RadioButton()
-        rbMejoresMiembros = New RadioButton()
         rbElementosenCursos = New RadioButton()
-        ComboBox1 = New ComboBox()
-        DateTimePicker1 = New DateTimePicker()
-        ComboBox2 = New ComboBox()
-        ComboBox3 = New ComboBox()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        rbMejoresMiembros = New RadioButton()
+        rbMiembrosconDeudas = New RadioButton()
+        rbMiembrosenCursos = New RadioButton()
+        Label1 = New Label()
+        Splitter1 = New Splitter()
+        CType(dgvResultados, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' DataGridView1
+        ' dgvResultados
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(28, 377)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(579, 260)
-        DataGridView1.TabIndex = 0
+        dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvResultados.Location = New Point(28, 377)
+        dgvResultados.Name = "dgvResultados"
+        dgvResultados.Size = New Size(579, 260)
+        dgvResultados.TabIndex = 0
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(DateTimePicker1)
-        GroupBox1.Controls.Add(ComboBox3)
-        GroupBox1.Controls.Add(ComboBox2)
-        GroupBox1.Controls.Add(ComboBox1)
-        GroupBox1.Controls.Add(btnGuardar)
+        GroupBox1.Controls.Add(dtpMemb)
+        GroupBox1.Controls.Add(cbCursos)
+        GroupBox1.Controls.Add(cbMejMiemb)
+        GroupBox1.Controls.Add(cbCurMiembro)
+        GroupBox1.Controls.Add(btnEjecutar)
         GroupBox1.Controls.Add(Panel1)
         GroupBox1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         GroupBox1.ForeColor = Color.White
@@ -66,16 +66,51 @@ Partial Class FormConsultas
         GroupBox1.TabStop = False
         GroupBox1.Text = "Elegir tipo de Consulta:"
         ' 
-        ' Label1
+        ' dtpMemb
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
-        Label1.ForeColor = SystemColors.Control
-        Label1.Location = New Point(27, 21)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(159, 35)
-        Label1.TabIndex = 12
-        Label1.Text = "Consultas"
+        dtpMemb.Format = DateTimePickerFormat.Short
+        dtpMemb.Location = New Point(282, 89)
+        dtpMemb.Name = "dtpMemb"
+        dtpMemb.Size = New Size(249, 21)
+        dtpMemb.TabIndex = 35
+        ' 
+        ' cbCursos
+        ' 
+        cbCursos.FormattingEnabled = True
+        cbCursos.Location = New Point(281, 159)
+        cbCursos.Name = "cbCursos"
+        cbCursos.Size = New Size(250, 24)
+        cbCursos.TabIndex = 34
+        ' 
+        ' cbMejMiemb
+        ' 
+        cbMejMiemb.FormattingEnabled = True
+        cbMejMiemb.Location = New Point(281, 123)
+        cbMejMiemb.Name = "cbMejMiemb"
+        cbMejMiemb.Size = New Size(250, 24)
+        cbMejMiemb.TabIndex = 34
+        ' 
+        ' cbCurMiembro
+        ' 
+        cbCurMiembro.FormattingEnabled = True
+        cbCurMiembro.Location = New Point(281, 53)
+        cbCurMiembro.Name = "cbCurMiembro"
+        cbCurMiembro.Size = New Size(250, 24)
+        cbCurMiembro.TabIndex = 34
+        ' 
+        ' btnEjecutar
+        ' 
+        btnEjecutar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        btnEjecutar.FlatStyle = FlatStyle.Popup
+        btnEjecutar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
+        btnEjecutar.ForeColor = Color.WhiteSmoke
+        btnEjecutar.ImageAlign = ContentAlignment.MiddleRight
+        btnEjecutar.Location = New Point(281, 211)
+        btnEjecutar.Name = "btnEjecutar"
+        btnEjecutar.Size = New Size(250, 44)
+        btnEjecutar.TabIndex = 33
+        btnEjecutar.Text = "Ejecutar consulta >"
+        btnEjecutar.UseVisualStyleBackColor = False
         ' 
         ' Panel1
         ' 
@@ -88,49 +123,16 @@ Partial Class FormConsultas
         Panel1.Size = New Size(233, 218)
         Panel1.TabIndex = 0
         ' 
-        ' btnGuardar
+        ' rbElementosenCursos
         ' 
-        btnGuardar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
-        btnGuardar.FlatStyle = FlatStyle.Popup
-        btnGuardar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
-        btnGuardar.ForeColor = Color.WhiteSmoke
-        btnGuardar.ImageAlign = ContentAlignment.MiddleRight
-        btnGuardar.Location = New Point(281, 211)
-        btnGuardar.Name = "btnGuardar"
-        btnGuardar.Size = New Size(250, 44)
-        btnGuardar.TabIndex = 33
-        btnGuardar.Text = "Ejecutar consulta >"
-        btnGuardar.UseVisualStyleBackColor = False
-        ' 
-        ' Splitter1
-        ' 
-        Splitter1.Location = New Point(0, 0)
-        Splitter1.Name = "Splitter1"
-        Splitter1.Size = New Size(3, 649)
-        Splitter1.TabIndex = 13
-        Splitter1.TabStop = False
-        ' 
-        ' rbMiembrosenCursos
-        ' 
-        rbMiembrosenCursos.AutoSize = True
-        rbMiembrosenCursos.Location = New Point(23, 18)
-        rbMiembrosenCursos.Name = "rbMiembrosenCursos"
-        rbMiembrosenCursos.Size = New Size(151, 20)
-        rbMiembrosenCursos.TabIndex = 0
-        rbMiembrosenCursos.TabStop = True
-        rbMiembrosenCursos.Text = "Miembros en Cursos"
-        rbMiembrosenCursos.UseVisualStyleBackColor = True
-        ' 
-        ' rbMiembrosconDeudas
-        ' 
-        rbMiembrosconDeudas.AutoSize = True
-        rbMiembrosconDeudas.Location = New Point(23, 53)
-        rbMiembrosconDeudas.Name = "rbMiembrosconDeudas"
-        rbMiembrosconDeudas.Size = New Size(158, 20)
-        rbMiembrosconDeudas.TabIndex = 0
-        rbMiembrosconDeudas.TabStop = True
-        rbMiembrosconDeudas.Text = "Membresías a vencer"
-        rbMiembrosconDeudas.UseVisualStyleBackColor = True
+        rbElementosenCursos.AutoSize = True
+        rbElementosenCursos.Location = New Point(23, 123)
+        rbElementosenCursos.Name = "rbElementosenCursos"
+        rbElementosenCursos.Size = New Size(158, 20)
+        rbElementosenCursos.TabIndex = 0
+        rbElementosenCursos.TabStop = True
+        rbElementosenCursos.Text = "Elementos en Cursos"
+        rbElementosenCursos.UseVisualStyleBackColor = True
         ' 
         ' rbMejoresMiembros
         ' 
@@ -143,48 +145,46 @@ Partial Class FormConsultas
         rbMejoresMiembros.Text = "Mejores Miembros"
         rbMejoresMiembros.UseVisualStyleBackColor = True
         ' 
-        ' rbElementosenCursos
+        ' rbMiembrosconDeudas
         ' 
-        rbElementosenCursos.AutoSize = True
-        rbElementosenCursos.Location = New Point(23, 123)
-        rbElementosenCursos.Name = "rbElementosenCursos"
-        rbElementosenCursos.Size = New Size(158, 20)
-        rbElementosenCursos.TabIndex = 0
-        rbElementosenCursos.TabStop = True
-        rbElementosenCursos.Text = "Elementos en Cursos"
-        rbElementosenCursos.UseVisualStyleBackColor = True
+        rbMiembrosconDeudas.AutoSize = True
+        rbMiembrosconDeudas.Location = New Point(23, 53)
+        rbMiembrosconDeudas.Name = "rbMiembrosconDeudas"
+        rbMiembrosconDeudas.Size = New Size(158, 20)
+        rbMiembrosconDeudas.TabIndex = 0
+        rbMiembrosconDeudas.TabStop = True
+        rbMiembrosconDeudas.Text = "Membresías a vencer"
+        rbMiembrosconDeudas.UseVisualStyleBackColor = True
         ' 
-        ' ComboBox1
+        ' rbMiembrosenCursos
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(281, 53)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(250, 24)
-        ComboBox1.TabIndex = 34
+        rbMiembrosenCursos.AutoSize = True
+        rbMiembrosenCursos.Location = New Point(23, 18)
+        rbMiembrosenCursos.Name = "rbMiembrosenCursos"
+        rbMiembrosenCursos.Size = New Size(151, 20)
+        rbMiembrosenCursos.TabIndex = 0
+        rbMiembrosenCursos.TabStop = True
+        rbMiembrosenCursos.Text = "Miembros en Cursos"
+        rbMiembrosenCursos.UseVisualStyleBackColor = True
         ' 
-        ' DateTimePicker1
+        ' Label1
         ' 
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(282, 89)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(249, 21)
-        DateTimePicker1.TabIndex = 35
+        Label1.AutoSize = True
+        Label1.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
+        Label1.ForeColor = SystemColors.Control
+        Label1.Location = New Point(27, 21)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(159, 35)
+        Label1.TabIndex = 12
+        Label1.Text = "Consultas"
         ' 
-        ' ComboBox2
+        ' Splitter1
         ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(281, 123)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(250, 24)
-        ComboBox2.TabIndex = 34
-        ' 
-        ' ComboBox3
-        ' 
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(281, 159)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(250, 24)
-        ComboBox3.TabIndex = 34
+        Splitter1.Location = New Point(0, 0)
+        Splitter1.Name = "Splitter1"
+        Splitter1.Size = New Size(3, 649)
+        Splitter1.TabIndex = 13
+        Splitter1.TabStop = False
         ' 
         ' FormConsultas
         ' 
@@ -195,10 +195,10 @@ Partial Class FormConsultas
         Controls.Add(Splitter1)
         Controls.Add(Label1)
         Controls.Add(GroupBox1)
-        Controls.Add(DataGridView1)
+        Controls.Add(dgvResultados)
         Name = "FormConsultas"
         Text = "FormConsultas"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvResultados, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -206,18 +206,18 @@ Partial Class FormConsultas
         PerformLayout()
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvResultados As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnEjecutar As Button
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents rbElementosenCursos As RadioButton
     Friend WithEvents rbMejoresMiembros As RadioButton
     Friend WithEvents rbMiembrosconDeudas As RadioButton
     Friend WithEvents rbMiembrosenCursos As RadioButton
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cbCurMiembro As ComboBox
+    Friend WithEvents dtpMemb As DateTimePicker
+    Friend WithEvents cbMejMiemb As ComboBox
+    Friend WithEvents cbCursos As ComboBox
 End Class
