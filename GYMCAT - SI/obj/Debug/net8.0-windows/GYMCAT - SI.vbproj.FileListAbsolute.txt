@@ -186,3 +186,4 @@ C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-wi
 C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.genruntimeconfig.cache
 C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\ref\GYMCAT - SI.dll
 C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormConsultas.resources
+C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormConsultas.resources

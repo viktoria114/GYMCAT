@@ -1,6 +1,6 @@
 ﻿Public Class CrudElementos2
     Private Sub CrudElementos2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If CrudElementos1.esNuevo Then
+        If CrudElementos1._Conexion.esNuevo Then
             Me.Text = ("Nuevo Elemento")
             tbNombreElemento.Text = ""
             tbModeloElemento.Text = ""
@@ -14,7 +14,7 @@
         Else
             Dim fila As DataGridViewRow = CrudElementos1.dgvListadoElementos.CurrentRow
             Me.Text = ("Editar Elemento")
-            CrudElementos1.idFila = fila.Cells(0).Value
+            CrudElementos1._Conexion.idFila = fila.Cells(0).Value
             tbNombreElemento.Text = fila.Cells(1).Value
             tbModeloElemento.Text = fila.Cells(2).Value
             tbPrecioElemento.Text = fila.Cells(3).Value

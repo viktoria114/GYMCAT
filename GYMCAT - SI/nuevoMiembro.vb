@@ -1,6 +1,6 @@
 ﻿Public Class nuevoMiembro
     Private Sub nuevoMiembro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If CrudMiembros.esNuevo Then
+        If CrudMiembros._Conexion.esNuevo Then
             Me.Text = ("Nuevo Miembro")
             tbNombre.Text = ""
             tbApellido.Text = ""
@@ -17,7 +17,7 @@
         Else
             Dim fila As DataGridViewRow = CrudMiembros.dgvListadoMiembros.CurrentRow
             Me.Text = ("Editar Miembro")
-            CrudMiembros.idFila = fila.Cells(0).Value
+            CrudMiembros._Conexion.idFila = fila.Cells(0).Value
             tbNombre.Text = fila.Cells(1).Value
             tbApellido.Text = fila.Cells(2).Value
             tbDNI.Text = fila.Cells(3).Value

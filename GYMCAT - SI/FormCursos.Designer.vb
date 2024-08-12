@@ -61,6 +61,7 @@ Partial Class FormCursos
         dgvListadoCursos.Location = New Point(19, 64)
         dgvListadoCursos.MultiSelect = False
         dgvListadoCursos.Name = "dgvListadoCursos"
+        dgvListadoCursos.ReadOnly = True
         DataGridViewCellStyle3.ForeColor = Color.Black
         dgvListadoCursos.RowsDefaultCellStyle = DataGridViewCellStyle3
         dgvListadoCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect

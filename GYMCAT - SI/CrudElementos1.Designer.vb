@@ -43,7 +43,7 @@ Partial Class CrudElementos1
         dgvListadoElementos.BackgroundColor = SystemColors.ButtonShadow
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = Color.Black
@@ -52,7 +52,7 @@ Partial Class CrudElementos1
         dgvListadoElementos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -61,6 +61,7 @@ Partial Class CrudElementos1
         dgvListadoElementos.Location = New Point(19, 64)
         dgvListadoElementos.MultiSelect = False
         dgvListadoElementos.Name = "dgvListadoElementos"
+        dgvListadoElementos.ReadOnly = True
         DataGridViewCellStyle3.ForeColor = Color.Black
         dgvListadoElementos.RowsDefaultCellStyle = DataGridViewCellStyle3
         dgvListadoElementos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
@@ -72,7 +73,7 @@ Partial Class CrudElementos1
         GroupBox2.Controls.Add(cbOpciones)
         GroupBox2.Controls.Add(tbBuscar)
         GroupBox2.Controls.Add(dgvListadoElementos)
-        GroupBox2.Font = New Font("Cascadia Mono", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        GroupBox2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         GroupBox2.ForeColor = Color.White
         GroupBox2.Location = New Point(27, 158)
         GroupBox2.Name = "GroupBox2"
@@ -146,7 +147,7 @@ Partial Class CrudElementos1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Cascadia Mono SemiBold", 20.0F, FontStyle.Bold)
+        Label1.Font = New Font("Cascadia Mono SemiBold", 20F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.Control
         Label1.Location = New Point(27, 21)
         Label1.Name = "Label1"
@@ -156,7 +157,7 @@ Partial Class CrudElementos1
         ' 
         ' CrudElementos1
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
         ClientSize = New Size(835, 626)

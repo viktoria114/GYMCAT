@@ -61,6 +61,7 @@ Partial Class CrudMiembros
         dgvListadoMiembros.Location = New Point(19, 64)
         dgvListadoMiembros.MultiSelect = False
         dgvListadoMiembros.Name = "dgvListadoMiembros"
+        dgvListadoMiembros.ReadOnly = True
         dgvListadoMiembros.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListadoMiembros.Size = New Size(739, 377)
         dgvListadoMiembros.TabIndex = 3

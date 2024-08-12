@@ -1607,19 +1607,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vik\\.nuget\\packages\\": {}
+    "C:\\Users\\matif\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+      "projectUniqueName": "C:\\Users\\matif\\OneDrive\\Documentos\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
       "projectName": "GYMCAT - SI",
-      "projectPath": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
-      "packagesPath": "C:\\Users\\vik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vik\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\obj\\",
+      "projectPath": "C:\\Users\\matif\\OneDrive\\Documentos\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+      "packagesPath": "C:\\Users\\matif\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matif\\OneDrive\\Documentos\\GitHub\\GYMCAT\\GYMCAT - SI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\matif\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1674,7 +1674,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

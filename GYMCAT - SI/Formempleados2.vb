@@ -1,6 +1,6 @@
 ﻿Public Class Formempleados2
     Private Sub Formempleados2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If FormEmpleados.esNuevo Then
+        If FormEmpleados._Conexion.esNuevo Then
             Me.Text = ("Nuevo Empleado")
             tbNombre.Text = ""
             tbApellido.Text = ""
@@ -15,7 +15,7 @@
         Else
             Dim fila As DataGridViewRow = FormEmpleados.dgvListadoEmpleados.CurrentRow
             Me.Text = ("Editar Empleado")
-            FormEmpleados.idFila = fila.Cells(0).Value
+            FormEmpleados._Conexion.idFila = fila.Cells(0).Value
             tbNombre.Text = fila.Cells(1).Value
             tbApellido.Text = fila.Cells(2).Value
             tbFechaNac.Text = fila.Cells(3).Value

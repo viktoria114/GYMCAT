@@ -23,17 +23,5 @@ Public Class Conexion
 
     End Sub
 
-    'Public Sub New(miConexion As MySqlConnection, xDataAdapter As MySqlDataAdapter, gymcatDataSet As DataSet, vistaDatos As DataView, esNuevo As Boolean, idFila As Integer)
-    '    Me.miConexion = miConexion
-    '    Me.XDataAdapter = xDataAdapter
-    '    Me.GymcatDataSet = gymcatDataSet
-    '    Me.vistaDatos = vistaDatos
-    '    Me.esNuevo = esNuevo
-    '    Me.idFila = idFila
-    'End Sub
 
-
-
-
-    'miConexion = New MySqlConnection("Server=localhost; Database=gymcat; Uid=root; Pwd=;")
 End Class

@@ -5,7 +5,6 @@ Public Class FormCursos
     Public _Conexion As Conexion
     Public Tabla As String
 
-
     Private Sub FormCursos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim consulta As String = "SELECT * FROM cursos"
         Tabla = "TCursos"
@@ -46,7 +45,7 @@ Public Class FormCursos
             fila("turno") = FormCursospopup.tbIdTurno.Text
 
             '3. Agregar fila a la tabla del DataSet
-            _Conexion.GymcatDataSet.Tables("TCursos").Rows.Add(fila)
+            _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
 
             '4. Crear Comando para agregar a la BD la fila nueva cmd
             cmd = "INSERT INTO cursos (nombre, horario, precio, cantidad_inscriptos, dias_clase, turno, FK_empleados) VALUES (@nom, @hor, @pre, @cant, @dias, @tur, @empl)"
@@ -153,4 +152,7 @@ Public Class FormCursos
         Buscar()
     End Sub
 
+    Private Sub dgvListadoCursos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoCursos.CellContentClick
+
+    End Sub
 End Class

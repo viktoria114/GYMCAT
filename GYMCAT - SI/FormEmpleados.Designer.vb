@@ -53,7 +53,7 @@ Partial Class FormEmpleados
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.Window
         DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
@@ -61,6 +61,7 @@ Partial Class FormEmpleados
         dgvListadoEmpleados.Location = New Point(19, 64)
         dgvListadoEmpleados.MultiSelect = False
         dgvListadoEmpleados.Name = "dgvListadoEmpleados"
+        dgvListadoEmpleados.ReadOnly = True
         DataGridViewCellStyle3.ForeColor = Color.Black
         dgvListadoEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle3
         dgvListadoEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect
