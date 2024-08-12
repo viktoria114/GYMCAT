@@ -85,6 +85,7 @@ Public Class FormConsultas
                     cursos.nombre AS 'Cursos',
                     miembros_cursos.ID_inscripción AS 'ID de Inscripción',
                     CONCAT(miembros.nombre, ' ', miembros.apellido) AS 'Nombre Completo',
+                    miembros.edad,
                     miembros_cursos.fecha_inscripcion AS 'Fecha de Inscripción'
                 FROM
                     cursos, miembros, miembros_cursos
@@ -100,36 +101,33 @@ Public Class FormConsultas
             Case rbMiembrosconDeudas.Checked
 
                 cmd.CommandText = "
-                            SELECT d.producto_id, p.nombre, SUM(d.cantidad) AS cantidad_ventas 
-                            FROM detalle d
-                            INNER JOIN productos p ON d.producto_id = p.id 
-                            GROUP BY d.producto_id
-                            ORDER BY cantidad_ventas DESC
-                            LIMIT @nro"
+                SELECT
+                    m.nombre,
+                    m.apellido,
+                    m.deudor,
+                    m.fecha_inscripcion AS 'Fecha de Inscripción',
+                    DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH) AS 'fecha_vencimiento',
+                    CASE WHEN DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH) < '2024-10-01' THEN 'Membresia a vencer' ELSE 'Membresia al dia' END AS 'Estado Membresia'
+                FROM
+                    miembros m
+                WHERE
+                    m.deudor = 1
+                    OR DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH) < '2024-10-01'
+                ORDER BY DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH)
+                    "
 
-                cmd.Parameters.AddWithValue("@nro", Convert.ToInt32(cbNroProductos.Text))
+                cmd.Parameters.AddWithValue("@fecha", dtpMemb.Value.Date)
 
-                '    Case rbMejoresMiembros.Checked
-                '        If rbClienteCantidad.Checked Then
-                '            cmd.CommandText = "
-                '            SELECT f.cliente_id, CONCAT(c.nombre,' ', c.apellido ) AS nombre_completo, COUNT(f.cliente_id) AS cantidad_compras 
-                '            FROM factura f
-                '            INNER JOIN clientes c ON f.cliente_id = c.id 
-                '            GROUP BY f.cliente_id
-                '            ORDER BY cantidad_compras DESC
-                '            LIMIT @nro"
-                '        Else
-                '            cmd.CommandText = "
-                '            SELECT f.cliente_id, CONCAT(c.nombre,' ', c.apellido ) AS nombre_completo, SUM(d.cantidad * d.precio) AS monto_compras 
-                '            FROM detalle d
-                '            INNER JOIN factura f ON d.factura_id = f.id
-                '            INNER JOIN clientes c ON f.cliente_id = c.id 
-                '            GROUP BY f.cliente_id
-                '            ORDER BY monto_compras DESC
-                '            LIMIT @nro"
-                '        End If
+            Case rbMejoresMiembros.Checked
 
-                '        cmd.Parameters.AddWithValue("@nro", Convert.ToInt32(cbNroClientes.Text))
+                cmd.CommandText = "
+                 SELECT CONCAT(m.nombre, ' ', m.apellido) AS 'Nombre Completo', m.costo_total AS 'Monto', m.telefono, m.correo
+                 FROM miembros m
+                 ORDER BY Monto DESC
+                 LIMIT @nro"
+
+
+                cmd.Parameters.AddWithValue("@nro", Convert.ToInt32(cbMejMiemb.Text))
 
             Case rbElementosenCursos.Checked
                 cmd.CommandText = "
@@ -148,11 +146,6 @@ Public Class FormConsultas
                     cursos.nombre;"
 
                 cmd.Parameters.AddWithValue("@curso", cbCursos.Text)
-
-            Case rbStockBajo.Checked
-                cmd.CommandText = "SELECT id, nombre, stock FROM productos WHERE stock <= @nro ORDER BY stock ASC"
-
-                cmd.Parameters.AddWithValue("@nro", Convert.ToInt32(tbNroProductos.Text))
 
             Case Else
 
