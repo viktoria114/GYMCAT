@@ -22,13 +22,13 @@ Partial Class CrudMiembros
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoMiembros = New DataGridView()
         cbBuscar = New ComboBox()
         tbBuscar = New TextBox()
         PictureBox1 = New PictureBox()
-        btnNuevo = New Button()
+        btnAgregar = New Button()
         btnEditar = New Button()
         btnBorrar = New Button()
         Label1 = New Label()
@@ -41,23 +41,23 @@ Partial Class CrudMiembros
         ' dgvListadoMiembros
         ' 
         dgvListadoMiembros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListadoMiembros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = SystemColors.Control
+        DataGridViewCellStyle23.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle23.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = SystemColors.Desktop
+        DataGridViewCellStyle23.WrapMode = DataGridViewTriState.True
+        dgvListadoMiembros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         dgvListadoMiembros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvListadoMiembros.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = SystemColors.Window
+        DataGridViewCellStyle24.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle24.ForeColor = Color.White
+        DataGridViewCellStyle24.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle24.SelectionForeColor = Color.White
+        DataGridViewCellStyle24.WrapMode = DataGridViewTriState.False
+        dgvListadoMiembros.DefaultCellStyle = DataGridViewCellStyle24
         dgvListadoMiembros.Location = New Point(19, 64)
         dgvListadoMiembros.MultiSelect = False
         dgvListadoMiembros.Name = "dgvListadoMiembros"
@@ -90,29 +90,31 @@ Partial Class CrudMiembros
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
-        ' btnNuevo
+        ' btnAgregar
         ' 
-        btnNuevo.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
-        btnNuevo.FlatStyle = FlatStyle.Popup
-        btnNuevo.Font = New Font("Cascadia Mono", 12F)
-        btnNuevo.ForeColor = SystemColors.ButtonFace
-        btnNuevo.ImageAlign = ContentAlignment.MiddleRight
-        btnNuevo.Location = New Point(27, 91)
-        btnNuevo.Name = "btnNuevo"
-        btnNuevo.Size = New Size(94, 44)
-        btnNuevo.TabIndex = 5
-        btnNuevo.Text = "Nuevo"
-        btnNuevo.TextAlign = ContentAlignment.MiddleLeft
-        btnNuevo.UseVisualStyleBackColor = False
+        btnAgregar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        btnAgregar.FlatStyle = FlatStyle.Popup
+        btnAgregar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+        btnAgregar.ForeColor = SystemColors.ButtonFace
+        btnAgregar.Image = My.Resources.Resources.agregar_usuario_1
+        btnAgregar.ImageAlign = ContentAlignment.MiddleRight
+        btnAgregar.Location = New Point(27, 84)
+        btnAgregar.Name = "btnAgregar"
+        btnAgregar.Size = New Size(101, 44)
+        btnAgregar.TabIndex = 5
+        btnAgregar.Text = "Agregar"
+        btnAgregar.TextAlign = ContentAlignment.MiddleLeft
+        btnAgregar.UseVisualStyleBackColor = False
         ' 
         ' btnEditar
         ' 
         btnEditar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnEditar.FlatStyle = FlatStyle.Popup
-        btnEditar.Font = New Font("Cascadia Mono", 12F)
+        btnEditar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnEditar.ForeColor = SystemColors.ButtonFace
+        btnEditar.Image = My.Resources.Resources.quitar_usuario__2__removebg_preview_1
         btnEditar.ImageAlign = ContentAlignment.MiddleRight
-        btnEditar.Location = New Point(127, 91)
+        btnEditar.Location = New Point(134, 84)
         btnEditar.Name = "btnEditar"
         btnEditar.Size = New Size(101, 44)
         btnEditar.TabIndex = 5
@@ -124,14 +126,15 @@ Partial Class CrudMiembros
         ' 
         btnBorrar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnBorrar.FlatStyle = FlatStyle.Popup
-        btnBorrar.Font = New Font("Cascadia Mono", 12F)
+        btnBorrar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnBorrar.ForeColor = SystemColors.ButtonFace
+        btnBorrar.Image = My.Resources.Resources.quitar_usuario
         btnBorrar.ImageAlign = ContentAlignment.MiddleRight
-        btnBorrar.Location = New Point(234, 91)
+        btnBorrar.Location = New Point(241, 84)
         btnBorrar.Name = "btnBorrar"
         btnBorrar.Size = New Size(101, 44)
         btnBorrar.TabIndex = 5
-        btnBorrar.Text = "Borrar"
+        btnBorrar.Text = "Eliminar"
         btnBorrar.TextAlign = ContentAlignment.MiddleLeft
         btnBorrar.UseVisualStyleBackColor = False
         ' 
@@ -171,7 +174,7 @@ Partial Class CrudMiembros
         Controls.Add(GroupBox1)
         Controls.Add(btnBorrar)
         Controls.Add(btnEditar)
-        Controls.Add(btnNuevo)
+        Controls.Add(btnAgregar)
         Name = "CrudMiembros"
         Text = "CrudMiembros"
         CType(dgvListadoMiembros, ComponentModel.ISupportInitialize).EndInit()
@@ -182,7 +185,7 @@ Partial Class CrudMiembros
         PerformLayout()
     End Sub
     Friend WithEvents dgvListadoMiembros As DataGridView
-    Friend WithEvents btnNuevo As Button
+    Friend WithEvents btnAgregar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnBorrar As Button
     Friend WithEvents PictureBox1 As PictureBox

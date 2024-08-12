@@ -139,8 +139,8 @@
   <data name="repeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\repeat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GYM_CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GYM CAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="music-player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\music-player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,16 +148,34 @@
   <data name="view_hide_icon_124813" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view_hide_icon_124813.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GYM_CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GYM CAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shuffle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shuffle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GYM CAT (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GYM CAT (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar__1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar__1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-usuario_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuario_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boton-editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton-editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quitar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quitar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quitar-usuario__2_-removebg-preview_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quitar-usuario__2_-removebg-preview_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

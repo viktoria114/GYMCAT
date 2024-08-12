@@ -144,7 +144,7 @@ Public Class CrudMiembros
                 _Conexion.vistaDatos.RowFilter = "correo LIKE '" + tbBuscar.Text + "%'"
         End Select
     End Sub
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Agregar()
     End Sub
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
