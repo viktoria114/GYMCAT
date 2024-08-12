@@ -85,6 +85,7 @@ Partial Class FormConsultas
         ' cbMejMiemb
         ' 
         cbMejMiemb.FormattingEnabled = True
+        cbMejMiemb.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
         cbMejMiemb.Location = New Point(281, 123)
         cbMejMiemb.Name = "cbMejMiemb"
         cbMejMiemb.Size = New Size(250, 24)
