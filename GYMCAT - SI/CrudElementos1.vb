@@ -51,23 +51,23 @@ Public Class CrudElementos1
 
             '4. Crear Comando para agregar a la BD la fila nueva cmd
             cmd = "INSERT INTO `elementos deportivos` (nombre, modelo, precio, tipo, fecha_compra, stock, marca, estado, detalle) VALUES (@nom, @mod, @pre, @tipo, @fe, @sto, @mar, @est, @det)"
-            _Conexion.XDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@mod", MySqlDbType.VarChar, 50, "modelo")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@pre", MySqlDbType.Int32, 20, "precio")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@tipo", MySqlDbType.VarChar, 20, "tipo")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@fe", MySqlDbType.Date, 10, "fecha_compra")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@sto", MySqlDbType.Int32, 20, "stock")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@mar", MySqlDbType.VarChar, 20, "marca")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@est", MySqlDbType.VarChar, 20, "estado")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@det", MySqlDbType.VarChar, 50, "detalle")
+            _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mod", MySqlDbType.VarChar, 50, "modelo")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@pre", MySqlDbType.Int32, 20, "precio")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@tipo", MySqlDbType.VarChar, 20, "tipo")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fe", MySqlDbType.Date, 10, "fecha_compra")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@sto", MySqlDbType.Int32, 20, "stock")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mar", MySqlDbType.VarChar, 20, "marca")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@est", MySqlDbType.VarChar, 20, "estado")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@det", MySqlDbType.VarChar, 50, "detalle")
 
             '5. Guardar los cambios en la base de datos
-            _Conexion.XDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
 
             '6. V1olver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
             _Conexion.GymcatDataSet.Tables(Tabla).Clear()
-            _Conexion.XDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
         Else
             '1 seleccionar fila editar
             fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
@@ -87,20 +87,20 @@ Public Class CrudElementos1
             cmd = "UPDATE `elementos deportivos` 
                    SET nombre=@nom, modelo=@mod, precio=@pre, precio=@pre, tipo=@tipo, fecha_compra=@fe, stock=@sto, marca=@mar, estado=@est, detalle=@det
                    WHERE ID_elementos_deportivos=@id"
-            _Conexion.XDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre") 'NO OLVIDAR EL UPDATECOMMAND
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@mod", MySqlDbType.VarChar, 50, "modelo")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@pre", MySqlDbType.Int32, 20, "precio")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@tipo", MySqlDbType.VarChar, 20, "tipo")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@fe", MySqlDbType.Date, 10, "fecha_compra")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@sto", MySqlDbType.Int32, 20, "stock")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@mar", MySqlDbType.VarChar, 20, "marca")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@est", MySqlDbType.VarChar, 20, "estado")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@det", MySqlDbType.VarChar, 50, "detalle")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_elementos_deportivos")
+            _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre") 'NO OLVIDAR EL UPDATECOMMAND
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@mod", MySqlDbType.VarChar, 50, "modelo")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@pre", MySqlDbType.Int32, 20, "precio")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@tipo", MySqlDbType.VarChar, 20, "tipo")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fe", MySqlDbType.Date, 10, "fecha_compra")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@sto", MySqlDbType.Int32, 20, "stock")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@mar", MySqlDbType.VarChar, 20, "marca")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@est", MySqlDbType.VarChar, 20, "estado")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@det", MySqlDbType.VarChar, 50, "detalle")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_elementos_deportivos")
 
             '4. Guardar los cambios en la base de datos
-            _Conexion.XDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
     End Sub
 
@@ -109,9 +109,9 @@ Public Class CrudElementos1
         _Conexion.idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Elemento?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila).Delete()
-            _Conexion.XDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM `elementos deportivos` WHERE ID_elementos_deportivos = @id", _Conexion.miConexion)
-            _Conexion.XDataAdapter.DeleteCommand.Parameters.Add("@id", SqlDbType.BigInt, 0, "ID_elementos_deportivos")
-            _Conexion.XDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM `elementos deportivos` WHERE ID_elementos_deportivos = @id", _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.DeleteCommand.Parameters.Add("@id", SqlDbType.BigInt, 0, "ID_elementos_deportivos")
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
     End Sub
 

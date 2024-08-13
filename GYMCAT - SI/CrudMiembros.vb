@@ -53,26 +53,26 @@ Public Class CrudMiembros
 
             '4. Crear Comando para agregar a la BD la fila nueva cmd
             cmd = "INSERT INTO miembros (DNI, nombre, apellido, edad, fecha_inscripcion, duracion_membresia, cursos_inscritos, costo_total, deudor, telefono, correo, puntos) VALUES (@dni, @nom, @ape, @edad, @fec, @dur, @cur, @cos, @deu, @tel, @cor, @pun)"
-            _Conexion.XDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 10, "DNI")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@edad", MySqlDbType.Int32, 5, "edad")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@fec", MySqlDbType.Date, 0, "fecha_inscripcion")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@dur", MySqlDbType.VarChar, 20, "duracion_membresia")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@cur", MySqlDbType.Int32, 5, "cursos_inscritos")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@cos", MySqlDbType.Int32, 20, "costo_total")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@deu", MySqlDbType.Int32, 10, "deudor")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.VarChar, 40, "telefono")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@cor", MySqlDbType.VarChar, 50, "correo")
-            _Conexion.XDataAdapter.InsertCommand.Parameters.Add("@pun", MySqlDbType.Int32, 50, "puntos")
+            _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 10, "DNI")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@edad", MySqlDbType.Int32, 5, "edad")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fec", MySqlDbType.Date, 0, "fecha_inscripcion")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@dur", MySqlDbType.VarChar, 20, "duracion_membresia")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@cur", MySqlDbType.Int32, 5, "cursos_inscritos")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@cos", MySqlDbType.Int32, 20, "costo_total")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@deu", MySqlDbType.Int32, 10, "deudor")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.VarChar, 40, "telefono")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@cor", MySqlDbType.VarChar, 50, "correo")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@pun", MySqlDbType.Int32, 50, "puntos")
 
             '5. Guardar los cambios en la base de datos
-            _Conexion.XDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
 
             '6. Volver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
             _Conexion.GymcatDataSet.Tables(Tabla).Clear()
-            _Conexion.XDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
         Else
             '1 seleccionar fila editar
             fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
@@ -95,22 +95,22 @@ Public Class CrudMiembros
             cmd = "UPDATE miembros 
                    SET nombre=@nom, apellido=@ape, edad=@edad, fecha_inscripcion=@fec, duracion_membresia=@dur, cursos_inscritos=@cur, costo_total=@cos, deudor=@deu, telefono=@tel, correo=@cor, puntos=@pun
                    WHERE DNI=@dni"
-            _Conexion.XDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@edad", MySqlDbType.Int32, 5, "edad")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@fec", MySqlDbType.Date, 0, "fecha_inscripcion")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@dur", MySqlDbType.VarChar, 20, "duracion_membresia")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@cur", MySqlDbType.Int32, 5, "cursos_inscritos")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@cos", MySqlDbType.Int32, 20, "costo_total")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@deu", MySqlDbType.Int32, 10, "deudor")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.VarChar, 40, "telefono")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@cor", MySqlDbType.VarChar, 50, "correo")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@pun", MySqlDbType.Int32, 50, "puntos")
-            _Conexion.XDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 10, "DNI")
+            _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@edad", MySqlDbType.Int32, 5, "edad")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fec", MySqlDbType.Date, 0, "fecha_inscripcion")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@dur", MySqlDbType.VarChar, 20, "duracion_membresia")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cur", MySqlDbType.Int32, 5, "cursos_inscritos")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cos", MySqlDbType.Int32, 20, "costo_total")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@deu", MySqlDbType.Int32, 10, "deudor")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.VarChar, 40, "telefono")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cor", MySqlDbType.VarChar, 50, "correo")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@pun", MySqlDbType.Int32, 50, "puntos")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 10, "DNI")
 
             '4. Guardar los cambios en la base de datos
-            _Conexion.XDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
     End Sub
 
@@ -119,9 +119,9 @@ Public Class CrudMiembros
         _Conexion.idFila = fila.Cells(0).Value
         If MessageBox.Show("¿Está seguro de eliminar este Miembro?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila).Delete()
-            _Conexion.XDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM miembros WHERE DNI = @dni", _Conexion.miConexion)
-            _Conexion.XDataAdapter.DeleteCommand.Parameters.Add("@dni", SqlDbType.BigInt, 0, "DNI")
-            _Conexion.XDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+            _Conexion.TablaDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM miembros WHERE DNI = @dni", _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.DeleteCommand.Parameters.Add("@dni", SqlDbType.BigInt, 0, "DNI")
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
     End Sub
 
