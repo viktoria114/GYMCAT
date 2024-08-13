@@ -40,7 +40,7 @@ Public Class FormConsultas
     Private Sub rbElementosenCursos_CheckedChanged(sender As Object, e As EventArgs) Handles rbElementosenCursos.CheckedChanged
         ElegirConsulta()
     End Sub
-
+    '"hola"
     Sub ElegirConsulta()
         Dim CursoMiembro As Control() = {cbCurMiembro}
         Dim MembreVencer As Control() = {dtpMemb}
