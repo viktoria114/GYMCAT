@@ -64,12 +64,12 @@ Public Class MDIPrincipal
     Private Sub btnFinanzas_Click(sender As Object, e As EventArgs) Handles btnFinanzas.Click
         mostrar_submenu(PanelFinanzas)
         Panel4.Visible = False
-        '.BringToFront()
+        FormFinanzas.BringToFront()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnInscripciones.Click
         Panel4.Visible = False
-        Inscripciones1.BringToFront()
+        FormInscripciones.BringToFront()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnHorario.Click
@@ -90,6 +90,8 @@ Public Class MDIPrincipal
     Private Sub MDIPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Login.Close()
     End Sub
+
+#End Region
 
     Private Sub MDIPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim NombreCompleto As String
@@ -137,6 +139,6 @@ Public Class MDIPrincipal
 
 
 
-#End Region
+
 
 End Class
