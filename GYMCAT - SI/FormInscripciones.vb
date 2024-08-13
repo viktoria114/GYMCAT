@@ -132,7 +132,7 @@ Public Class FormInscripciones
 		vistaDatos1 = GymcatDataSet.Tables("TMiembros").DefaultView
 		dgvListadoMiembros.DataSource = vistaDatos1
 
-		'dgvListadoMiembros.Columns(0).Visible = False
+		dgvListadoMiembros.Columns(0).Visible = False
 		dgvListadoMiembros.CurrentCell = dgvListadoMiembros.Rows(0).Cells(1)
 
 		GymcatDataSet.Tables.Add("TInscritos")
@@ -189,7 +189,7 @@ Public Class FormInscripciones
 		End Select
 	End Sub
 
-	Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles Button1.Click
+	Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
 		btnInscribir.Enabled = True
 		btnDesinscribir.Enabled = True
 	End Sub

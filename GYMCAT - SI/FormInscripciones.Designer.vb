@@ -41,6 +41,7 @@ Partial Class FormInscripciones
 		dgvListadoMiembros = New DataGridView()
 		tbBuscar = New TextBox()
 		Button1 = New Button()
+		Button2 = New Button()
 		GroupBox1.SuspendLayout()
 		CType(dgvCursosInscritos, ComponentModel.ISupportInitialize).BeginInit()
 		GroupBox2.SuspendLayout()
@@ -51,7 +52,7 @@ Partial Class FormInscripciones
 		' btnInscribir
 		' 
 		btnInscribir.Enabled = False
-		btnInscribir.Location = New Point(358, 350)
+		btnInscribir.Location = New Point(358, 339)
 		btnInscribir.Name = "btnInscribir"
 		btnInscribir.Size = New Size(108, 44)
 		btnInscribir.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class FormInscripciones
 		' btnDesinscribir
 		' 
 		btnDesinscribir.Enabled = False
-		btnDesinscribir.Location = New Point(358, 400)
+		btnDesinscribir.Location = New Point(358, 389)
 		btnDesinscribir.Name = "btnDesinscribir"
 		btnDesinscribir.Size = New Size(108, 44)
 		btnDesinscribir.TabIndex = 2
@@ -71,7 +72,7 @@ Partial Class FormInscripciones
 		' GroupBox1
 		' 
 		GroupBox1.Controls.Add(dgvCursosInscritos)
-		GroupBox1.Font = New Font("Cascadia Mono", 9.0F)
+		GroupBox1.Font = New Font("Cascadia Mono", 9F)
 		GroupBox1.ForeColor = SystemColors.ButtonHighlight
 		GroupBox1.Location = New Point(27, 280)
 		GroupBox1.Name = "GroupBox1"
@@ -88,7 +89,7 @@ Partial Class FormInscripciones
 		dgvCursosInscritos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
 		DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
 		DataGridViewCellStyle1.BackColor = SystemColors.Window
-		DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9.0F)
+		DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F)
 		DataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight
 		DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
 		DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -105,7 +106,7 @@ Partial Class FormInscripciones
 		' GroupBox2
 		' 
 		GroupBox2.Controls.Add(dgvCursosDisponibles)
-		GroupBox2.Font = New Font("Cascadia Mono", 9.0F)
+		GroupBox2.Font = New Font("Cascadia Mono", 9F)
 		GroupBox2.ForeColor = SystemColors.ButtonHighlight
 		GroupBox2.Location = New Point(472, 280)
 		GroupBox2.Name = "GroupBox2"
@@ -122,7 +123,7 @@ Partial Class FormInscripciones
 		dgvCursosDisponibles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
 		DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
 		DataGridViewCellStyle2.BackColor = SystemColors.Window
-		DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9.0F)
+		DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F)
 		DataGridViewCellStyle2.ForeColor = SystemColors.ButtonHighlight
 		DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
 		DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -139,7 +140,7 @@ Partial Class FormInscripciones
 		' lbProfesorCurso
 		' 
 		lbProfesorCurso.AutoSize = True
-		lbProfesorCurso.Font = New Font("Cascadia Mono SemiBold", 14.0F)
+		lbProfesorCurso.Font = New Font("Cascadia Mono SemiBold", 14F)
 		lbProfesorCurso.ForeColor = SystemColors.Control
 		lbProfesorCurso.Location = New Point(250, 551)
 		lbProfesorCurso.Name = "lbProfesorCurso"
@@ -150,7 +151,7 @@ Partial Class FormInscripciones
 		' lbDiasCurso
 		' 
 		lbDiasCurso.AutoSize = True
-		lbDiasCurso.Font = New Font("Cascadia Mono SemiBold", 14.0F)
+		lbDiasCurso.Font = New Font("Cascadia Mono SemiBold", 14F)
 		lbDiasCurso.ForeColor = SystemColors.Control
 		lbDiasCurso.Location = New Point(250, 521)
 		lbDiasCurso.Name = "lbDiasCurso"
@@ -161,7 +162,7 @@ Partial Class FormInscripciones
 		' lbPrecioCurso
 		' 
 		lbPrecioCurso.AutoSize = True
-		lbPrecioCurso.Font = New Font("Cascadia Mono SemiBold", 14.0F)
+		lbPrecioCurso.Font = New Font("Cascadia Mono SemiBold", 14F)
 		lbPrecioCurso.ForeColor = SystemColors.Control
 		lbPrecioCurso.Location = New Point(38, 581)
 		lbPrecioCurso.Name = "lbPrecioCurso"
@@ -172,7 +173,7 @@ Partial Class FormInscripciones
 		' lbHorariosCurso
 		' 
 		lbHorariosCurso.AutoSize = True
-		lbHorariosCurso.Font = New Font("Cascadia Mono SemiBold", 14.0F)
+		lbHorariosCurso.Font = New Font("Cascadia Mono SemiBold", 14F)
 		lbHorariosCurso.ForeColor = SystemColors.Control
 		lbHorariosCurso.Location = New Point(38, 551)
 		lbHorariosCurso.Name = "lbHorariosCurso"
@@ -183,7 +184,7 @@ Partial Class FormInscripciones
 		' lbCursos
 		' 
 		lbCursos.AutoSize = True
-		lbCursos.Font = New Font("Cascadia Mono SemiBold", 14.0F)
+		lbCursos.Font = New Font("Cascadia Mono SemiBold", 14F)
 		lbCursos.ForeColor = SystemColors.Control
 		lbCursos.Location = New Point(38, 521)
 		lbCursos.Name = "lbCursos"
@@ -209,7 +210,7 @@ Partial Class FormInscripciones
 		dgvListadoMiembros.BackgroundColor = SystemColors.ButtonShadow
 		DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
 		DataGridViewCellStyle3.BackColor = SystemColors.Control
-		DataGridViewCellStyle3.Font = New Font("Segoe UI", 9.0F)
+		DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
 		DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
 		DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
 		DataGridViewCellStyle3.SelectionForeColor = Color.Black
@@ -235,16 +236,25 @@ Partial Class FormInscripciones
 		' 
 		' Button1
 		' 
-		Button1.Location = New Point(358, 300)
+		Button1.Location = New Point(358, 289)
 		Button1.Name = "Button1"
 		Button1.Size = New Size(108, 44)
 		Button1.TabIndex = 2
 		Button1.Text = "Modificar Inscripciones"
 		Button1.UseVisualStyleBackColor = True
 		' 
-		' Form2
+		' Button2
 		' 
-		AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+		Button2.Location = New Point(358, 439)
+		Button2.Name = "Button2"
+		Button2.Size = New Size(108, 44)
+		Button2.TabIndex = 2
+		Button2.Text = "Modificar Inscripciones"
+		Button2.UseVisualStyleBackColor = True
+		' 
+		' FormInscripciones
+		' 
+		AutoScaleDimensions = New SizeF(7F, 15F)
 		AutoScaleMode = AutoScaleMode.Font
 		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
 		ClientSize = New Size(824, 626)
@@ -259,9 +269,10 @@ Partial Class FormInscripciones
 		Controls.Add(GroupBox2)
 		Controls.Add(GroupBox1)
 		Controls.Add(btnDesinscribir)
+		Controls.Add(Button2)
 		Controls.Add(Button1)
 		Controls.Add(btnInscribir)
-		Name = "Form2"
+		Name = "FormInscripciones"
 		Text = "Form2"
 		GroupBox1.ResumeLayout(False)
 		CType(dgvCursosInscritos, ComponentModel.ISupportInitialize).EndInit()
@@ -288,4 +299,5 @@ Partial Class FormInscripciones
 	Friend WithEvents tbBuscar As TextBox
 	Friend WithEvents dgvCursosInscritos As DataGridView
 	Friend WithEvents Button1 As Button
+	Friend WithEvents Button2 As Button
 End Class
