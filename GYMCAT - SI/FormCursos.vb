@@ -152,7 +152,4 @@ Public Class FormCursos
         Buscar()
     End Sub
 
-    Private Sub dgvListadoCursos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoCursos.CellContentClick
-
-    End Sub
 End Class
