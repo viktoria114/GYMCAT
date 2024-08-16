@@ -7,11 +7,12 @@ Imports Mysqlx
 
 Public Class FormInscripciones
 	Private _Conexion As Conexion
-	Public Tabla As String
-	Public Tabla2 As String
+	Public Tabla As String = "TMiembros"
+	Public Tabla2 As String = "TInscripciones"
 	Private lector As MySqlDataReader
+	Private edicion As Boolean = False
 
-#Region "FUNCIONES"
+#Region "FUNCIONES <<<"
 
 	Sub SeleccionarMiembro(IDMiembro As Integer)
 		'Fila = dgvListadoMiembros.CurrentRow
@@ -45,7 +46,7 @@ Public Class FormInscripciones
 	End Sub
 
 	Sub Desinscribir(FilaCurso As DataGridViewRow)
-
+		edicion = True
 		MsgBox(dgvListadoMiembros.CurrentRow.Cells(1).Value.ToString + " , " + FilaCurso.Cells(1).Value)
 		If (MessageBox.Show("¿Está seguro de Desincribir el miembro " + dgvListadoMiembros.CurrentRow.Cells(1).Value.ToString + " del Curso " +
 			FilaCurso.Cells(1).Value.ToString + "?", "Desincribir Miembro", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -60,6 +61,7 @@ Public Class FormInscripciones
 	End Sub
 
 	Sub Inscribir(FilaCurso As DataGridViewRow)
+		edicion = True
 		Dim NuevaFila As DataRow
 		If (MessageBox.Show("¿Quiere agregar el miembro a este Curso?", "Agregar Miembro",
 							MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -70,10 +72,13 @@ Public Class FormInscripciones
 
 
 			NuevaFila = _Conexion.GymcatDataSet.Tables(Tabla2).NewRow
+
 			'2. Rellenar la fila con información
 			NuevaFila("FK_miembros") = dgvListadoMiembros.CurrentRow.Cells(0).Value
 			NuevaFila("FK_cursos") = lector("ID_cursos")
 			NuevaFila("Fecha_Inscripcion") = Today
+
+			dgvCursosInscritos.Rows.Add()
 
 			'3. Agregar fila a la tabla del DataSet
 			_Conexion.GymcatDataSet.Tables(Tabla2).Rows.Add(NuevaFila)
@@ -86,7 +91,8 @@ Public Class FormInscripciones
 			_Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fe", MySqlDbType.Date, 10, "Fecha_Inscripcion")
 			lector.Close()
 			'5. Guardar los cambios en la base de datos
-			_Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
+
+			'_Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))   '<<<<<<<
 
 			'6. V1olver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
 			_Conexion.GymcatDataSet.Tables(Tabla2).Clear()
@@ -112,15 +118,10 @@ Public Class FormInscripciones
 		lector.Close()
 	End Sub
 
-
-#End Region
-
-	Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+	Public Sub CargarDatosForm()    'esta funcion debe ser llamada cada vez que se muestra el formulario
 		Dim consulta As String = "SELECT ID_miembro, nombre AS Nombre, apellido, DNI FROM miembros"
 		Dim consulta2 As String = "SELECT * FROM miembros_cursos"
 		'Llenar el selector de miembros
-		Tabla = "TMiembros"
-		Tabla2 = "TInscripciones"
 		_Conexion = New Conexion(consulta, consulta2, Tabla, Tabla2)
 		_Conexion.GymcatDataSet.Tables.Add("TInscritos")
 		_Conexion.GymcatDataSet.Tables.Add("TNoInscritos")
@@ -134,11 +135,33 @@ Public Class FormInscripciones
 	End Sub
 
 
+
+#End Region
+
+	Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+		'CargarDatosForm()
+		'SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
+	End Sub
+
+
 	Private Sub dgvListadoMiembros_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoMiembros.CellClick
-		SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
+		If edicion Then
+
+			If (MessageBox.Show("Se realizaron cambios que todavia no han sido guardados." + vbCrLf + "Desea descartar los cambios realizados?",
+						   "Cambios Sin Guardar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) = DialogResult.OK) Then
+				edicion = False
+				btnCancelar.Enabled = False
+				btnGuardar.Enabled = False
+				SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
+			End If
+
+		Else
+				SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
+		End If
 	End Sub
 
 	Private Sub btnInscribir_Click(sender As Object, e As EventArgs) Handles btnInscribir.Click
+		btnDesinscribir.Enabled = False
 		Inscribir(dgvCursosDisponibles.CurrentRow)
 	End Sub
 
@@ -148,13 +171,16 @@ Public Class FormInscripciones
 
 	Private Sub dgvCursosInscritos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCursosInscritos.CellClick
 		MostrarInfoCurso(dgvCursosInscritos.CurrentRow)
+		dgvCursosDisponibles.ClearSelection()
 	End Sub
 
 	Private Sub dgvCursosDisponibles_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCursosDisponibles.CellClick
 		MostrarInfoCurso(dgvCursosDisponibles.CurrentRow)
+		dgvCursosInscritos.ClearSelection()
 	End Sub
 
 	Private Sub dgvCursosDisponibles_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCursosDisponibles.CellDoubleClick
+		btnDesinscribir.Enabled = False
 		Inscribir(dgvCursosDisponibles.CurrentRow)
 	End Sub
 
@@ -174,8 +200,23 @@ Public Class FormInscripciones
 		End Select
 	End Sub
 
-	Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click
-		btnInscribir.Enabled = True
-		btnDesinscribir.Enabled = True
+
+	Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+		If (MessageBox.Show("Desea Guardar las Inscripciones realizadas?", "Cambios Sin Guardar",
+				MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) = DialogResult.OK) Then
+
+			_Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
+
+			SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
+		End If
+	End Sub
+
+
+
+	Private Sub btnCancelar_Click_1(sender As Object, e As EventArgs) Handles btnCancelar.Click
+		_Conexion.GymcatDataSet.Tables(Tabla).Clear()
+		_Conexion.GymcatDataSet.Tables(Tabla2).Clear()
+
+
 	End Sub
 End Class

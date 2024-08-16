@@ -10,12 +10,18 @@ Public Class MDIPrincipal
         PanelFinanzas.Visible = False
     End Sub
 
-    Dim botones As Button() = {btnEmpleados, btnCursos, btnMembresias, btnFinanzas, btnInventario, BtnHorario, btnInscripciones, BtnIngresos, btnEgresos}
+
 
     Sub colorearboton(boton As Button)
-        For i As Integer = 0 To botones.Length - 1
-            botones(i).BackColor = Color.FromArgb(35, 32, 39)
-        Next
+        btnEmpleados.BackColor = Color.FromArgb(35, 32, 39)
+        btnCursos.BackColor = Color.FromArgb(35, 32, 39)
+        btnMembresias.BackColor = Color.FromArgb(35, 32, 39)
+        btnFinanzas.BackColor = Color.FromArgb(35, 32, 39)
+        btnInventario.BackColor = Color.FromArgb(35, 32, 39)
+        BtnHorario.BackColor = Color.FromArgb(35, 32, 39)
+        btnInscripciones.BackColor = Color.FromArgb(35, 32, 39)
+        BtnIngresos.BackColor = Color.FromArgb(35, 32, 39)
+        btnEgresos.BackColor = Color.FromArgb(35, 32, 39)
         boton.BackColor = Color.FromArgb(239, 84, 41)
     End Sub
 
@@ -47,12 +53,15 @@ Public Class MDIPrincipal
     Private Sub btnEmpleados_Click(sender As Object, e As EventArgs) Handles btnEmpleados.Click
         mostrar_submenu(PanelEmpleados)
         Panel4.Visible = False
+        colorearboton(btnEmpleados)
         FormEmpleados.BringToFront()
     End Sub
 
     Private Sub brnMembresias_Click(sender As Object, e As EventArgs) Handles btnMembresias.Click
         mostrar_submenu(PanelMembresias)
         Panel4.Visible = False
+        colorearboton(btnMembresias)
+
         CrudMiembros.BringToFront()
     End Sub
 
@@ -64,12 +73,15 @@ Public Class MDIPrincipal
     Private Sub btnFinanzas_Click(sender As Object, e As EventArgs) Handles btnFinanzas.Click
         mostrar_submenu(PanelFinanzas)
         Panel4.Visible = False
+        colorearboton(btnFinanzas)
         FormFinanzas.BringToFront()
+
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnInscripciones.Click
+    Private Sub btnInscripciones_Click(sender As Object, e As EventArgs) Handles btnInscripciones.Click
         Panel4.Visible = False
         FormInscripciones.BringToFront()
+        FormInscripciones.CargarDatosForm()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnHorario.Click

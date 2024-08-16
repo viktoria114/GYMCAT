@@ -1,4 +1,4 @@
-﻿Public Class Formempleados2
+﻿Public Class Formempleadospopup
     Private Sub Formempleados2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If FormEmpleados._Conexion.esNuevo Then
             Me.Text = ("Nuevo Empleado")

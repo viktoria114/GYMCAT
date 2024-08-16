@@ -20,12 +20,12 @@ Public Class FormEmpleados
 
     Private Sub Agregar() Implements CRUD.Agregar
         _Conexion.esNuevo = True
-        Formempleados2.ShowDialog()
+        Formempleadospopup.ShowDialog()
     End Sub
 
     Private Sub Editar() Implements CRUD.Editar
         _Conexion.esNuevo = False
-        Formempleados2.ShowDialog()
+        Formempleadospopup.ShowDialog()
     End Sub
 
     Public Sub Guardar() Implements CRUD.Guardar
@@ -36,15 +36,15 @@ Public Class FormEmpleados
             '1. Crear una nueva fila 
             fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
             '2. Rellenar la fila con información
-            fila("nombre") = Formempleados2.tbNombre.Text
-            fila("apellido") = Formempleados2.tbApellido.Text
-            fila("DNI") = Formempleados2.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleados2.tbFechaNac.Text
-            fila("telefono") = Formempleados2.tbTelefono.Text
-            fila("correo") = Formempleados2.tbCorreo.Text
-            fila("sueldo") = Formempleados2.tbSueldo.Text
-            fila("turno") = Formempleados2.tbTurno.Text
-            fila("cargo") = Formempleados2.tbCargo.Text
+            fila("nombre") = Formempleadospopup.tbNombre.Text
+            fila("apellido") = Formempleadospopup.tbApellido.Text
+            fila("DNI") = Formempleadospopup.tbDNI.Text
+            fila("fecha_nacimiento") = Formempleadospopup.tbFechaNac.Text
+            fila("telefono") = Formempleadospopup.tbTelefono.Text
+            fila("correo") = Formempleadospopup.tbCorreo.Text
+            fila("sueldo") = Formempleadospopup.tbSueldo.Text
+            fila("turno") = Formempleadospopup.tbTurno.Text
+            fila("cargo") = Formempleadospopup.tbCargo.Text
 
             '3. Agregar fila a la tabla del DataSet
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
@@ -73,15 +73,15 @@ Public Class FormEmpleados
             fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
 
             '2. Rellenar la fila con información
-            fila("nombre") = Formempleados2.tbNombre.Text
-            fila("apellido") = Formempleados2.tbApellido.Text
-            fila("DNI") = Formempleados2.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleados2.tbFechaNac.Text
-            fila("telefono") = Formempleados2.tbTelefono.Text
-            fila("correo") = Formempleados2.tbCorreo.Text
-            fila("sueldo") = Formempleados2.tbSueldo.Text
-            fila("turno") = Formempleados2.tbTurno.Text
-            fila("cargo") = Formempleados2.tbCargo.Text
+            fila("nombre") = Formempleadospopup.tbNombre.Text
+            fila("apellido") = Formempleadospopup.tbApellido.Text
+            fila("DNI") = Formempleadospopup.tbDNI.Text
+            fila("fecha_nacimiento") = Formempleadospopup.tbFechaNac.Text
+            fila("telefono") = Formempleadospopup.tbTelefono.Text
+            fila("correo") = Formempleadospopup.tbCorreo.Text
+            fila("sueldo") = Formempleadospopup.tbSueldo.Text
+            fila("turno") = Formempleadospopup.tbTurno.Text
+            fila("cargo") = Formempleadospopup.tbCargo.Text
 
             '3. Crear el comando para odificar la Fila
             cmd = "UPDATE empleados 
