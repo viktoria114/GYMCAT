@@ -22,8 +22,9 @@ Partial Class CrudMiembros
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle23 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoMiembros = New DataGridView()
         cbBuscar = New ComboBox()
         tbBuscar = New TextBox()
@@ -41,27 +42,29 @@ Partial Class CrudMiembros
         ' dgvListadoMiembros
         ' 
         dgvListadoMiembros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = SystemColors.Control
-        DataGridViewCellStyle23.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle23.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = SystemColors.Desktop
-        DataGridViewCellStyle23.WrapMode = DataGridViewTriState.True
-        dgvListadoMiembros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvListadoMiembros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvListadoMiembros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = SystemColors.Window
-        DataGridViewCellStyle24.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle24.ForeColor = Color.White
-        DataGridViewCellStyle24.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = Color.White
-        DataGridViewCellStyle24.WrapMode = DataGridViewTriState.False
-        dgvListadoMiembros.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        dgvListadoMiembros.DefaultCellStyle = DataGridViewCellStyle2
         dgvListadoMiembros.Location = New Point(19, 64)
         dgvListadoMiembros.MultiSelect = False
         dgvListadoMiembros.Name = "dgvListadoMiembros"
         dgvListadoMiembros.ReadOnly = True
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        dgvListadoMiembros.RowsDefaultCellStyle = DataGridViewCellStyle3
         dgvListadoMiembros.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListadoMiembros.Size = New Size(739, 377)
         dgvListadoMiembros.TabIndex = 3
