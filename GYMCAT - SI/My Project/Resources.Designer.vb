@@ -93,9 +93,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property avance_rapido() As System.Drawing.Bitmap
+        Friend ReadOnly Property avance_rapido__3_() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("avance-rapido", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("avance_rapido__3_", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -103,9 +103,19 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property avance_rapido__1_() As System.Drawing.Bitmap
+        Friend ReadOnly Property avance_rapido__3___1_() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("avance-rapido (1)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("avance_rapido__3___1_", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property avance_rapidof() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("avance_rapidof", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -123,19 +133,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property boton_guardar() As System.Drawing.Bitmap
+        Friend ReadOnly Property boton_guardar__3_() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("boton-guardar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property boton_guardar__1_() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("boton-guardar (1)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("boton_guardar__3_", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

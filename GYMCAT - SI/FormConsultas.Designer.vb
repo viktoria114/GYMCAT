@@ -105,13 +105,15 @@ Partial Class FormConsultas
 		btnEjecutar.FlatStyle = FlatStyle.Popup
 		btnEjecutar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
 		btnEjecutar.ForeColor = Color.WhiteSmoke
-		btnEjecutar.Image = My.Resources.Resources.avance_rapido__1_
+		btnEjecutar.Image = My.Resources.Resources.avance_rapidof
 		btnEjecutar.ImageAlign = ContentAlignment.MiddleRight
 		btnEjecutar.Location = New Point(281, 211)
 		btnEjecutar.Name = "btnEjecutar"
+		btnEjecutar.Padding = New Padding(10, 0, 25, 0)
 		btnEjecutar.Size = New Size(250, 44)
 		btnEjecutar.TabIndex = 33
-		btnEjecutar.Text = "Ejecutar consulta >"
+		btnEjecutar.Text = "Ejecutar consulta"
+		btnEjecutar.TextImageRelation = TextImageRelation.TextBeforeImage
 		btnEjecutar.UseVisualStyleBackColor = False
 		' 
 		' Panel1

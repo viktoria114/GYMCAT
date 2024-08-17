@@ -187,3 +187,54 @@ C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-wi
 C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\ref\GYMCAT - SI.dll
 C:\Users\vik\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormConsultas.resources
 C:\Users\matif\OneDrive\Documentos\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormConsultas.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.exe
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.deps.json
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.runtimeconfig.json
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\GYMCAT - SI.pdb
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.vbproj.AssemblyReference.cache
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CrudElementos1.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CrudElementos2.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CrudMiembros.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormConsultas.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormCursos.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormCursospopup.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormEmpleados.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Formempleadospopup.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormFinanzas.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormInscripciones.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.FormPagopopup.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Horarios.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Inscripciones1.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Inscripciones2.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Login.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.MDIPrincipal.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.CRUDEMPLEADOS.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.Resources.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT___SI.nuevoMiembro.resources
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.vbproj.GenerateResource.cache
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.AssemblyInfoInputs.cache
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.AssemblyInfo.vb
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.vbproj.CoreCompileInputs.cache
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.sourcelink.json
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT -.1CFAF2DA.Up2Date
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\refint\GYMCAT - SI.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.pdb
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.genruntimeconfig.cache
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\ref\GYMCAT - SI.dll

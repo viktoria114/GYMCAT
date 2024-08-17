@@ -1,10 +1,10 @@
 ﻿Public Class FormPagopopup
 
-	Public Sub New(nombre As String, ins As List(Of Integer))
+	Public Sub New()
 		InitializeComponent()
 
-
 	End Sub
+
 
 	Private Sub FormPagopopup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

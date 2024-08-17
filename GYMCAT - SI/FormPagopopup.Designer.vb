@@ -57,11 +57,11 @@ Partial Class FormPagopopup
 		Label1.AutoSize = True
 		Label1.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label1.ForeColor = Color.WhiteSmoke
-		Label1.Location = New Point(30, 70)
+		Label1.Location = New Point(12, 70)
 		Label1.Name = "Label1"
-		Label1.Size = New Size(152, 17)
+		Label1.Size = New Size(176, 17)
 		Label1.TabIndex = 3
-		Label1.Text = "Nombre del Elemto:"
+		Label1.Text = "Numero de Movimiento:"
 		' 
 		' tbModeloElemento
 		' 
@@ -72,21 +72,21 @@ Partial Class FormPagopopup
 		' 
 		' tbTipoElemento
 		' 
-		tbTipoElemento.Location = New Point(188, 156)
+		tbTipoElemento.Location = New Point(188, 169)
 		tbTipoElemento.Name = "tbTipoElemento"
 		tbTipoElemento.Size = New Size(183, 23)
 		tbTipoElemento.TabIndex = 6
 		' 
 		' tbPrecioElemento
 		' 
-		tbPrecioElemento.Location = New Point(188, 127)
+		tbPrecioElemento.Location = New Point(188, 140)
 		tbPrecioElemento.Name = "tbPrecioElemento"
 		tbPrecioElemento.Size = New Size(183, 23)
 		tbPrecioElemento.TabIndex = 5
 		' 
 		' tbFechaCompraElemento
 		' 
-		tbFechaCompraElemento.Location = New Point(188, 185)
+		tbFechaCompraElemento.Location = New Point(188, 198)
 		tbFechaCompraElemento.Name = "tbFechaCompraElemento"
 		tbFechaCompraElemento.Size = New Size(183, 23)
 		tbFechaCompraElemento.TabIndex = 7
@@ -98,16 +98,16 @@ Partial Class FormPagopopup
 		Label2.ForeColor = Color.WhiteSmoke
 		Label2.Location = New Point(118, 99)
 		Label2.Name = "Label2"
-		Label2.Size = New Size(64, 17)
+		Label2.Size = New Size(56, 17)
 		Label2.TabIndex = 10
-		Label2.Text = "Modelo:"
+		Label2.Text = "Fecha:"
 		' 
 		' Label3
 		' 
 		Label3.AutoSize = True
 		Label3.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label3.ForeColor = Color.WhiteSmoke
-		Label3.Location = New Point(118, 128)
+		Label3.Location = New Point(118, 141)
 		Label3.Name = "Label3"
 		Label3.Size = New Size(64, 17)
 		Label3.TabIndex = 12
@@ -118,7 +118,7 @@ Partial Class FormPagopopup
 		Label4.AutoSize = True
 		Label4.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label4.ForeColor = Color.WhiteSmoke
-		Label4.Location = New Point(134, 157)
+		Label4.Location = New Point(134, 170)
 		Label4.Name = "Label4"
 		Label4.Size = New Size(48, 17)
 		Label4.TabIndex = 11
@@ -129,7 +129,7 @@ Partial Class FormPagopopup
 		Label5.AutoSize = True
 		Label5.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label5.ForeColor = Color.WhiteSmoke
-		Label5.Location = New Point(46, 186)
+		Label5.Location = New Point(46, 199)
 		Label5.Name = "Label5"
 		Label5.Size = New Size(136, 17)
 		Label5.TabIndex = 13
@@ -140,7 +140,7 @@ Partial Class FormPagopopup
 		Label6.AutoSize = True
 		Label6.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label6.ForeColor = Color.WhiteSmoke
-		Label6.Location = New Point(126, 214)
+		Label6.Location = New Point(126, 227)
 		Label6.Name = "Label6"
 		Label6.Size = New Size(56, 17)
 		Label6.TabIndex = 15
@@ -148,7 +148,7 @@ Partial Class FormPagopopup
 		' 
 		' tbStockElemeto
 		' 
-		tbStockElemeto.Location = New Point(188, 214)
+		tbStockElemeto.Location = New Point(188, 227)
 		tbStockElemeto.Name = "tbStockElemeto"
 		tbStockElemeto.Size = New Size(183, 23)
 		tbStockElemeto.TabIndex = 14
@@ -160,7 +160,7 @@ Partial Class FormPagopopup
 		btnGuardar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		btnGuardar.ForeColor = Color.WhiteSmoke
 		btnGuardar.ImageAlign = ContentAlignment.MiddleRight
-		btnGuardar.Location = New Point(68, 327)
+		btnGuardar.Location = New Point(68, 340)
 		btnGuardar.Name = "btnGuardar"
 		btnGuardar.Size = New Size(91, 44)
 		btnGuardar.TabIndex = 16
@@ -174,7 +174,7 @@ Partial Class FormPagopopup
 		btnCancelar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		btnCancelar.ForeColor = Color.WhiteSmoke
 		btnCancelar.ImageAlign = ContentAlignment.MiddleRight
-		btnCancelar.Location = New Point(239, 327)
+		btnCancelar.Location = New Point(251, 361)
 		btnCancelar.Name = "btnCancelar"
 		btnCancelar.Size = New Size(91, 44)
 		btnCancelar.TabIndex = 17
@@ -186,7 +186,7 @@ Partial Class FormPagopopup
 		Label7.AutoSize = True
 		Label7.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label7.ForeColor = Color.WhiteSmoke
-		Label7.Location = New Point(126, 244)
+		Label7.Location = New Point(126, 257)
 		Label7.Name = "Label7"
 		Label7.Size = New Size(56, 17)
 		Label7.TabIndex = 18
@@ -197,7 +197,7 @@ Partial Class FormPagopopup
 		Label8.AutoSize = True
 		Label8.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label8.ForeColor = Color.WhiteSmoke
-		Label8.Location = New Point(118, 273)
+		Label8.Location = New Point(118, 286)
 		Label8.Name = "Label8"
 		Label8.Size = New Size(64, 17)
 		Label8.TabIndex = 19
@@ -208,7 +208,7 @@ Partial Class FormPagopopup
 		Label9.AutoSize = True
 		Label9.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label9.ForeColor = Color.WhiteSmoke
-		Label9.Location = New Point(110, 302)
+		Label9.Location = New Point(110, 315)
 		Label9.Name = "Label9"
 		Label9.Size = New Size(72, 17)
 		Label9.TabIndex = 20
@@ -216,14 +216,14 @@ Partial Class FormPagopopup
 		' 
 		' tbDetalleElemento
 		' 
-		tbDetalleElemento.Location = New Point(188, 301)
+		tbDetalleElemento.Location = New Point(188, 314)
 		tbDetalleElemento.Name = "tbDetalleElemento"
 		tbDetalleElemento.Size = New Size(183, 23)
 		tbDetalleElemento.TabIndex = 23
 		' 
 		' tbMarcaElemento
 		' 
-		tbMarcaElemento.Location = New Point(188, 243)
+		tbMarcaElemento.Location = New Point(188, 256)
 		tbMarcaElemento.Name = "tbMarcaElemento"
 		tbMarcaElemento.Size = New Size(183, 23)
 		tbMarcaElemento.TabIndex = 21
@@ -232,7 +232,7 @@ Partial Class FormPagopopup
 		' 
 		cbEstadoElemento.FormattingEnabled = True
 		cbEstadoElemento.Items.AddRange(New Object() {"Nuevo", "Bueno", "Desgastado", "Deporable", "Defectuoso*"})
-		cbEstadoElemento.Location = New Point(188, 272)
+		cbEstadoElemento.Location = New Point(188, 285)
 		cbEstadoElemento.Name = "cbEstadoElemento"
 		cbEstadoElemento.Size = New Size(183, 23)
 		cbEstadoElemento.TabIndex = 24
@@ -254,7 +254,7 @@ Partial Class FormPagopopup
 		AutoScaleDimensions = New SizeF(7F, 15F)
 		AutoScaleMode = AutoScaleMode.Font
 		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-		ClientSize = New Size(399, 432)
+		ClientSize = New Size(790, 571)
 		Controls.Add(cbEstadoElemento)
 		Controls.Add(tbDetalleElemento)
 		Controls.Add(tbMarcaElemento)
