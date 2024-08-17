@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class CrudElementos1
-    Implements CRUD
+    Implements ICRUD
     Public _Conexion As Conexion
     Public Tabla As String
 
@@ -18,17 +18,17 @@ Public Class CrudElementos1
         dgvListadoElementos.CurrentCell = dgvListadoElementos.Rows(0).Cells(1)
     End Sub
 
-    Public Sub Agregar() Implements CRUD.Agregar
+    Public Sub Agregar() Implements ICRUD.Agregar
         _Conexion.esNuevo = True
         CrudElementos2.ShowDialog()
     End Sub
 
-    Public Sub Editar() Implements CRUD.Editar
+    Public Sub Editar() Implements ICRUD.Editar
         _Conexion.esNuevo = False
         CrudElementos2.ShowDialog()
     End Sub
 
-    Public Sub Guardar() Implements CRUD.Guardar
+    Public Sub Guardar() Implements ICRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -104,7 +104,7 @@ Public Class CrudElementos1
         End If
     End Sub
 
-    Public Sub Borrar() Implements CRUD.Borrar
+    Public Sub Borrar() Implements ICRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoElementos.CurrentRow
         _Conexion.idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Elemento?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -115,7 +115,7 @@ Public Class CrudElementos1
         End If
     End Sub
 
-    Public Sub Buscar() Implements CRUD.Buscar
+    Public Sub Buscar() Implements ICRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 

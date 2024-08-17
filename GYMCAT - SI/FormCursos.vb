@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormCursos
-    Implements CRUD
+    Implements ICRUD
     Public _Conexion As Conexion
     Public Tabla As String
 
@@ -18,17 +18,17 @@ Public Class FormCursos
 
     End Sub
 
-    Private Sub Agregar() Implements CRUD.Agregar
+    Private Sub Agregar() Implements ICRUD.Agregar
         _Conexion.esNuevo = True
         FormCursospopup.ShowDialog()
     End Sub
 
-    Private Sub Editar() Implements CRUD.Editar
+    Private Sub Editar() Implements ICRUD.Editar
         _Conexion.esNuevo = False
         FormCursospopup.ShowDialog()
     End Sub
 
-    Public Sub Guardar() Implements CRUD.Guardar
+    Public Sub Guardar() Implements ICRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -39,7 +39,6 @@ Public Class FormCursos
             fila("nombre") = FormCursospopup.tbNombreCurso.Text
             fila("horario") = FormCursospopup.tbHorarioCurso.Text
             fila("precio") = FormCursospopup.tbPrecioCurso.Text
-            fila("cantidad_inscriptos") = FormCursospopup.tbInscriptosCursos.Text
             fila("dias_clase") = FormCursospopup.tbDiasCurso.Text
             fila("FK_empleados") = FormCursospopup.tbIdTurno.Text
             fila("turno") = FormCursospopup.tbIdTurno.Text
@@ -48,12 +47,11 @@ Public Class FormCursos
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
 
             '4. Crear Comando para agregar a la BD la fila nueva cmd
-            cmd = "INSERT INTO cursos (nombre, horario, precio, cantidad_inscriptos, dias_clase, turno, FK_empleados) VALUES (@nom, @hor, @pre, @cant, @dias, @tur, @empl)"
+            cmd = "INSERT INTO cursos (nombre, horario, precio, dias_clase, turno, FK_empleados) VALUES (@nom, @hor, @pre, @dias, @tur, @empl)"
             _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@hor", MySqlDbType.VarChar, 50, "horario")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@pre", MySqlDbType.Int32, 10, "precio")
-            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@cant", MySqlDbType.Int32, 10, "cantidad_inscriptos")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@dias", MySqlDbType.VarChar, 50, "dias_clase")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@tur", MySqlDbType.VarChar, 15, "turno")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@empl", MySqlDbType.Int32, 11, "FK_empleados")
@@ -72,20 +70,18 @@ Public Class FormCursos
             fila("nombre") = FormCursospopup.tbNombreCurso.Text
             fila("horario") = FormCursospopup.tbHorarioCurso.Text
             fila("precio") = FormCursospopup.tbPrecioCurso.Text
-            fila("cantidad_inscriptos") = FormCursospopup.tbInscriptosCursos.Text
             fila("dias_clase") = FormCursospopup.tbDiasCurso.Text
             fila("FK_empleados") = FormCursospopup.tbIdProfesor.Text
             fila("turno") = FormCursospopup.tbIdTurno.Text
 
             '3. Crear el comando para odificar la Fila
             cmd = "UPDATE cursos 
-                   SET nombre=@nom, horario=@hor, precio=@pre, cantidad_inscriptos=@cant, dias_clase=@dias, FK_empleados=@empl, turno=@tur                                       
+                   SET nombre=@nom, horario=@hor, precio=@pre, dias_clase=@dias, FK_empleados=@empl, turno=@tur                                       
                    WHERE ID_cursos=@id"
             _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 50, "nombre") 'NO OLVIDAR EL UPDATECOMMAND
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@hor", MySqlDbType.VarChar, 50, "horario")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@pre", MySqlDbType.Int32, 10, "precio")
-            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cant", MySqlDbType.Int32, 10, "cantidad_inscriptos")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@dias", MySqlDbType.VarChar, 50, "dias_clase")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@tur", MySqlDbType.VarChar, 15, "turno")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@empl", MySqlDbType.Int32, 11, "FK_empleados")
@@ -97,7 +93,7 @@ Public Class FormCursos
 
     End Sub
 
-    Private Sub Borrar() Implements CRUD.Borrar
+    Private Sub Borrar() Implements ICRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoCursos.CurrentRow
         _Conexion.idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Curso?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -108,7 +104,7 @@ Public Class FormCursos
         End If
     End Sub
 
-    Private Sub Buscar() Implements CRUD.Buscar
+    Private Sub Buscar() Implements ICRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 
@@ -123,8 +119,6 @@ Public Class FormCursos
             Case "Turno"
                 _Conexion.vistaDatos.RowFilter = "turno LIKE '" + tbBuscar.Text + "%'"
             Case "Precio"
-                _Conexion.vistaDatos.RowFilter = String.Format("CONVERT({0}, System.String) like '%{1}%'", "precio", tbBuscar.Text)
-            Case "Cantidad de Inscriptos"
                 _Conexion.vistaDatos.RowFilter = String.Format("CONVERT({0}, System.String) like '%{1}%'", "cantidad_inscriptos", tbBuscar.Text)
             Case "Instructor"
                 _Conexion.vistaDatos.RowFilter = String.Format("CONVERT({0}, System.String) like '%{1}%'", "FK_empleados", tbBuscar.Text)

@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormEmpleados
-    Implements CRUD
+    Implements ICRUD
     Public _Conexion As Conexion
     Public Tabla As String
 
@@ -18,17 +18,17 @@ Public Class FormEmpleados
 
     End Sub
 
-    Private Sub Agregar() Implements CRUD.Agregar
+    Private Sub Agregar() Implements ICRUD.Agregar
         _Conexion.esNuevo = True
         Formempleadospopup.ShowDialog()
     End Sub
 
-    Private Sub Editar() Implements CRUD.Editar
+    Private Sub Editar() Implements ICRUD.Editar
         _Conexion.esNuevo = False
         Formempleadospopup.ShowDialog()
     End Sub
 
-    Public Sub Guardar() Implements CRUD.Guardar
+    Public Sub Guardar() Implements ICRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -36,6 +36,7 @@ Public Class FormEmpleados
             '1. Crear una nueva fila 
             fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
             '2. Rellenar la fila con información
+<<<<<<< HEAD
             fila("nombre") = Formempleadospopup.tbNombre.Text
             fila("apellido") = Formempleadospopup.tbApellido.Text
             fila("DNI") = Formempleadospopup.tbDNI.Text
@@ -45,6 +46,17 @@ Public Class FormEmpleados
             fila("sueldo") = Formempleadospopup.tbSueldo.Text
             fila("turno") = Formempleadospopup.tbTurno.Text
             fila("cargo") = Formempleadospopup.tbCargo.Text
+=======
+            fila("nombre") = Formempleados2.tbNombre.Text
+            fila("apellido") = Formempleados2.tbApellido.Text
+            fila("DNI") = Formempleados2.tbDNI.Text
+            fila("fecha_nacimiento") = Formempleados2.dtpNac.Text
+            fila("telefono") = Formempleados2.tbTelefono.Text
+            fila("correo") = Formempleados2.tbCorreo.Text
+            fila("sueldo") = Formempleados2.tbSueldo.Text
+            fila("turno") = Formempleados2.tbTurno.Text
+            fila("cargo") = Formempleados2.tbCargo.Text
+>>>>>>> 59cdd388d7317e5bedc00b4873af701d17a491cb
 
             '3. Agregar fila a la tabla del DataSet
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
@@ -73,6 +85,7 @@ Public Class FormEmpleados
             fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
 
             '2. Rellenar la fila con información
+<<<<<<< HEAD
             fila("nombre") = Formempleadospopup.tbNombre.Text
             fila("apellido") = Formempleadospopup.tbApellido.Text
             fila("DNI") = Formempleadospopup.tbDNI.Text
@@ -82,6 +95,17 @@ Public Class FormEmpleados
             fila("sueldo") = Formempleadospopup.tbSueldo.Text
             fila("turno") = Formempleadospopup.tbTurno.Text
             fila("cargo") = Formempleadospopup.tbCargo.Text
+=======
+            fila("nombre") = Formempleados2.tbNombre.Text
+            fila("apellido") = Formempleados2.tbApellido.Text
+            fila("DNI") = Formempleados2.tbDNI.Text
+            fila("fecha_nacimiento") = Formempleados2.dtpNac.Text
+            fila("telefono") = Formempleados2.tbTelefono.Text
+            fila("correo") = Formempleados2.tbCorreo.Text
+            fila("sueldo") = Formempleados2.tbSueldo.Text
+            fila("turno") = Formempleados2.tbTurno.Text
+            fila("cargo") = Formempleados2.tbCargo.Text
+>>>>>>> 59cdd388d7317e5bedc00b4873af701d17a491cb
 
             '3. Crear el comando para odificar la Fila
             cmd = "UPDATE empleados 
@@ -105,7 +129,7 @@ Public Class FormEmpleados
 
     End Sub
 
-    Private Sub Borrar() Implements CRUD.Borrar
+    Private Sub Borrar() Implements ICRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoEmpleados.CurrentRow
         _Conexion.idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Empleado?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -116,7 +140,7 @@ Public Class FormEmpleados
         End If
     End Sub
 
-    Private Sub Buscar() Implements CRUD.Buscar
+    Private Sub Buscar() Implements ICRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 

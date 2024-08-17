@@ -6,9 +6,9 @@
             tbNombreCurso.Text = ""
             tbHorarioCurso.Text = ""
             tbPrecioCurso.Text = ""
-            tbInscriptosCursos.Text = ""
             tbDiasCurso.Text = ""
             tbIdTurno.Text = ""
+            tbIdProfesor.Text = ""
         Else
             Dim fila As DataGridViewRow = FormCursos.dgvListadoCursos.CurrentRow
             Me.Text = ("Editar Curso")
@@ -16,9 +16,9 @@
             tbNombreCurso.Text = fila.Cells(1).Value
             tbHorarioCurso.Text = fila.Cells(2).Value
             tbPrecioCurso.Text = fila.Cells(3).Value
-            tbInscriptosCursos.Text = fila.Cells(4).Value
-            tbDiasCurso.Text = fila.Cells(5).Value
-            tbIdProfesor.Text = fila.Cells(6).Value
+            tbDiasCurso.Text = fila.Cells(4).Value
+            tbIdProfesor.Text = fila.Cells(5).Value
+            tbIdTurno.Text = fila.Cells(6).Value
         End If
     End Sub
 
