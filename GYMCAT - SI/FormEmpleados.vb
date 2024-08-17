@@ -39,7 +39,7 @@ Public Class FormEmpleados
             fila("nombre") = Formempleados2.tbNombre.Text
             fila("apellido") = Formempleados2.tbApellido.Text
             fila("DNI") = Formempleados2.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleados2.tbFechaNac.Text
+            fila("fecha_nacimiento") = Formempleados2.dtpNac.Text
             fila("telefono") = Formempleados2.tbTelefono.Text
             fila("correo") = Formempleados2.tbCorreo.Text
             fila("sueldo") = Formempleados2.tbSueldo.Text
@@ -76,7 +76,7 @@ Public Class FormEmpleados
             fila("nombre") = Formempleados2.tbNombre.Text
             fila("apellido") = Formempleados2.tbApellido.Text
             fila("DNI") = Formempleados2.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleados2.tbFechaNac.Text
+            fila("fecha_nacimiento") = Formempleados2.dtpNac.Text
             fila("telefono") = Formempleados2.tbTelefono.Text
             fila("correo") = Formempleados2.tbCorreo.Text
             fila("sueldo") = Formempleados2.tbSueldo.Text

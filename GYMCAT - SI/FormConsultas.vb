@@ -107,7 +107,8 @@ Public Class FormConsultas
                     m.deudor,
                     m.fecha_inscripcion AS 'Fecha de Inscripción',
                     DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH) AS 'fecha_vencimiento',
-                    CASE WHEN DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH) < '2024-10-01' THEN 'Membresia a vencer' ELSE 'Membresia al dia' END AS 'Estado Membresia'
+                    CASE WHEN DATE_ADD(m.fecha_inscripcion, INTERVAL m.duracion_membresia MONTH) < '2024-10-01' THEN 
+                    'Membresia a vencer' ELSE 'Membresia al dia' END AS 'Estado Membresia'
                 FROM
                     miembros m
                 WHERE
@@ -121,7 +122,8 @@ Public Class FormConsultas
             Case rbMejoresMiembros.Checked
 
                 cmd.CommandText = "
-                 SELECT CONCAT(m.nombre, ' ', m.apellido) AS 'Nombre Completo', m.costo_total AS 'Monto', m.telefono, m.correo
+                 SELECT CONCAT(m.nombre, ' ', m.apellido) AS 'Nombre Completo', 
+                    m.costo_total AS 'Monto', m.telefono, m.correo
                  FROM miembros m
                  ORDER BY Monto DESC
                  LIMIT @nro"

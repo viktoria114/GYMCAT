@@ -33,7 +33,6 @@ Partial Class Formempleados2
         Label4 = New Label()
         Label2 = New Label()
         tbSueldo = New TextBox()
-        tbFechaNac = New TextBox()
         tbDNI = New TextBox()
         tbApellido = New TextBox()
         Label1 = New Label()
@@ -42,6 +41,7 @@ Partial Class Formempleados2
         Label8 = New Label()
         tbCorreo = New TextBox()
         Label9 = New Label()
+        dtpNac = New DateTimePicker()
         SuspendLayout()
         ' 
         ' Label7
@@ -159,13 +159,6 @@ Partial Class Formempleados2
         tbSueldo.Size = New Size(183, 23)
         tbSueldo.TabIndex = 25
         ' 
-        ' tbFechaNac
-        ' 
-        tbFechaNac.Location = New Point(196, 109)
-        tbFechaNac.Name = "tbFechaNac"
-        tbFechaNac.Size = New Size(183, 23)
-        tbFechaNac.TabIndex = 24
-        ' 
         ' tbDNI
         ' 
         tbDNI.Location = New Point(196, 80)
@@ -234,12 +227,23 @@ Partial Class Formempleados2
         Label9.TabIndex = 35
         Label9.Text = "Correo:"
         ' 
+        ' dtpNac
+        ' 
+        dtpNac.Format = DateTimePickerFormat.Short
+        dtpNac.Location = New Point(196, 109)
+        dtpNac.MaxDate = New Date(2024, 8, 17, 0, 0, 0, 0)
+        dtpNac.Name = "dtpNac"
+        dtpNac.Size = New Size(183, 23)
+        dtpNac.TabIndex = 36
+        dtpNac.Value = New Date(2024, 8, 17, 0, 0, 0, 0)
+        ' 
         ' Formempleados2
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
         ClientSize = New Size(420, 387)
+        Controls.Add(dtpNac)
         Controls.Add(Label9)
         Controls.Add(Label7)
         Controls.Add(tbCorreo)
@@ -255,7 +259,6 @@ Partial Class Formempleados2
         Controls.Add(Label4)
         Controls.Add(Label2)
         Controls.Add(tbSueldo)
-        Controls.Add(tbFechaNac)
         Controls.Add(tbDNI)
         Controls.Add(tbApellido)
         Controls.Add(Label1)
@@ -277,7 +280,6 @@ Partial Class Formempleados2
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents tbSueldo As TextBox
-    Friend WithEvents tbFechaNac As TextBox
     Friend WithEvents tbDNI As TextBox
     Friend WithEvents tbApellido As TextBox
     Friend WithEvents Label1 As Label
@@ -286,4 +288,5 @@ Partial Class Formempleados2
     Friend WithEvents Label8 As Label
     Friend WithEvents tbCorreo As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents dtpNac As DateTimePicker
 End Class

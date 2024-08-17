@@ -8,9 +8,7 @@
             tbEdad.Text = ""
             tbFechaIns.Text = ""
             tbDuraMem.Text = ""
-            tbCurIns.Text = ""
             tbCostoTotal.Text = ""
-            tbDeudor.Text = ""
             tbTelef.Text = ""
             tbCorreo.Text = ""
             tbPuntos.Text = ""
@@ -24,12 +22,11 @@
             tbEdad.Text = fila.Cells(4).Value
             tbFechaIns.Text = fila.Cells(5).Value
             tbDuraMem.Text = fila.Cells(6).Value
-            tbCurIns.Text = fila.Cells(7).Value
-            tbCostoTotal.Text = fila.Cells(8).Value
-            tbDeudor.Text = fila.Cells(9).Value
-            tbTelef.Text = fila.Cells(10).Value
-            tbCorreo.Text = fila.Cells(11).Value
-            tbPuntos.Text = fila.Cells(12).Value
+            tbCostoTotal.Text = fila.Cells(7).Value
+            cbDeudor.Checked = fila.Cells(8).Value
+            tbTelef.Text = fila.Cells(9).Value
+            tbCorreo.Text = fila.Cells(10).Value
+            tbPuntos.Text = fila.Cells(11).Value
         End If
     End Sub
 

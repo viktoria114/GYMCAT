@@ -59,7 +59,7 @@ Public Class Horarios
     Sub CursosHoy()
         miConexion = New MySqlConnection("Server=localhost; Database=gymcat; Uid=root; Pwd=;")
         miConexion.Open()
-        Dim consulta = "SELECT horario, turno, dias_clase, nombre FROM cursos WHERE dias_clase LIKE '%" + Format(MonthCalendar1.SelectionRange.Start, "dddd") + "%' and turno = @turno"
+        Dim consulta = "SELECT * FROM cursos WHERE dias_clase LIKE '%" + Format(MonthCalendar1.SelectionRange.Start, "dddd") + "%' and turno = @turno"
 
         Dim comando As New MySqlCommand(consulta, miConexion)
         comando.Parameters.AddWithValue("@turno", Cajita.SelectedTab.Text)

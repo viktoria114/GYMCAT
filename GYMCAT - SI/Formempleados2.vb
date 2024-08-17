@@ -5,7 +5,7 @@
             tbNombre.Text = ""
             tbApellido.Text = ""
             tbDNI.Text = ""
-            tbFechaNac.Text = ""
+            dtpNac.Text = ""
             tbCargo.Text = ""
             tbTurno.Text = ""
             tbSueldo.Text = ""
@@ -18,11 +18,11 @@
             FormEmpleados._Conexion.idFila = fila.Cells(0).Value
             tbNombre.Text = fila.Cells(1).Value
             tbApellido.Text = fila.Cells(2).Value
-            tbFechaNac.Text = fila.Cells(3).Value
-            tbDNI.Text = fila.Cells(4).Value
-            tbSueldo.Text = fila.Cells(5).Value
-            tbTurno.Text = fila.Cells(6).Value
-            tbCargo.Text = fila.Cells(7).Value
+            dtpNac.Text = fila.Cells(3).Value
+            tbDNI.Text = fila.Cells(7).Value
+            tbSueldo.Text = fila.Cells(4).Value
+            tbTurno.Text = fila.Cells(5).Value
+            tbCargo.Text = fila.Cells(6).Value
             tbTelefono.Text = fila.Cells(8).Value
             tbCorreo.Text = fila.Cells(9).Value
         End If

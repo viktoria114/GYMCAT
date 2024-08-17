@@ -41,9 +41,8 @@ Public Class CrudMiembros
             fila("edad") = nuevoMiembro.tbEdad.Text
             fila("fecha_inscripcion") = nuevoMiembro.tbFechaIns.Text
             fila("duracion_membresia") = nuevoMiembro.tbDuraMem.Text
-            fila("cursos_inscritos") = nuevoMiembro.tbCurIns.Text
             fila("costo_total") = nuevoMiembro.tbCostoTotal.Text
-            fila("deudor") = nuevoMiembro.tbDeudor.Text
+            fila("deudor") = nuevoMiembro.cbDeudor.Checked
             fila("telefono") = nuevoMiembro.tbTelef.Text
             fila("correo") = nuevoMiembro.tbCorreo.Text
             fila("puntos") = nuevoMiembro.tbPuntos.Text
@@ -52,7 +51,7 @@ Public Class CrudMiembros
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
 
             '4. Crear Comando para agregar a la BD la fila nueva cmd
-            cmd = "INSERT INTO miembros (DNI, nombre, apellido, edad, fecha_inscripcion, duracion_membresia, cursos_inscritos, costo_total, deudor, telefono, correo, puntos) VALUES (@dni, @nom, @ape, @edad, @fec, @dur, @cur, @cos, @deu, @tel, @cor, @pun)"
+            cmd = "INSERT INTO miembros (DNI, nombre, apellido, edad, fecha_inscripcion, duracion_membresia, costo_total, deudor, telefono, correo, puntos) VALUES (@dni, @nom, @ape, @edad, @fec, @dur, @cos, @deu, @tel, @cor, @pun)"
             _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 10, "DNI")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
@@ -60,7 +59,6 @@ Public Class CrudMiembros
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@edad", MySqlDbType.Int32, 5, "edad")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fec", MySqlDbType.Date, 0, "fecha_inscripcion")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@dur", MySqlDbType.VarChar, 20, "duracion_membresia")
-            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@cur", MySqlDbType.Int32, 5, "cursos_inscritos")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@cos", MySqlDbType.Int32, 20, "costo_total")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@deu", MySqlDbType.Int32, 10, "deudor")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.VarChar, 40, "telefono")
@@ -84,16 +82,15 @@ Public Class CrudMiembros
             fila("edad") = nuevoMiembro.tbEdad.Text
             fila("fecha_inscripcion") = nuevoMiembro.tbFechaIns.Text
             fila("duracion_membresia") = nuevoMiembro.tbDuraMem.Text
-            fila("cursos_inscritos") = nuevoMiembro.tbCurIns.Text
             fila("costo_total") = nuevoMiembro.tbCostoTotal.Text
-            fila("deudor") = nuevoMiembro.tbDeudor.Text
+            fila("deudor") = nuevoMiembro.cbDeudor.Checked
             fila("telefono") = nuevoMiembro.tbTelef.Text
             fila("correo") = nuevoMiembro.tbCorreo.Text
             fila("puntos") = nuevoMiembro.tbPuntos.Text
 
             '3. Crear el comando para modificar la Fila
             cmd = "UPDATE miembros 
-                   SET nombre=@nom, apellido=@ape, edad=@edad, fecha_inscripcion=@fec, duracion_membresia=@dur, cursos_inscritos=@cur, costo_total=@cos, deudor=@deu, telefono=@tel, correo=@cor, puntos=@pun
+                   SET nombre=@nom, apellido=@ape, edad=@edad, fecha_inscripcion=@fec, duracion_membresia=@dur, costo_total=@cos, deudor=@deu, telefono=@tel, correo=@cor, puntos=@pun
                    WHERE DNI=@dni"
             _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
@@ -101,7 +98,6 @@ Public Class CrudMiembros
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@edad", MySqlDbType.Int32, 5, "edad")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fec", MySqlDbType.Date, 0, "fecha_inscripcion")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@dur", MySqlDbType.VarChar, 20, "duracion_membresia")
-            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cur", MySqlDbType.Int32, 5, "cursos_inscritos")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cos", MySqlDbType.Int32, 20, "costo_total")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@deu", MySqlDbType.Int32, 10, "deudor")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.VarChar, 40, "telefono")
