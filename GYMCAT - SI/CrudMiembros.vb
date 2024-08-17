@@ -39,8 +39,8 @@ Public Class CrudMiembros
             fila("apellido") = nuevoMiembro.tbApellido.Text
             fila("DNI") = nuevoMiembro.tbDNI.Text
             fila("edad") = nuevoMiembro.tbEdad.Text
-            fila("fecha_inscripcion") = nuevoMiembro.tbFechaIns.Text
-            fila("duracion_membresia") = nuevoMiembro.tbDuraMem.Text
+            fila("fecha_inscripcion") = nuevoMiembro.dtpInscripcion.Text
+            fila("duracion_membresia") = nuevoMiembro.cbDuracMemb.Text
             fila("costo_total") = nuevoMiembro.tbCostoTotal.Text
             fila("deudor") = nuevoMiembro.cbDeudor.Checked
             fila("telefono") = nuevoMiembro.tbTelef.Text
@@ -80,8 +80,8 @@ Public Class CrudMiembros
             fila("apellido") = nuevoMiembro.tbApellido.Text
             fila("DNI") = nuevoMiembro.tbDNI.Text
             fila("edad") = nuevoMiembro.tbEdad.Text
-            fila("fecha_inscripcion") = nuevoMiembro.tbFechaIns.Text
-            fila("duracion_membresia") = nuevoMiembro.tbDuraMem.Text
+            fila("fecha_inscripcion") = nuevoMiembro.dtpInscripcion.Text
+            fila("duracion_membresia") = nuevoMiembro.cbDuracMemb.Text
             fila("costo_total") = nuevoMiembro.tbCostoTotal.Text
             fila("deudor") = nuevoMiembro.cbDeudor.Checked
             fila("telefono") = nuevoMiembro.tbTelef.Text

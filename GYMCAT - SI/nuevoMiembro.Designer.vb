@@ -30,9 +30,7 @@ Partial Class nuevoMiembro
         Label5 = New Label()
         tbEdad = New TextBox()
         Label6 = New Label()
-        tbFechaIns = New TextBox()
         Label7 = New Label()
-        tbDuraMem = New TextBox()
         Label8 = New Label()
         tbTelef = New TextBox()
         Label2 = New Label()
@@ -46,6 +44,8 @@ Partial Class nuevoMiembro
         tbPuntos = New TextBox()
         Label12 = New Label()
         cbDeudor = New CheckBox()
+        dtpInscripcion = New DateTimePicker()
+        cbDuracMemb = New ComboBox()
         SuspendLayout()
         ' 
         ' tbNombre
@@ -120,13 +120,6 @@ Partial Class nuevoMiembro
         Label6.TabIndex = 1
         Label6.Text = "Edad"
         ' 
-        ' tbFechaIns
-        ' 
-        tbFechaIns.Location = New Point(171, 156)
-        tbFechaIns.Name = "tbFechaIns"
-        tbFechaIns.Size = New Size(192, 23)
-        tbFechaIns.TabIndex = 0
-        ' 
         ' Label7
         ' 
         Label7.AutoSize = True
@@ -137,13 +130,6 @@ Partial Class nuevoMiembro
         Label7.Size = New Size(144, 17)
         Label7.TabIndex = 1
         Label7.Text = "Fecha Inscripcion"
-        ' 
-        ' tbDuraMem
-        ' 
-        tbDuraMem.Location = New Point(171, 185)
-        tbDuraMem.Name = "tbDuraMem"
-        tbDuraMem.Size = New Size(192, 23)
-        tbDuraMem.TabIndex = 0
         ' 
         ' Label8
         ' 
@@ -158,7 +144,7 @@ Partial Class nuevoMiembro
         ' 
         ' tbTelef
         ' 
-        tbTelef.Location = New Point(171, 216)
+        tbTelef.Location = New Point(171, 214)
         tbTelef.Name = "tbTelef"
         tbTelef.Size = New Size(192, 23)
         tbTelef.TabIndex = 0
@@ -176,7 +162,7 @@ Partial Class nuevoMiembro
         ' 
         ' tbCorreo
         ' 
-        tbCorreo.Location = New Point(171, 245)
+        tbCorreo.Location = New Point(171, 243)
         tbCorreo.Name = "tbCorreo"
         tbCorreo.Size = New Size(192, 23)
         tbCorreo.TabIndex = 0
@@ -196,7 +182,7 @@ Partial Class nuevoMiembro
         ' 
         btnGuardar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnGuardar.FlatStyle = FlatStyle.Popup
-        btnGuardar.Font = New Font("Cascadia Mono", 12F)
+        btnGuardar.Font = New Font("Cascadia Mono", 12.0F)
         btnGuardar.ForeColor = SystemColors.ButtonFace
         btnGuardar.ImageAlign = ContentAlignment.MiddleRight
         btnGuardar.Location = New Point(67, 392)
@@ -211,7 +197,7 @@ Partial Class nuevoMiembro
         ' 
         btnCancelar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnCancelar.FlatStyle = FlatStyle.Popup
-        btnCancelar.Font = New Font("Cascadia Mono", 12F)
+        btnCancelar.Font = New Font("Cascadia Mono", 12.0F)
         btnCancelar.ForeColor = SystemColors.ButtonFace
         btnCancelar.ImageAlign = ContentAlignment.MiddleRight
         btnCancelar.Location = New Point(252, 392)
@@ -224,7 +210,7 @@ Partial Class nuevoMiembro
         ' 
         ' tbCostoTotal
         ' 
-        tbCostoTotal.Location = New Point(171, 274)
+        tbCostoTotal.Location = New Point(171, 272)
         tbCostoTotal.Name = "tbCostoTotal"
         tbCostoTotal.Size = New Size(192, 23)
         tbCostoTotal.TabIndex = 0
@@ -272,7 +258,7 @@ Partial Class nuevoMiembro
         ' cbDeudor
         ' 
         cbDeudor.AutoSize = True
-        cbDeudor.Font = New Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbDeudor.Font = New Font("Cascadia Code", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbDeudor.ForeColor = Color.White
         cbDeudor.Location = New Point(172, 307)
         cbDeudor.Name = "cbDeudor"
@@ -281,12 +267,31 @@ Partial Class nuevoMiembro
         cbDeudor.Text = " Si/No"
         cbDeudor.UseVisualStyleBackColor = True
         ' 
+        ' dtpInscripcion
+        ' 
+        dtpInscripcion.Format = DateTimePickerFormat.Short
+        dtpInscripcion.Location = New Point(171, 156)
+        dtpInscripcion.Name = "dtpInscripcion"
+        dtpInscripcion.Size = New Size(192, 23)
+        dtpInscripcion.TabIndex = 38
+        ' 
+        ' cbDuracMemb
+        ' 
+        cbDuracMemb.FormattingEnabled = True
+        cbDuracMemb.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
+        cbDuracMemb.Location = New Point(171, 185)
+        cbDuracMemb.Name = "cbDuracMemb"
+        cbDuracMemb.Size = New Size(192, 23)
+        cbDuracMemb.TabIndex = 39
+        ' 
         ' nuevoMiembro
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
         ClientSize = New Size(431, 484)
+        Controls.Add(cbDuracMemb)
+        Controls.Add(dtpInscripcion)
         Controls.Add(cbDeudor)
         Controls.Add(btnCancelar)
         Controls.Add(btnGuardar)
@@ -305,8 +310,6 @@ Partial Class nuevoMiembro
         Controls.Add(tbCostoTotal)
         Controls.Add(tbCorreo)
         Controls.Add(tbTelef)
-        Controls.Add(tbDuraMem)
-        Controls.Add(tbFechaIns)
         Controls.Add(tbEdad)
         Controls.Add(tbDNI)
         Controls.Add(tbApellido)
@@ -324,9 +327,7 @@ Partial Class nuevoMiembro
     Friend WithEvents Label5 As Label
     Friend WithEvents tbEdad As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents tbFechaIns As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents tbDuraMem As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents tbTelef As TextBox
     Friend WithEvents Label2 As Label
@@ -340,4 +341,6 @@ Partial Class nuevoMiembro
     Friend WithEvents tbPuntos As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents cbDeudor As CheckBox
+    Friend WithEvents dtpInscripcion As DateTimePicker
+    Friend WithEvents cbDuracMemb As ComboBox
 End Class

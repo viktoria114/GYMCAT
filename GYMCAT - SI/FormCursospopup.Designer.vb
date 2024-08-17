@@ -25,12 +25,10 @@ Partial Class FormCursospopup
         tbNombreCurso = New TextBox()
         Label1 = New Label()
         tbHorarioCurso = New TextBox()
-        tbInscriptosCursos = New TextBox()
         tbPrecioCurso = New TextBox()
         tbDiasCurso = New TextBox()
         Label2 = New Label()
         Label3 = New Label()
-        Label4 = New Label()
         Label5 = New Label()
         Label6 = New Label()
         tbIdTurno = New TextBox()
@@ -65,13 +63,6 @@ Partial Class FormCursospopup
         tbHorarioCurso.Size = New Size(183, 23)
         tbHorarioCurso.TabIndex = 4
         ' 
-        ' tbInscriptosCursos
-        ' 
-        tbInscriptosCursos.Location = New Point(193, 120)
-        tbInscriptosCursos.Name = "tbInscriptosCursos"
-        tbInscriptosCursos.Size = New Size(183, 23)
-        tbInscriptosCursos.TabIndex = 6
-        ' 
         ' tbPrecioCurso
         ' 
         tbPrecioCurso.Location = New Point(193, 91)
@@ -81,7 +72,7 @@ Partial Class FormCursospopup
         ' 
         ' tbDiasCurso
         ' 
-        tbDiasCurso.Location = New Point(193, 149)
+        tbDiasCurso.Location = New Point(193, 122)
         tbDiasCurso.Name = "tbDiasCurso"
         tbDiasCurso.Size = New Size(183, 23)
         tbDiasCurso.TabIndex = 7
@@ -108,23 +99,12 @@ Partial Class FormCursospopup
         Label3.TabIndex = 12
         Label3.Text = "Precio:"
         ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-        Label4.ForeColor = Color.WhiteSmoke
-        Label4.Location = New Point(3, 121)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(184, 17)
-        Label4.TabIndex = 11
-        Label4.Text = "Cantidad de Incriptos:"
-        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         Label5.ForeColor = Color.WhiteSmoke
-        Label5.Location = New Point(59, 150)
+        Label5.Location = New Point(59, 123)
         Label5.Name = "Label5"
         Label5.Size = New Size(128, 17)
         Label5.TabIndex = 13
@@ -135,7 +115,7 @@ Partial Class FormCursospopup
         Label6.AutoSize = True
         Label6.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         Label6.ForeColor = Color.WhiteSmoke
-        Label6.Location = New Point(131, 179)
+        Label6.Location = New Point(131, 152)
         Label6.Name = "Label6"
         Label6.Size = New Size(56, 17)
         Label6.TabIndex = 15
@@ -143,7 +123,7 @@ Partial Class FormCursospopup
         ' 
         ' tbIdTurno
         ' 
-        tbIdTurno.Location = New Point(193, 178)
+        tbIdTurno.Location = New Point(193, 151)
         tbIdTurno.Name = "tbIdTurno"
         tbIdTurno.Size = New Size(183, 23)
         tbIdTurno.TabIndex = 14
@@ -155,7 +135,7 @@ Partial Class FormCursospopup
         btnGuardar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnGuardar.ForeColor = Color.WhiteSmoke
         btnGuardar.ImageAlign = ContentAlignment.MiddleRight
-        btnGuardar.Location = New Point(70, 254)
+        btnGuardar.Location = New Point(70, 234)
         btnGuardar.Name = "btnGuardar"
         btnGuardar.Size = New Size(91, 44)
         btnGuardar.TabIndex = 16
@@ -169,7 +149,7 @@ Partial Class FormCursospopup
         btnCancelar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnCancelar.ForeColor = Color.WhiteSmoke
         btnCancelar.ImageAlign = ContentAlignment.MiddleRight
-        btnCancelar.Location = New Point(241, 254)
+        btnCancelar.Location = New Point(241, 234)
         btnCancelar.Name = "btnCancelar"
         btnCancelar.Size = New Size(91, 44)
         btnCancelar.TabIndex = 17
@@ -181,7 +161,7 @@ Partial Class FormCursospopup
         Label7.AutoSize = True
         Label7.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         Label7.ForeColor = Color.WhiteSmoke
-        Label7.Location = New Point(51, 208)
+        Label7.Location = New Point(51, 181)
         Label7.Name = "Label7"
         Label7.Size = New Size(136, 17)
         Label7.TabIndex = 19
@@ -189,7 +169,7 @@ Partial Class FormCursospopup
         ' 
         ' tbIdProfesor
         ' 
-        tbIdProfesor.Location = New Point(193, 207)
+        tbIdProfesor.Location = New Point(193, 180)
         tbIdProfesor.Name = "tbIdProfesor"
         tbIdProfesor.Size = New Size(183, 23)
         tbIdProfesor.TabIndex = 18
@@ -199,7 +179,7 @@ Partial Class FormCursospopup
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-        ClientSize = New Size(424, 341)
+        ClientSize = New Size(424, 319)
         Controls.Add(Label7)
         Controls.Add(tbIdProfesor)
         Controls.Add(btnCancelar)
@@ -208,10 +188,8 @@ Partial Class FormCursospopup
         Controls.Add(tbIdTurno)
         Controls.Add(Label5)
         Controls.Add(Label3)
-        Controls.Add(Label4)
         Controls.Add(Label2)
         Controls.Add(tbDiasCurso)
-        Controls.Add(tbInscriptosCursos)
         Controls.Add(tbPrecioCurso)
         Controls.Add(tbHorarioCurso)
         Controls.Add(Label1)
@@ -224,12 +202,10 @@ Partial Class FormCursospopup
     Friend WithEvents tbNombreCurso As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents tbHorarioCurso As TextBox
-    Friend WithEvents tbInscriptosCursos As TextBox
     Friend WithEvents tbPrecioCurso As TextBox
     Friend WithEvents tbDiasCurso As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents tbIdTurno As TextBox

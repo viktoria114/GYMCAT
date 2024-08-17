@@ -22,9 +22,9 @@ Partial Class FormCursos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle40 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoCursos = New DataGridView()
         GroupBox2 = New GroupBox()
         cbOpciones = New ComboBox()
@@ -41,29 +41,29 @@ Partial Class FormCursos
         ' 
         dgvListadoCursos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListadoCursos.BackgroundColor = SystemColors.ButtonShadow
-        DataGridViewCellStyle40.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle40.BackColor = SystemColors.Control
-        DataGridViewCellStyle40.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle40.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle40.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle40.SelectionForeColor = Color.Black
-        DataGridViewCellStyle40.WrapMode = DataGridViewTriState.True
-        dgvListadoCursos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvListadoCursos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvListadoCursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle41.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle41.BackColor = SystemColors.Window
-        DataGridViewCellStyle41.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle41.ForeColor = Color.White
-        DataGridViewCellStyle41.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle41.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle41.WrapMode = DataGridViewTriState.False
-        dgvListadoCursos.DefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        dgvListadoCursos.DefaultCellStyle = DataGridViewCellStyle2
         dgvListadoCursos.Location = New Point(19, 64)
         dgvListadoCursos.MultiSelect = False
         dgvListadoCursos.Name = "dgvListadoCursos"
         dgvListadoCursos.ReadOnly = True
-        DataGridViewCellStyle42.ForeColor = Color.Black
-        dgvListadoCursos.RowsDefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        dgvListadoCursos.RowsDefaultCellStyle = DataGridViewCellStyle3
         dgvListadoCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListadoCursos.Size = New Size(739, 379)
         dgvListadoCursos.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class FormCursos
         ' cbOpciones
         ' 
         cbOpciones.FormattingEnabled = True
-        cbOpciones.Items.AddRange(New Object() {"Nombre", "Horario", "Precio", "Cantidad de Inscriptos", "Dias de Clase", "Turno", "Instructor"})
+        cbOpciones.Items.AddRange(New Object() {"Nombre", "Horario", "Precio", "Dias de Clase", "Turno", "Instructor"})
         cbOpciones.Location = New Point(440, 27)
         cbOpciones.Name = "cbOpciones"
         cbOpciones.Size = New Size(214, 24)
