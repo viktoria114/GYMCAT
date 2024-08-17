@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class CrudMiembros
-    Implements CRUD
+    Implements ICRUD
     Public _Conexion As Conexion
     Public Tabla As String
     'Private miConexion As MySqlConnection
@@ -18,16 +18,16 @@ Public Class CrudMiembros
         dgvListadoMiembros.CurrentCell = dgvListadoMiembros.Rows(0).Cells(1)
     End Sub
 
-    Private Sub Agregar() Implements CRUD.Agregar
+    Private Sub Agregar() Implements ICRUD.Agregar
         _Conexion.esNuevo = True
         nuevoMiembro.ShowDialog()
     End Sub
 
-    Private Sub Editar() Implements CRUD.Editar
+    Private Sub Editar() Implements ICRUD.Editar
         _Conexion.esNuevo = False
         nuevoMiembro.ShowDialog()
     End Sub
-    Public Sub Guardar() Implements CRUD.Guardar
+    Public Sub Guardar() Implements ICRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -110,7 +110,7 @@ Public Class CrudMiembros
         End If
     End Sub
 
-    Private Sub Borrar() Implements CRUD.Borrar
+    Private Sub Borrar() Implements ICRUD.Borrar
         Dim fila = dgvListadoMiembros.CurrentRow
         _Conexion.idFila = fila.Cells(0).Value
         If MessageBox.Show("¿Está seguro de eliminar este Miembro?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
@@ -121,7 +121,7 @@ Public Class CrudMiembros
         End If
     End Sub
 
-    Private Sub Buscar() Implements CRUD.Buscar
+    Private Sub Buscar() Implements ICRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada = cbBuscar.SelectedItem.ToString
 

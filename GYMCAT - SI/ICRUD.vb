@@ -1,4 +1,4 @@
-﻿Public Interface CRUD
+﻿Public Interface ICRUD
     Sub Agregar()
     Sub Editar()
     Sub Guardar()

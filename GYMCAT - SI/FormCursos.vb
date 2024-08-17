@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormCursos
-    Implements CRUD
+    Implements ICRUD
     Public _Conexion As Conexion
     Public Tabla As String
 
@@ -18,17 +18,17 @@ Public Class FormCursos
 
     End Sub
 
-    Private Sub Agregar() Implements CRUD.Agregar
+    Private Sub Agregar() Implements ICRUD.Agregar
         _Conexion.esNuevo = True
         FormCursospopup.ShowDialog()
     End Sub
 
-    Private Sub Editar() Implements CRUD.Editar
+    Private Sub Editar() Implements ICRUD.Editar
         _Conexion.esNuevo = False
         FormCursospopup.ShowDialog()
     End Sub
 
-    Public Sub Guardar() Implements CRUD.Guardar
+    Public Sub Guardar() Implements ICRUD.Guardar
         Dim fila As DataRow
         Dim cmd As String
 
@@ -97,7 +97,7 @@ Public Class FormCursos
 
     End Sub
 
-    Private Sub Borrar() Implements CRUD.Borrar
+    Private Sub Borrar() Implements ICRUD.Borrar
         Dim fila As DataGridViewRow = dgvListadoCursos.CurrentRow
         _Conexion.idFila = fila.Cells(0).Value
         If (MessageBox.Show("¿Está seguro de eliminar este Curso?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -108,7 +108,7 @@ Public Class FormCursos
         End If
     End Sub
 
-    Private Sub Buscar() Implements CRUD.Buscar
+    Private Sub Buscar() Implements ICRUD.Buscar
         ' Obtén el valor seleccionado en el ComboBox
         Dim columnaSeleccionada As String = cbOpciones.SelectedItem.ToString()
 
