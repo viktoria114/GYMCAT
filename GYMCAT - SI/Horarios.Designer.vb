@@ -130,7 +130,7 @@ Partial Class Horarios
         TabPage2.Location = New Point(4, 29)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(708, 302)
+        TabPage2.Size = New Size(778, 302)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Tarde"
         TabPage2.UseVisualStyleBackColor = True
@@ -170,7 +170,7 @@ Partial Class Horarios
         TabPage3.Location = New Point(4, 29)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(708, 302)
+        TabPage3.Size = New Size(778, 302)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Noche"
         TabPage3.UseVisualStyleBackColor = True

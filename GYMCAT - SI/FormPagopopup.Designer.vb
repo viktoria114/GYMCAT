@@ -26,14 +26,14 @@ Partial Class FormPagopopup
         btnImprimir = New Button()
         Label10 = New Label()
         DataGridView1 = New DataGridView()
-        dtpNac = New DateTimePicker()
+        dtpFechaMov = New DateTimePicker()
         Label2 = New Label()
         Label3 = New Label()
         cbEstadoElemento = New ComboBox()
         Label8 = New Label()
         lbTitulo = New Label()
         GroupBox1 = New GroupBox()
-        ComboBox1 = New ComboBox()
+        cbMiembros = New ComboBox()
         GroupBox2 = New GroupBox()
         cbDeudor = New CheckBox()
         TextBox1 = New TextBox()
@@ -99,16 +99,15 @@ Partial Class FormPagopopup
         DataGridView1.Size = New Size(533, 329)
         DataGridView1.TabIndex = 38
         ' 
-        ' dtpNac
+        ' dtpFechaMov
         ' 
-        dtpNac.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
-        dtpNac.Format = DateTimePickerFormat.Short
-        dtpNac.Location = New Point(189, 27)
-        dtpNac.MaxDate = New Date(2024, 8, 17, 0, 0, 0, 0)
-        dtpNac.Name = "dtpNac"
-        dtpNac.Size = New Size(183, 21)
-        dtpNac.TabIndex = 37
-        dtpNac.Value = New Date(2024, 8, 17, 0, 0, 0, 0)
+        dtpFechaMov.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        dtpFechaMov.Format = DateTimePickerFormat.Short
+        dtpFechaMov.Location = New Point(189, 27)
+        dtpFechaMov.Name = "dtpFechaMov"
+        dtpFechaMov.Size = New Size(183, 21)
+        dtpFechaMov.TabIndex = 37
+        dtpFechaMov.Value = New Date(2024, 8, 17, 0, 0, 0, 0)
         ' 
         ' Label2
         ' 
@@ -135,7 +134,7 @@ Partial Class FormPagopopup
         ' cbEstadoElemento
         ' 
         cbEstadoElemento.FormattingEnabled = True
-        cbEstadoElemento.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta", "Cola °|°"})
+        cbEstadoElemento.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta"})
         cbEstadoElemento.Location = New Point(187, 54)
         cbEstadoElemento.Name = "cbEstadoElemento"
         cbEstadoElemento.Size = New Size(185, 24)
@@ -168,7 +167,7 @@ Partial Class FormPagopopup
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label8)
         GroupBox1.Controls.Add(cbEstadoElemento)
-        GroupBox1.Controls.Add(dtpNac)
+        GroupBox1.Controls.Add(dtpFechaMov)
         GroupBox1.Font = New Font("Cascadia Mono", 9F)
         GroupBox1.ForeColor = Color.White
         GroupBox1.Location = New Point(34, 114)
@@ -178,14 +177,14 @@ Partial Class FormPagopopup
         GroupBox1.TabStop = False
         GroupBox1.Text = "Detalles"
         ' 
-        ' ComboBox1
+        ' cbMiembros
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta", "Cola °|°"})
-        ComboBox1.Location = New Point(142, 248)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(264, 23)
-        ComboBox1.TabIndex = 24
+        cbMiembros.FormattingEnabled = True
+        cbMiembros.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta", "Cola °|°"})
+        cbMiembros.Location = New Point(142, 248)
+        cbMiembros.Name = "cbMiembros"
+        cbMiembros.Size = New Size(264, 23)
+        cbMiembros.TabIndex = 24
         ' 
         ' GroupBox2
         ' 
@@ -274,7 +273,6 @@ Partial Class FormPagopopup
         DateTimePicker2.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         DateTimePicker2.Format = DateTimePickerFormat.Short
         DateTimePicker2.Location = New Point(189, 107)
-        DateTimePicker2.MaxDate = New Date(2024, 8, 17, 0, 0, 0, 0)
         DateTimePicker2.Name = "DateTimePicker2"
         DateTimePicker2.Size = New Size(183, 21)
         DateTimePicker2.TabIndex = 37
@@ -285,7 +283,6 @@ Partial Class FormPagopopup
         DateTimePicker1.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         DateTimePicker1.Format = DateTimePickerFormat.Short
         DateTimePicker1.Location = New Point(189, 54)
-        DateTimePicker1.MaxDate = New Date(2024, 8, 17, 0, 0, 0, 0)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(183, 21)
         DateTimePicker1.TabIndex = 37
@@ -332,7 +329,7 @@ Partial Class FormPagopopup
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Controls.Add(ComboBox2)
-        Controls.Add(ComboBox1)
+        Controls.Add(cbMiembros)
         Controls.Add(lbTitulo)
         Controls.Add(DataGridView1)
         Controls.Add(Label9)
@@ -354,7 +351,7 @@ Partial Class FormPagopopup
     Friend WithEvents btnImprimir As Button
 	Friend WithEvents Label10 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents dtpNac As DateTimePicker
+    Friend WithEvents dtpFechaMov As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents cbEstadoElemento As ComboBox
@@ -363,7 +360,7 @@ Partial Class FormPagopopup
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbMiembros As ComboBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents cbDeudor As CheckBox
