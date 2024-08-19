@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2024 a las 20:32:31
+-- Tiempo de generación: 19-08-2024 a las 21:13:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -50,7 +50,6 @@ CREATE TABLE `cursos` (
   `nombre` varchar(50) NOT NULL,
   `horario` varchar(50) NOT NULL,
   `precio` int(10) NOT NULL,
-  `cantidad_inscriptos` int(10) NOT NULL,
   `dias_clase` varchar(50) NOT NULL,
   `FK_empleados` int(11) DEFAULT NULL,
   `turno` varchar(15) NOT NULL
@@ -60,14 +59,14 @@ CREATE TABLE `cursos` (
 -- Volcado de datos para la tabla `cursos`
 --
 
-INSERT INTO `cursos` (`ID_cursos`, `nombre`, `horario`, `precio`, `cantidad_inscriptos`, `dias_clase`, `FK_empleados`, `turno`) VALUES
-(1, 'Pilates', '18:00 20:00', 6500, 5, 'martes, jueves', 2, 'Tarde'),
-(2, 'Yoga', '20:00 22:00', 7000, 3, 'sábados', 6, 'Tarde'),
-(3, 'Funcional', '9:00 11:00', 5000, 4, 'lunes, miércoles, viernes', 5, 'Mañana'),
-(4, 'Boxeo', '20:00 22:00', 5000, 3, 'lunes, miércoles, viernes', 5, 'Tarde'),
-(5, 'Musculación1', '8:00 10:00', 5000, 3, 'lunes, miércoles', 2, 'Mañana'),
-(6, 'Musculación2', '8:00 10:00', 5000, 1, 'martes, jueves, sábado', 5, 'Mañana'),
-(7, 'Crossfit', '15:00 17:00', 6500, 2, 'miércoles, viernes', 7, 'Tarde');
+INSERT INTO `cursos` (`ID_cursos`, `nombre`, `horario`, `precio`, `dias_clase`, `FK_empleados`, `turno`) VALUES
+(1, 'Pilates', '18:00 20:00', 6500, 'martes, jueves', 2, 'Tarde'),
+(2, 'Yoga', '20:00 22:00', 7000, 'sábados', 6, 'Tarde'),
+(3, 'Funcional', '9:00 11:00', 5000, 'lunes, miércoles, viernes', 5, 'Mañana'),
+(4, 'Boxeo', '20:00 22:00', 5000, 'lunes, miércoles, viernes', 5, 'Tarde'),
+(5, 'Musculación1', '8:00 10:00', 5000, 'lunes, miércoles', 2, 'Mañana'),
+(6, 'Musculación2', '8:00 10:00', 5000, 'martes, jueves, sábado', 5, 'Mañana'),
+(7, 'Crossfit', '15:00 17:00', 6500, 'miércoles, viernes', 7, 'Tarde');
 
 -- --------------------------------------------------------
 
@@ -153,12 +152,13 @@ CREATE TABLE `empleados` (
 
 INSERT INTO `empleados` (`ID_empleados`, `nombre`, `apellido`, `fecha_nacimiento`, `sueldo`, `turno`, `cargo`, `DNI`, `telefono`, `correo`) VALUES
 (1, 'José Manuel', 'Venteo', '2004-12-10', 300000, 'Mañana', 'Dueño', 92583068, 380463067, 'jose@venteo.com'),
-(2, 'Kim', 'Termica', '1994-07-05', 400000, 'Tarde', 'Instructor', 75489375, 587943758, 'kimbesha34@gmail.com'),
+(2, 'Kim', 'Termica', '1994-07-05', 4000, 'Tarde', 'Instructor', 75489375, 587943758, 'kimbesha34@gmail.com'),
 (3, 'T. Jenna', 'Swift', '1998-12-13', 130000, 'Noche', 'Gerente', 13131313, 546546234, 'tswift@gmail.com'),
 (4, 'Pedro', 'Del Valle', '1990-04-09', 10000, 'Mañana', 'Conserje', 78432346, 380478230, 'pdrito@gmail.com'),
 (5, 'Valentino', 'Herrera', '2010-10-10', 100000, 'Mañana, Tarde', 'Instructor', 3920432, 380410101, 'valeh@gmail.com'),
 (6, 'Mónica', 'Oviedo', '1973-02-03', 300000, 'Tarde', 'Instructor', 784320923, 380412783, 'oviedomonik@gmail.com'),
-(7, 'Roberto', 'Pardo', '1984-11-08', 150000, 'Tarde', 'Instructor', 325363, 325423754, 'rpardo@gmail.com');
+(7, 'Roberto', 'Pardo', '1984-11-18', 150000, 'Tarde', 'Instructor', 325363, 325423754, 'rpardo@gmail.com'),
+(8, 'Oliver', 'Fruit', '2000-02-05', 45000, 'Noche', 'Instructor', 98234541, 3804985, 'olivafrut@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -222,7 +222,11 @@ CREATE TABLE `ingresos` (
 INSERT INTO `ingresos` (`ID_ingresos`, `fecha_pago`, `forma_pago`, `monto`, `concepto`) VALUES
 (1, '2024-06-24', 'efectivo', 0, 'membresia'),
 (2, '2024-08-08', 'efectivo', 10000, 'cursos'),
-(3, '2024-08-12', 'transferencia', 35000, 'membresía, curso');
+(3, '2024-08-12', 'transferencia', 35000, 'membresía, curso'),
+(4, '2024-08-05', 'efectivo', 10000, 'membresia'),
+(5, '2024-07-17', 'transferencia', 17000, 'cuota'),
+(6, '2024-08-01', 'efectivo', 20000, 'cuota'),
+(7, '2024-08-19', 'transferencia', 15000, 'couta');
 
 -- --------------------------------------------------------
 
@@ -245,7 +249,8 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`ID_login`, `FK_empleado`, `usuario`, `contraseña`, `nivel_acceso`) VALUES
 (1, 1, 'venteveo', '123', 3),
 (2, 2, 'kimk', '123', 1),
-(3, 3, 'tswift', '123', 2);
+(3, 3, 'tswift', '123', 2),
+(4, 5, 'valeh', '321', 3);
 
 -- --------------------------------------------------------
 
@@ -282,7 +287,6 @@ CREATE TABLE `miembros` (
   `edad` int(5) NOT NULL,
   `fecha_inscripcion` date NOT NULL,
   `duracion_membresia` int(5) NOT NULL,
-  `cursos_inscritos` int(5) NOT NULL,
   `costo_total` int(20) NOT NULL,
   `deudor` tinyint(1) NOT NULL,
   `telefono` int(40) NOT NULL,
@@ -294,13 +298,14 @@ CREATE TABLE `miembros` (
 -- Volcado de datos para la tabla `miembros`
 --
 
-INSERT INTO `miembros` (`ID_miembro`, `DNI`, `nombre`, `apellido`, `edad`, `fecha_inscripcion`, `duracion_membresia`, `cursos_inscritos`, `costo_total`, `deudor`, `telefono`, `correo`, `puntos`) VALUES
-(1, 45254686, 'Viktoria', 'Arancio', 20, '2024-06-24', 3, 2, 0, 0, 380417074, 'aranciomarivi@gmail.com', 0),
-(3, 44984514, 'Matias', 'Moreno', 22, '2024-06-24', 5, 3, 20000, 0, 380489234, 'matifmoreno@gmail.com', 500),
-(4, 44002362, 'Francisco', 'Brizuela', 42, '2024-08-01', 1, 0, 15000, 1, 3476247, 'franbri@gmail.com', 0),
-(5, 5462452, 'Tatiana', 'Gómez', 17, '2024-07-01', 3, 1, 17000, 0, 654132473, '', 0),
-(6, 9878623, 'Lucas', 'Rearte', 32, '2024-04-01', 5, 1, 16500, 0, 35245436, '', 0),
-(7, 5435234, 'Luis Manuel', 'Guerra', 27, '2024-07-16', 5, 0, 15000, 0, 34762477, 'luisitoguerra@gmail.com', 235);
+INSERT INTO `miembros` (`ID_miembro`, `DNI`, `nombre`, `apellido`, `edad`, `fecha_inscripcion`, `duracion_membresia`, `costo_total`, `deudor`, `telefono`, `correo`, `puntos`) VALUES
+(1, 45254686, 'Viktoria', 'Arancio', 20, '2024-06-24', 3, 0, 0, 380417074, 'aranciomarivi@gmail.com', 0),
+(3, 44984514, 'Matias', 'Moreno', 22, '2024-06-24', 5, 20000, 0, 380489234, 'matifmoreno@gmail.com', 500),
+(4, 44002362, 'Francisco', 'Brizuela', 42, '2024-08-01', 1, 15000, 1, 3476247, 'franbri@gmail.com', 0),
+(5, 5462452, 'Tatiana', 'Gómez', 17, '2024-07-01', 3, 17000, 0, 654132473, '', 0),
+(6, 9878623, 'Lucas', 'Rearte', 32, '2024-04-01', 5, 16500, 0, 35245436, '', 0),
+(7, 5435234, 'Luis Manuel', 'Guerra', 27, '2024-07-16', 5, 15000, 0, 34762477, 'luisitoguerra@gmail.com', 235),
+(8, 43523465, 'Julián', 'Algañaraz', 26, '2022-08-03', 12, 5000, 1, 380493821, 'julia@gmail.com', 5000);
 
 -- --------------------------------------------------------
 
@@ -320,13 +325,15 @@ CREATE TABLE `miembros_cursos` (
 --
 
 INSERT INTO `miembros_cursos` (`FK_miembros`, `FK_cursos`, `ID_inscripción`, `fecha_inscripcion`) VALUES
-(1, 1, 4, '2024-08-08'),
 (1, 2, 5, '2024-08-08'),
 (3, 5, 6, '2024-07-04'),
 (3, 6, 7, '2024-07-01'),
 (3, 7, 8, '2024-07-01'),
 (5, 3, 9, '2024-08-08'),
-(6, 4, 10, '2024-08-08');
+(6, 4, 10, '2024-08-08'),
+(8, 3, 11, '2024-01-11'),
+(1, 1, 12, '2024-08-19'),
+(7, 4, 13, '2024-08-19');
 
 -- --------------------------------------------------------
 
@@ -347,7 +354,11 @@ CREATE TABLE `miembros_mes_ingresos` (
 INSERT INTO `miembros_mes_ingresos` (`FK_miembros`, `FK_mes`, `FK_ingresos`) VALUES
 (1, 1, 1),
 (1, 2, 2),
-(5, 2, 3);
+(3, 2, 6),
+(4, 2, 7),
+(5, 1, 5),
+(5, 2, 3),
+(8, 2, 4);
 
 --
 -- Índices para tablas volcadas
@@ -464,7 +475,7 @@ ALTER TABLE `año`
 -- AUTO_INCREMENT de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `ID_cursos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_cursos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `elementos deportivos`
@@ -476,7 +487,7 @@ ALTER TABLE `elementos deportivos`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `ID_empleados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_empleados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `gastos`
@@ -488,13 +499,13 @@ ALTER TABLE `gastos`
 -- AUTO_INCREMENT de la tabla `ingresos`
 --
 ALTER TABLE `ingresos`
-  MODIFY `ID_ingresos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_ingresos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `ID_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `mes`
@@ -506,13 +517,13 @@ ALTER TABLE `mes`
 -- AUTO_INCREMENT de la tabla `miembros`
 --
 ALTER TABLE `miembros`
-  MODIFY `ID_miembro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_miembro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `miembros_cursos`
 --
 ALTER TABLE `miembros_cursos`
-  MODIFY `ID_inscripción` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID_inscripción` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
