@@ -4,24 +4,10 @@ Public Class FormConsultas
     Private cmd As MySqlCommand
     Private tablaResultado As DataTable
     Private dataReader As MySqlDataReader
-    Private miConexion As MySqlConnection
+    Private miConexion As New MySqlConnection("Server=localhost; Database=gymcat; Uid=root; Pwd=;")
 
     Private Sub FormConsultas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ElegirConsulta()
-        miConexion = New MySqlConnection("Server=localhost; Database=gymcat; Uid=root; Pwd=;")
-        miConexion.Open()
-        Dim consulta = "SELECT nombre FROM cursos"
-        Dim comando As New MySqlCommand(consulta, miConexion)
-        Dim lector = comando.ExecuteReader
-
-        If lector.HasRows Then
-            While lector.Read()
-                cbCurMiembro.Items.Add(lector("nombre"))
-                cbCursos.Items.Add(lector("nombre"))
-            End While
-        End If
-        lector.Close()
-        miConexion.Close()
 
     End Sub
 
@@ -40,7 +26,7 @@ Public Class FormConsultas
     Private Sub rbElementosenCursos_CheckedChanged(sender As Object, e As EventArgs) Handles rbElementosenCursos.CheckedChanged
         ElegirConsulta()
     End Sub
-    '"hola"
+
     Sub ElegirConsulta()
         Dim CursoMiembro As Control() = {cbCurMiembro}
         Dim MembreVencer As Control() = {dtpMemb}
@@ -82,19 +68,20 @@ Public Class FormConsultas
             Case rbMiembrosenCursos.Checked
                 cmd.CommandText = "
                 SELECT
-                    cursos.nombre AS 'Cursos',
-                    miembros_cursos.ID_inscripción AS 'ID de Inscripción',
                     CONCAT(miembros.nombre, ' ', miembros.apellido) AS 'Nombre Completo',
                     miembros.edad,
-                    miembros_cursos.fecha_inscripcion AS 'Fecha de Inscripción'
+                    miembros_cursos.fecha_inscripcion AS 'Fecha de Inscripción',
+                    (SELECT COUNT(*) 
+                     FROM miembros_cursos 
+                     WHERE FK_cursos = cursos.ID_cursos) AS 'Total Miembros Inscritos'
                 FROM
-                    cursos, miembros, miembros_cursos
+                    miembros
+                    INNER JOIN miembros_cursos ON miembros.ID_miembro = miembros_cursos.FK_miembros
+                    INNER JOIN cursos ON cursos.ID_cursos = miembros_cursos.FK_cursos
                 WHERE
-                    miembros.ID_miembro = miembros_cursos.FK_miembros
-                    AND cursos.ID_cursos = miembros_cursos.FK_cursos
-                    AND cursos.nombre = @curso
+                    cursos.nombre = @curso
                 ORDER BY
-                    cursos.nombre, miembros_cursos.id_inscripción;"
+                    miembros_cursos.ID_inscripción;"
 
                 cmd.Parameters.AddWithValue("@curso", cbCurMiembro.Text)
 
@@ -176,4 +163,24 @@ Public Class FormConsultas
 
         dgvResultados.DataSource = tablaResultado
     End Sub
+
+    Sub CargarDatosForm()
+        cbCurMiembro.Items.Clear()
+        cbCursos.Items.Clear()
+
+        miConexion.Open()
+        Dim consulta = "SELECT nombre FROM cursos"
+        Dim comando As New MySqlCommand(consulta, miConexion)
+        Dim lector = comando.ExecuteReader
+
+        If lector.HasRows Then
+            While lector.Read()
+                cbCurMiembro.Items.Add(lector("nombre"))
+                cbCursos.Items.Add(lector("nombre"))
+            End While
+        End If
+        lector.Close()
+        miConexion.Close()
+    End Sub
+
 End Class

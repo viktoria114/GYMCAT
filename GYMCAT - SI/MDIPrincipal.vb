@@ -98,6 +98,11 @@ Public Class MDIPrincipal
 		Panel4.Visible = False
 		FormConsultas.BringToFront()
 	End Sub
+    Private Sub btnConsultas_Click(sender As Object, e As EventArgs) Handles btnConsultas.Click
+        Panel4.Visible = False
+        FormConsultas.BringToFront()
+        FormConsultas.CargarDatosForm()
+    End Sub
 
 	Private Sub MDIPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
 		Login.Close()
