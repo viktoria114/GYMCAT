@@ -22,9 +22,9 @@ Partial Class FormEmpleados
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle58 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle59 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle60 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoEmpleados = New DataGridView()
         GroupBox2 = New GroupBox()
         cbOpciones = New ComboBox()
@@ -33,43 +33,46 @@ Partial Class FormEmpleados
         btnBorrar = New Button()
         btnEditar = New Button()
         Label1 = New Label()
+        PictureBox1 = New PictureBox()
         CType(dgvListadoEmpleados, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox2.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dgvListadoEmpleados
         ' 
         dgvListadoEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListadoEmpleados.BackgroundColor = SystemColors.ButtonShadow
-        DataGridViewCellStyle58.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle58.BackColor = SystemColors.Control
-        DataGridViewCellStyle58.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle58.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle58.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle58.SelectionForeColor = Color.Black
-        DataGridViewCellStyle58.WrapMode = DataGridViewTriState.True
-        dgvListadoEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = SystemColors.Control
+        DataGridViewCellStyle10.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle10.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = Color.Black
+        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.True
+        dgvListadoEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         dgvListadoEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle59.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle59.BackColor = SystemColors.Window
-        DataGridViewCellStyle59.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle59.ForeColor = Color.White
-        DataGridViewCellStyle59.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle59.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle59.WrapMode = DataGridViewTriState.False
-        dgvListadoEmpleados.DefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = SystemColors.Window
+        DataGridViewCellStyle11.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle11.ForeColor = Color.White
+        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.False
+        dgvListadoEmpleados.DefaultCellStyle = DataGridViewCellStyle11
         dgvListadoEmpleados.Location = New Point(19, 64)
         dgvListadoEmpleados.MultiSelect = False
         dgvListadoEmpleados.Name = "dgvListadoEmpleados"
         dgvListadoEmpleados.ReadOnly = True
-        DataGridViewCellStyle60.ForeColor = Color.Black
-        dgvListadoEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle12.ForeColor = Color.Black
+        dgvListadoEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle12
         dgvListadoEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListadoEmpleados.Size = New Size(739, 379)
         dgvListadoEmpleados.TabIndex = 3
         ' 
         ' GroupBox2
         ' 
+        GroupBox2.Controls.Add(PictureBox1)
         GroupBox2.Controls.Add(cbOpciones)
         GroupBox2.Controls.Add(tbBuscar)
         GroupBox2.Controls.Add(dgvListadoEmpleados)
@@ -157,6 +160,16 @@ Partial Class FormEmpleados
         Label1.TabIndex = 11
         Label1.Text = "Empleados"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.file
+        PictureBox1.Location = New Point(16, 18)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(35, 38)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 12
+        PictureBox1.TabStop = False
+        ' 
         ' FormEmpleados
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -173,6 +186,7 @@ Partial Class FormEmpleados
         CType(dgvListadoEmpleados, ComponentModel.ISupportInitialize).EndInit()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -189,4 +203,5 @@ Partial Class FormEmpleados
     Friend WithEvents tbBuscar As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cbOpciones As ComboBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

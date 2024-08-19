@@ -22,9 +22,9 @@ Partial Class FormCursos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoCursos = New DataGridView()
         GroupBox2 = New GroupBox()
         cbOpciones = New ComboBox()
@@ -33,43 +33,46 @@ Partial Class FormCursos
         btnBorrar = New Button()
         btnEditar = New Button()
         Label1 = New Label()
+        PictureBox1 = New PictureBox()
         CType(dgvListadoCursos, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox2.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dgvListadoCursos
         ' 
         dgvListadoCursos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListadoCursos.BackgroundColor = SystemColors.ButtonShadow
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListadoCursos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = SystemColors.Control
+        DataGridViewCellStyle7.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle7.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = Color.Black
+        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
+        dgvListadoCursos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         dgvListadoCursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.White
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvListadoCursos.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = SystemColors.Window
+        DataGridViewCellStyle8.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle8.ForeColor = Color.White
+        DataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.False
+        dgvListadoCursos.DefaultCellStyle = DataGridViewCellStyle8
         dgvListadoCursos.Location = New Point(19, 64)
         dgvListadoCursos.MultiSelect = False
         dgvListadoCursos.Name = "dgvListadoCursos"
         dgvListadoCursos.ReadOnly = True
-        DataGridViewCellStyle3.ForeColor = Color.Black
-        dgvListadoCursos.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.ForeColor = Color.Black
+        dgvListadoCursos.RowsDefaultCellStyle = DataGridViewCellStyle9
         dgvListadoCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListadoCursos.Size = New Size(739, 379)
         dgvListadoCursos.TabIndex = 3
         ' 
         ' GroupBox2
         ' 
+        GroupBox2.Controls.Add(PictureBox1)
         GroupBox2.Controls.Add(cbOpciones)
         GroupBox2.Controls.Add(tbBuscar)
         GroupBox2.Controls.Add(dgvListadoCursos)
@@ -158,6 +161,16 @@ Partial Class FormCursos
         Label1.TabIndex = 11
         Label1.Text = "Cursos"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.file
+        PictureBox1.Location = New Point(16, 18)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(35, 38)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 12
+        PictureBox1.TabStop = False
+        ' 
         ' FormCursos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -174,6 +187,7 @@ Partial Class FormCursos
         CType(dgvListadoCursos, ComponentModel.ISupportInitialize).EndInit()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -190,4 +204,5 @@ Partial Class FormCursos
     Friend WithEvents tbBuscar As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cbOpciones As ComboBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

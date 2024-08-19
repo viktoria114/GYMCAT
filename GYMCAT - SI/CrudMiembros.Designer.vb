@@ -54,7 +54,7 @@ Partial Class CrudMiembros
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.Window
         DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.ForeColor = Color.White
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = Color.White
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
@@ -87,9 +87,11 @@ Partial Class CrudMiembros
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(19, 23)
+        PictureBox1.Image = My.Resources.Resources.file
+        PictureBox1.Location = New Point(16, 18)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(35, 31)
+        PictureBox1.Size = New Size(35, 38)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
