@@ -36,31 +36,17 @@ Public Class FormEmpleados
             '1. Crear una nueva fila 
             fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
             '2. Rellenar la fila con información
-<<<<<<< HEAD
             fila("nombre") = Formempleadospopup.tbNombre.Text
             fila("apellido") = Formempleadospopup.tbApellido.Text
             fila("DNI") = Formempleadospopup.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleadospopup.tbFechaNac.Text
+            fila("fecha_nacimiento") = Formempleadospopup.dtpNac.Text
             fila("telefono") = Formempleadospopup.tbTelefono.Text
             fila("correo") = Formempleadospopup.tbCorreo.Text
             fila("sueldo") = Formempleadospopup.tbSueldo.Text
             fila("turno") = Formempleadospopup.tbTurno.Text
             fila("cargo") = Formempleadospopup.tbCargo.Text
-=======
-            fila("nombre") = Formempleados2.tbNombre.Text
-            fila("apellido") = Formempleados2.tbApellido.Text
-            fila("DNI") = Formempleados2.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleados2.dtpNac.Text
-            fila("telefono") = Formempleados2.tbTelefono.Text
-            fila("correo") = Formempleados2.tbCorreo.Text
-            fila("sueldo") = Formempleados2.tbSueldo.Text
-            fila("turno") = Formempleados2.tbTurno.Text
-            fila("cargo") = Formempleados2.tbCargo.Text
->>>>>>> 59cdd388d7317e5bedc00b4873af701d17a491cb
-
             '3. Agregar fila a la tabla del DataSet
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
-
             '4. Crear Comando para agregar a la BD la fila nueva cmd
             cmd = "INSERT INTO empleados (nombre, apellido, DNI, fecha_nacimiento, telefono, correo, sueldo, turno, cargo) VALUES (@nom, @ape, @dni, @nac, @tel, @cor, @suel, @tur, @carg)"
             _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
@@ -83,30 +69,16 @@ Public Class FormEmpleados
         Else
             '1 seleccionar fila editar
             fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
-
             '2. Rellenar la fila con información
-<<<<<<< HEAD
             fila("nombre") = Formempleadospopup.tbNombre.Text
             fila("apellido") = Formempleadospopup.tbApellido.Text
             fila("DNI") = Formempleadospopup.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleadospopup.tbFechaNac.Text
+            fila("fecha_nacimiento") = Formempleadospopup.dtpNac.Text
             fila("telefono") = Formempleadospopup.tbTelefono.Text
             fila("correo") = Formempleadospopup.tbCorreo.Text
             fila("sueldo") = Formempleadospopup.tbSueldo.Text
             fila("turno") = Formempleadospopup.tbTurno.Text
             fila("cargo") = Formempleadospopup.tbCargo.Text
-=======
-            fila("nombre") = Formempleados2.tbNombre.Text
-            fila("apellido") = Formempleados2.tbApellido.Text
-            fila("DNI") = Formempleados2.tbDNI.Text
-            fila("fecha_nacimiento") = Formempleados2.dtpNac.Text
-            fila("telefono") = Formempleados2.tbTelefono.Text
-            fila("correo") = Formempleados2.tbCorreo.Text
-            fila("sueldo") = Formempleados2.tbSueldo.Text
-            fila("turno") = Formempleados2.tbTurno.Text
-            fila("cargo") = Formempleados2.tbCargo.Text
->>>>>>> 59cdd388d7317e5bedc00b4873af701d17a491cb
-
             '3. Crear el comando para odificar la Fila
             cmd = "UPDATE empleados 
                    SET nombre=@nom, apellido=@ape, DNI=@dni, fecha_nacimiento=@nac, telefono=@tel, correo=@cor, sueldo=@suel ,turno=@tur , cargo=@carg
