@@ -99,7 +99,7 @@ Partial Class CrudMiembros
         btnAgregar.FlatStyle = FlatStyle.Popup
         btnAgregar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnAgregar.ForeColor = SystemColors.ButtonFace
-        btnAgregar.Image = My.Resources.Resources.agregar_usuario_1
+        btnAgregar.Image = My.Resources.Resources.icono_user_agregar
         btnAgregar.ImageAlign = ContentAlignment.MiddleRight
         btnAgregar.Location = New Point(27, 84)
         btnAgregar.Name = "btnAgregar"
@@ -115,7 +115,7 @@ Partial Class CrudMiembros
         btnEditar.FlatStyle = FlatStyle.Popup
         btnEditar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnEditar.ForeColor = SystemColors.ButtonFace
-        btnEditar.Image = My.Resources.Resources.quitar_usuario__2__removebg_preview_1
+        btnEditar.Image = My.Resources.Resources.icono_user_editar
         btnEditar.ImageAlign = ContentAlignment.MiddleRight
         btnEditar.Location = New Point(134, 84)
         btnEditar.Name = "btnEditar"
@@ -131,7 +131,7 @@ Partial Class CrudMiembros
         btnBorrar.FlatStyle = FlatStyle.Popup
         btnBorrar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnBorrar.ForeColor = SystemColors.ButtonFace
-        btnBorrar.Image = My.Resources.Resources.quitar_usuario
+        btnBorrar.Image = My.Resources.Resources.icono_user_eliminar
         btnBorrar.ImageAlign = ContentAlignment.MiddleRight
         btnBorrar.Location = New Point(241, 84)
         btnBorrar.Name = "btnBorrar"

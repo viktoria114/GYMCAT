@@ -30,6 +30,7 @@ Partial Class Login
 		btnIngresar = New Button()
 		PictureBoxSHOW = New PictureBox()
 		PictureBoxHIDE = New PictureBox()
+		Label3 = New Label()
 		CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
 		CType(PictureBoxSHOW, ComponentModel.ISupportInitialize).BeginInit()
 		CType(PictureBoxHIDE, ComponentModel.ISupportInitialize).BeginInit()
@@ -59,10 +60,10 @@ Partial Class Login
 		' 
 		' PictureBox1
 		' 
-		PictureBox1.Image = My.Resources.Resources.GYM_CAT__1_
-		PictureBox1.Location = New Point(78, 26)
+		PictureBox1.Image = My.Resources.Resources.SIMON_GHOST
+		PictureBox1.Location = New Point(51, 13)
 		PictureBox1.Name = "PictureBox1"
-		PictureBox1.Size = New Size(195, 172)
+		PictureBox1.Size = New Size(212, 216)
 		PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
 		PictureBox1.TabIndex = 3
 		PictureBox1.TabStop = False
@@ -103,7 +104,7 @@ Partial Class Login
 		' PictureBoxSHOW
 		' 
 		PictureBoxSHOW.BackColor = Color.White
-		PictureBoxSHOW.Image = My.Resources.Resources.view_show_icon_124811
+		PictureBoxSHOW.Image = My.Resources.Resources.icono_mostrar
 		PictureBoxSHOW.Location = New Point(298, 272)
 		PictureBoxSHOW.Name = "PictureBoxSHOW"
 		PictureBoxSHOW.Size = New Size(22, 20)
@@ -114,7 +115,7 @@ Partial Class Login
 		' PictureBoxHIDE
 		' 
 		PictureBoxHIDE.BackColor = Color.White
-		PictureBoxHIDE.Image = My.Resources.Resources.view_hide_icon_124813
+		PictureBoxHIDE.Image = My.Resources.Resources.icono_ocultar
 		PictureBoxHIDE.Location = New Point(298, 272)
 		PictureBoxHIDE.Name = "PictureBoxHIDE"
 		PictureBoxHIDE.Size = New Size(22, 20)
@@ -122,12 +123,24 @@ Partial Class Login
 		PictureBoxHIDE.TabIndex = 9
 		PictureBoxHIDE.TabStop = False
 		' 
+		' Label3
+		' 
+		Label3.AutoSize = True
+		Label3.Font = New Font("Cascadia Mono SemiBold", 11.25F, FontStyle.Bold)
+		Label3.ForeColor = SystemColors.Control
+		Label3.Location = New Point(213, 25)
+		Label3.Name = "Label3"
+		Label3.Size = New Size(90, 20)
+		Label3.TabIndex = 2
+		Label3.Text = "mati puto"
+		' 
 		' Login
 		' 
 		AutoScaleDimensions = New SizeF(7F, 15F)
 		AutoScaleMode = AutoScaleMode.Font
 		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
 		ClientSize = New Size(364, 411)
+		Controls.Add(Label3)
 		Controls.Add(PictureBoxSHOW)
 		Controls.Add(btnIngresar)
 		Controls.Add(tbContraseña)
@@ -155,4 +168,5 @@ Partial Class Login
 	Friend WithEvents btnIngresar As Button
 	Friend WithEvents PictureBoxSHOW As PictureBox
     Friend WithEvents PictureBoxHIDE As PictureBox
+	Friend WithEvents Label3 As Label
 End Class

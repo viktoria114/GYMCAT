@@ -26,6 +26,7 @@ Partial Class FormInscripciones
 		Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
 		Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
 		Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormInscripciones))
 		btnInscribir = New Button()
 		btnDesinscribir = New Button()
 		GroupBox1 = New GroupBox()
@@ -46,6 +47,10 @@ Partial Class FormInscripciones
 		lbDesinscripciones = New Label()
 		Label2 = New Label()
 		lbInscripciones = New Label()
+		tbMeses = New TextBox()
+		btnReducirMeses = New Button()
+		btnAumentarMeses = New Button()
+		Label1 = New Label()
 		GroupBox1.SuspendLayout()
 		CType(dgvCursosInscritos, ComponentModel.ISupportInitialize).BeginInit()
 		GroupBox2.SuspendLayout()
@@ -58,14 +63,14 @@ Partial Class FormInscripciones
 		' 
 		btnInscribir.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
 		btnInscribir.FlatStyle = FlatStyle.Popup
-		btnInscribir.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
+		btnInscribir.Font = New Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold)
 		btnInscribir.ForeColor = SystemColors.Control
-		btnInscribir.Image = My.Resources.Resources.avance_rapido__3___1_
+		btnInscribir.Image = My.Resources.Resources.icono_flecha_izquierda
 		btnInscribir.ImageAlign = ContentAlignment.MiddleLeft
-		btnInscribir.Location = New Point(330, 329)
+		btnInscribir.Location = New Point(446, 364)
 		btnInscribir.Name = "btnInscribir"
 		btnInscribir.Padding = New Padding(5, 0, 0, 0)
-		btnInscribir.Size = New Size(165, 41)
+		btnInscribir.Size = New Size(154, 34)
 		btnInscribir.TabIndex = 2
 		btnInscribir.Text = " Inscribir"
 		btnInscribir.UseVisualStyleBackColor = False
@@ -74,26 +79,27 @@ Partial Class FormInscripciones
 		' 
 		btnDesinscribir.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
 		btnDesinscribir.FlatStyle = FlatStyle.Popup
-		btnDesinscribir.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
+		btnDesinscribir.Font = New Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold)
 		btnDesinscribir.ForeColor = SystemColors.Control
-		btnDesinscribir.Image = My.Resources.Resources.avance_rapido__3_
+		btnDesinscribir.Image = My.Resources.Resources.icono_flecha_derecha
 		btnDesinscribir.ImageAlign = ContentAlignment.MiddleLeft
-		btnDesinscribir.Location = New Point(330, 378)
+		btnDesinscribir.Location = New Point(446, 404)
 		btnDesinscribir.Name = "btnDesinscribir"
 		btnDesinscribir.Padding = New Padding(5, 0, 0, 0)
-		btnDesinscribir.Size = New Size(165, 41)
+		btnDesinscribir.Size = New Size(154, 34)
 		btnDesinscribir.TabIndex = 2
 		btnDesinscribir.Text = "  Desinscribir"
+		btnDesinscribir.TextAlign = ContentAlignment.MiddleRight
 		btnDesinscribir.UseVisualStyleBackColor = False
 		' 
 		' GroupBox1
 		' 
 		GroupBox1.Controls.Add(dgvCursosInscritos)
-		GroupBox1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+		GroupBox1.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		GroupBox1.ForeColor = SystemColors.ButtonHighlight
-		GroupBox1.Location = New Point(30, 319)
+		GroupBox1.Location = New Point(38, 297)
 		GroupBox1.Name = "GroupBox1"
-		GroupBox1.Size = New Size(294, 199)
+		GroupBox1.Size = New Size(402, 221)
 		GroupBox1.TabIndex = 3
 		GroupBox1.TabStop = False
 		GroupBox1.Text = "Cursos Inscritos"
@@ -106,24 +112,24 @@ Partial Class FormInscripciones
 		dgvCursosInscritos.AllowUserToResizeRows = False
 		dgvCursosInscritos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 		dgvCursosInscritos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		dgvCursosInscritos.Location = New Point(6, 20)
+		dgvCursosInscritos.Location = New Point(6, 22)
 		dgvCursosInscritos.MultiSelect = False
 		dgvCursosInscritos.Name = "dgvCursosInscritos"
 		dgvCursosInscritos.ReadOnly = True
 		DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
 		dgvCursosInscritos.RowsDefaultCellStyle = DataGridViewCellStyle1
 		dgvCursosInscritos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-		dgvCursosInscritos.Size = New Size(282, 173)
+		dgvCursosInscritos.Size = New Size(390, 193)
 		dgvCursosInscritos.TabIndex = 0
 		' 
 		' GroupBox2
 		' 
 		GroupBox2.Controls.Add(dgvCursosDisponibles)
-		GroupBox2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+		GroupBox2.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		GroupBox2.ForeColor = SystemColors.ButtonHighlight
-		GroupBox2.Location = New Point(501, 319)
+		GroupBox2.Location = New Point(606, 297)
 		GroupBox2.Name = "GroupBox2"
-		GroupBox2.Size = New Size(294, 199)
+		GroupBox2.Size = New Size(189, 221)
 		GroupBox2.TabIndex = 3
 		GroupBox2.TabStop = False
 		GroupBox2.Text = "Cursos Disponibes"
@@ -135,14 +141,14 @@ Partial Class FormInscripciones
 		dgvCursosDisponibles.AllowUserToResizeRows = False
 		dgvCursosDisponibles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 		dgvCursosDisponibles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		dgvCursosDisponibles.Location = New Point(6, 20)
+		dgvCursosDisponibles.Location = New Point(6, 22)
 		dgvCursosDisponibles.MultiSelect = False
 		dgvCursosDisponibles.Name = "dgvCursosDisponibles"
 		dgvCursosDisponibles.ReadOnly = True
 		DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
 		dgvCursosDisponibles.RowsDefaultCellStyle = DataGridViewCellStyle2
 		dgvCursosDisponibles.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-		dgvCursosDisponibles.Size = New Size(282, 173)
+		dgvCursosDisponibles.Size = New Size(177, 193)
 		dgvCursosDisponibles.TabIndex = 0
 		' 
 		' lbProfesorCurso
@@ -237,7 +243,7 @@ Partial Class FormInscripciones
 		DataGridViewCellStyle4.ForeColor = Color.Black
 		dgvListadoMiembros.RowsDefaultCellStyle = DataGridViewCellStyle4
 		dgvListadoMiembros.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-		dgvListadoMiembros.Size = New Size(570, 190)
+		dgvListadoMiembros.Size = New Size(570, 168)
 		dgvListadoMiembros.TabIndex = 6
 		' 
 		' tbBuscar
@@ -252,14 +258,14 @@ Partial Class FormInscripciones
 		btnGuardar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
 		btnGuardar.Enabled = False
 		btnGuardar.FlatStyle = FlatStyle.Popup
-		btnGuardar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
+		btnGuardar.Font = New Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold)
 		btnGuardar.ForeColor = SystemColors.Control
-		btnGuardar.Image = My.Resources.Resources.boton_guardar__3_
+		btnGuardar.Image = My.Resources.Resources.icono_item_guardar
 		btnGuardar.ImageAlign = ContentAlignment.MiddleLeft
-		btnGuardar.Location = New Point(330, 476)
+		btnGuardar.Location = New Point(446, 484)
 		btnGuardar.Name = "btnGuardar"
 		btnGuardar.Padding = New Padding(5, 0, 0, 0)
-		btnGuardar.Size = New Size(165, 41)
+		btnGuardar.Size = New Size(154, 34)
 		btnGuardar.TabIndex = 2
 		btnGuardar.Text = " Guardar"
 		btnGuardar.UseVisualStyleBackColor = False
@@ -269,14 +275,14 @@ Partial Class FormInscripciones
 		btnCancelar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
 		btnCancelar.Enabled = False
 		btnCancelar.FlatStyle = FlatStyle.Popup
-		btnCancelar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
+		btnCancelar.Font = New Font("Cascadia Mono SemiBold", 11F, FontStyle.Bold)
 		btnCancelar.ForeColor = SystemColors.Control
-		btnCancelar.Image = My.Resources.Resources.agregar__1__removebg_preview
+		btnCancelar.Image = My.Resources.Resources.icono_item_eliminar
 		btnCancelar.ImageAlign = ContentAlignment.MiddleLeft
-		btnCancelar.Location = New Point(330, 427)
+		btnCancelar.Location = New Point(446, 444)
 		btnCancelar.Name = "btnCancelar"
 		btnCancelar.Padding = New Padding(5, 0, 0, 0)
-		btnCancelar.Size = New Size(165, 41)
+		btnCancelar.Size = New Size(154, 34)
 		btnCancelar.TabIndex = 2
 		btnCancelar.Text = " Cancelar"
 		btnCancelar.UseVisualStyleBackColor = False
@@ -286,11 +292,11 @@ Partial Class FormInscripciones
 		GroupBox3.Controls.Add(lbDesinscripciones)
 		GroupBox3.Controls.Add(Label2)
 		GroupBox3.Controls.Add(lbInscripciones)
-		GroupBox3.Font = New Font("Cascadia Mono SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		GroupBox3.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
 		GroupBox3.ForeColor = SystemColors.ButtonHighlight
 		GroupBox3.Location = New Point(606, 123)
 		GroupBox3.Name = "GroupBox3"
-		GroupBox3.Size = New Size(186, 190)
+		GroupBox3.Size = New Size(189, 168)
 		GroupBox3.TabIndex = 3
 		GroupBox3.TabStop = False
 		GroupBox3.Text = "Cambios sin Guardar"
@@ -299,11 +305,11 @@ Partial Class FormInscripciones
 		' 
 		lbDesinscripciones.AutoSize = True
 		lbDesinscripciones.Dock = DockStyle.Top
-		lbDesinscripciones.Font = New Font("Cascadia Mono SemiBold", 10F)
+		lbDesinscripciones.Font = New Font("Cascadia Mono", 9.75F)
 		lbDesinscripciones.ForeColor = SystemColors.Control
-		lbDesinscripciones.Location = New Point(3, 35)
+		lbDesinscripciones.Location = New Point(3, 36)
 		lbDesinscripciones.Name = "lbDesinscripciones"
-		lbDesinscripciones.Size = New Size(144, 18)
+		lbDesinscripciones.Size = New Size(144, 17)
 		lbDesinscripciones.TabIndex = 27
 		lbDesinscripciones.Text = "Desinscripciones:"
 		lbDesinscripciones.Visible = False
@@ -313,7 +319,7 @@ Partial Class FormInscripciones
 		Label2.AutoSize = True
 		Label2.Location = New Point(596, -258)
 		Label2.Name = "Label2"
-		Label2.Size = New Size(49, 16)
+		Label2.Size = New Size(56, 17)
 		Label2.TabIndex = 0
 		Label2.Text = "Label1"
 		' 
@@ -321,14 +327,59 @@ Partial Class FormInscripciones
 		' 
 		lbInscripciones.AutoSize = True
 		lbInscripciones.Dock = DockStyle.Top
-		lbInscripciones.Font = New Font("Cascadia Mono SemiBold", 10F)
+		lbInscripciones.Font = New Font("Cascadia Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
 		lbInscripciones.ForeColor = SystemColors.Control
-		lbInscripciones.Location = New Point(3, 17)
+		lbInscripciones.Location = New Point(3, 19)
 		lbInscripciones.Name = "lbInscripciones"
-		lbInscripciones.Size = New Size(120, 18)
+		lbInscripciones.Size = New Size(120, 17)
 		lbInscripciones.TabIndex = 26
 		lbInscripciones.Text = "Inscripciones:"
 		lbInscripciones.Visible = False
+		' 
+		' tbMeses
+		' 
+		tbMeses.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		tbMeses.Font = New Font("Cascadia Mono", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		tbMeses.ForeColor = Color.White
+		tbMeses.Location = New Point(499, 326)
+		tbMeses.Name = "tbMeses"
+		tbMeses.Size = New Size(48, 32)
+		tbMeses.TabIndex = 32
+		tbMeses.Text = "1"
+		tbMeses.TextAlign = HorizontalAlignment.Center
+		' 
+		' btnReducirMeses
+		' 
+		btnReducirMeses.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		btnReducirMeses.FlatStyle = FlatStyle.Popup
+		btnReducirMeses.Image = CType(resources.GetObject("btnReducirMeses.Image"), Image)
+		btnReducirMeses.Location = New Point(460, 326)
+		btnReducirMeses.Name = "btnReducirMeses"
+		btnReducirMeses.Size = New Size(33, 32)
+		btnReducirMeses.TabIndex = 33
+		btnReducirMeses.UseVisualStyleBackColor = False
+		' 
+		' btnAumentarMeses
+		' 
+		btnAumentarMeses.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		btnAumentarMeses.FlatStyle = FlatStyle.Popup
+		btnAumentarMeses.Image = CType(resources.GetObject("btnAumentarMeses.Image"), Image)
+		btnAumentarMeses.Location = New Point(553, 326)
+		btnAumentarMeses.Name = "btnAumentarMeses"
+		btnAumentarMeses.Size = New Size(33, 32)
+		btnAumentarMeses.TabIndex = 33
+		btnAumentarMeses.UseVisualStyleBackColor = False
+		' 
+		' Label1
+		' 
+		Label1.AutoSize = True
+		Label1.Font = New Font("Cascadia Mono SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		Label1.ForeColor = SystemColors.Control
+		Label1.Location = New Point(450, 304)
+		Label1.Name = "Label1"
+		Label1.Size = New Size(147, 16)
+		Label1.TabIndex = 27
+		Label1.Text = "Meses de Inscripcion"
 		' 
 		' FormInscripciones
 		' 
@@ -336,6 +387,10 @@ Partial Class FormInscripciones
 		AutoScaleMode = AutoScaleMode.Font
 		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
 		ClientSize = New Size(824, 626)
+		Controls.Add(Label1)
+		Controls.Add(btnAumentarMeses)
+		Controls.Add(btnReducirMeses)
+		Controls.Add(tbMeses)
 		Controls.Add(dgvListadoMiembros)
 		Controls.Add(cbOpciones)
 		Controls.Add(tbBuscar)
@@ -385,4 +440,8 @@ Partial Class FormInscripciones
 	Friend WithEvents lbDesinscripciones As Label
 	Friend WithEvents Label2 As Label
 	Friend WithEvents lbInscripciones As Label
+	Friend WithEvents tbMeses As TextBox
+	Friend WithEvents btnReducirMeses As Button
+	Friend WithEvents btnAumentarMeses As Button
+	Friend WithEvents Label1 As Label
 End Class

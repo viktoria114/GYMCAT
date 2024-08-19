@@ -105,7 +105,7 @@ Partial Class FormConsultas
 		btnEjecutar.FlatStyle = FlatStyle.Popup
 		btnEjecutar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
 		btnEjecutar.ForeColor = Color.WhiteSmoke
-		btnEjecutar.Image = My.Resources.Resources.avance_rapidof
+		btnEjecutar.Image = My.Resources.Resources.icono_flecha_derecha_grande
 		btnEjecutar.ImageAlign = ContentAlignment.MiddleRight
 		btnEjecutar.Location = New Point(281, 211)
 		btnEjecutar.Name = "btnEjecutar"

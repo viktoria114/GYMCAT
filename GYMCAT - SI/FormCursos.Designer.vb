@@ -105,7 +105,7 @@ Partial Class FormCursos
         btnAgregar.FlatStyle = FlatStyle.Popup
         btnAgregar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnAgregar.ForeColor = Color.WhiteSmoke
-        btnAgregar.Image = My.Resources.Resources.agregar
+        btnAgregar.Image = My.Resources.Resources.icono_item_agregar
         btnAgregar.ImageAlign = ContentAlignment.MiddleRight
         btnAgregar.Location = New Point(27, 84)
         btnAgregar.Name = "btnAgregar"
@@ -121,7 +121,7 @@ Partial Class FormCursos
         btnBorrar.FlatStyle = FlatStyle.Popup
         btnBorrar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnBorrar.ForeColor = Color.White
-        btnBorrar.Image = My.Resources.Resources.agregar__1__removebg_preview
+        btnBorrar.Image = My.Resources.Resources.icono_item_eliminar
         btnBorrar.ImageAlign = ContentAlignment.MiddleRight
         btnBorrar.Location = New Point(241, 84)
         btnBorrar.Name = "btnBorrar"
@@ -137,7 +137,7 @@ Partial Class FormCursos
         btnEditar.FlatStyle = FlatStyle.Popup
         btnEditar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnEditar.ForeColor = Color.White
-        btnEditar.Image = My.Resources.Resources.boton_editar
+        btnEditar.Image = My.Resources.Resources.icono_item_editar
         btnEditar.ImageAlign = ContentAlignment.MiddleRight
         btnEditar.Location = New Point(134, 84)
         btnEditar.Name = "btnEditar"

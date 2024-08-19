@@ -22,136 +22,44 @@ Partial Class FormPagopopup
 	'No lo modifique con el editor de código.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
-		tbNombreElemento = New TextBox()
-		Label1 = New Label()
-		tbModeloElemento = New TextBox()
-		tbTipoElemento = New TextBox()
-		tbPrecioElemento = New TextBox()
-		tbFechaCompraElemento = New TextBox()
 		Label2 = New Label()
-		Label3 = New Label()
-		Label4 = New Label()
-		Label5 = New Label()
-		Label6 = New Label()
-		tbStockElemeto = New TextBox()
 		btnGuardar = New Button()
 		btnCancelar = New Button()
-		Label7 = New Label()
 		Label8 = New Label()
-		Label9 = New Label()
-		tbDetalleElemento = New TextBox()
-		tbMarcaElemento = New TextBox()
 		cbEstadoElemento = New ComboBox()
 		Label10 = New Label()
+		dtpNac = New DateTimePicker()
+		GroupBox1 = New GroupBox()
+		RichTextBox1 = New RichTextBox()
+		CheckBox1 = New CheckBox()
+		TabControl1 = New TabControl()
+		TabPage2 = New TabPage()
+		CheckedListBox1 = New CheckedListBox()
+		ListBox1 = New ListBox()
+		Panel2 = New Panel()
+		DataGridView1 = New DataGridView()
+		TextBox1 = New TextBox()
+		Label3 = New Label()
+		lbInscripciones = New Label()
+		Panel1 = New Panel()
+		GroupBox1.SuspendLayout()
+		TabControl1.SuspendLayout()
+		TabPage2.SuspendLayout()
+		Panel2.SuspendLayout()
+		CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+		Panel1.SuspendLayout()
 		SuspendLayout()
-		' 
-		' tbNombreElemento
-		' 
-		tbNombreElemento.Location = New Point(188, 69)
-		tbNombreElemento.Name = "tbNombreElemento"
-		tbNombreElemento.Size = New Size(183, 23)
-		tbNombreElemento.TabIndex = 2
-		' 
-		' Label1
-		' 
-		Label1.AutoSize = True
-		Label1.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label1.ForeColor = Color.WhiteSmoke
-		Label1.Location = New Point(12, 70)
-		Label1.Name = "Label1"
-		Label1.Size = New Size(176, 17)
-		Label1.TabIndex = 3
-		Label1.Text = "Numero de Movimiento:"
-		' 
-		' tbModeloElemento
-		' 
-		tbModeloElemento.Location = New Point(188, 98)
-		tbModeloElemento.Name = "tbModeloElemento"
-		tbModeloElemento.Size = New Size(183, 23)
-		tbModeloElemento.TabIndex = 4
-		' 
-		' tbTipoElemento
-		' 
-		tbTipoElemento.Location = New Point(188, 169)
-		tbTipoElemento.Name = "tbTipoElemento"
-		tbTipoElemento.Size = New Size(183, 23)
-		tbTipoElemento.TabIndex = 6
-		' 
-		' tbPrecioElemento
-		' 
-		tbPrecioElemento.Location = New Point(188, 140)
-		tbPrecioElemento.Name = "tbPrecioElemento"
-		tbPrecioElemento.Size = New Size(183, 23)
-		tbPrecioElemento.TabIndex = 5
-		' 
-		' tbFechaCompraElemento
-		' 
-		tbFechaCompraElemento.Location = New Point(188, 198)
-		tbFechaCompraElemento.Name = "tbFechaCompraElemento"
-		tbFechaCompraElemento.Size = New Size(183, 23)
-		tbFechaCompraElemento.TabIndex = 7
 		' 
 		' Label2
 		' 
 		Label2.AutoSize = True
 		Label2.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label2.ForeColor = Color.WhiteSmoke
-		Label2.Location = New Point(118, 99)
+		Label2.Location = New Point(68, 20)
 		Label2.Name = "Label2"
 		Label2.Size = New Size(56, 17)
 		Label2.TabIndex = 10
 		Label2.Text = "Fecha:"
-		' 
-		' Label3
-		' 
-		Label3.AutoSize = True
-		Label3.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label3.ForeColor = Color.WhiteSmoke
-		Label3.Location = New Point(118, 141)
-		Label3.Name = "Label3"
-		Label3.Size = New Size(64, 17)
-		Label3.TabIndex = 12
-		Label3.Text = "Precio:"
-		' 
-		' Label4
-		' 
-		Label4.AutoSize = True
-		Label4.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label4.ForeColor = Color.WhiteSmoke
-		Label4.Location = New Point(134, 170)
-		Label4.Name = "Label4"
-		Label4.Size = New Size(48, 17)
-		Label4.TabIndex = 11
-		Label4.Text = "Tipo:"
-		' 
-		' Label5
-		' 
-		Label5.AutoSize = True
-		Label5.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label5.ForeColor = Color.WhiteSmoke
-		Label5.Location = New Point(46, 199)
-		Label5.Name = "Label5"
-		Label5.Size = New Size(136, 17)
-		Label5.TabIndex = 13
-		Label5.Text = "Fecha de Compra:"
-		' 
-		' Label6
-		' 
-		Label6.AutoSize = True
-		Label6.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label6.ForeColor = Color.WhiteSmoke
-		Label6.Location = New Point(126, 227)
-		Label6.Name = "Label6"
-		Label6.Size = New Size(56, 17)
-		Label6.TabIndex = 15
-		Label6.Text = "Stock:"
-		' 
-		' tbStockElemeto
-		' 
-		tbStockElemeto.Location = New Point(188, 227)
-		tbStockElemeto.Name = "tbStockElemeto"
-		tbStockElemeto.Size = New Size(183, 23)
-		tbStockElemeto.TabIndex = 14
 		' 
 		' btnGuardar
 		' 
@@ -160,7 +68,7 @@ Partial Class FormPagopopup
 		btnGuardar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		btnGuardar.ForeColor = Color.WhiteSmoke
 		btnGuardar.ImageAlign = ContentAlignment.MiddleRight
-		btnGuardar.Location = New Point(68, 340)
+		btnGuardar.Location = New Point(873, 512)
 		btnGuardar.Name = "btnGuardar"
 		btnGuardar.Size = New Size(91, 44)
 		btnGuardar.TabIndex = 16
@@ -174,69 +82,32 @@ Partial Class FormPagopopup
 		btnCancelar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		btnCancelar.ForeColor = Color.WhiteSmoke
 		btnCancelar.ImageAlign = ContentAlignment.MiddleRight
-		btnCancelar.Location = New Point(251, 361)
+		btnCancelar.Location = New Point(873, 447)
 		btnCancelar.Name = "btnCancelar"
 		btnCancelar.Size = New Size(91, 44)
 		btnCancelar.TabIndex = 17
 		btnCancelar.Text = "Cancelar"
 		btnCancelar.UseVisualStyleBackColor = False
 		' 
-		' Label7
-		' 
-		Label7.AutoSize = True
-		Label7.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label7.ForeColor = Color.WhiteSmoke
-		Label7.Location = New Point(126, 257)
-		Label7.Name = "Label7"
-		Label7.Size = New Size(56, 17)
-		Label7.TabIndex = 18
-		Label7.Text = "Marca:"
-		' 
 		' Label8
 		' 
 		Label8.AutoSize = True
 		Label8.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label8.ForeColor = Color.WhiteSmoke
-		Label8.Location = New Point(118, 286)
+		Label8.Location = New Point(12, 49)
 		Label8.Name = "Label8"
-		Label8.Size = New Size(64, 17)
+		Label8.Size = New Size(120, 17)
 		Label8.TabIndex = 19
-		Label8.Text = "Estado:"
-		' 
-		' Label9
-		' 
-		Label9.AutoSize = True
-		Label9.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		Label9.ForeColor = Color.WhiteSmoke
-		Label9.Location = New Point(110, 315)
-		Label9.Name = "Label9"
-		Label9.Size = New Size(72, 17)
-		Label9.TabIndex = 20
-		Label9.Text = "Detalle:"
-		' 
-		' tbDetalleElemento
-		' 
-		tbDetalleElemento.Location = New Point(188, 314)
-		tbDetalleElemento.Name = "tbDetalleElemento"
-		tbDetalleElemento.Size = New Size(183, 23)
-		tbDetalleElemento.TabIndex = 23
-		' 
-		' tbMarcaElemento
-		' 
-		tbMarcaElemento.Location = New Point(188, 256)
-		tbMarcaElemento.Name = "tbMarcaElemento"
-		tbMarcaElemento.Size = New Size(183, 23)
-		tbMarcaElemento.TabIndex = 21
+		Label8.Text = "Forma de Pago:"
 		' 
 		' cbEstadoElemento
 		' 
 		cbEstadoElemento.FormattingEnabled = True
-		cbEstadoElemento.Items.AddRange(New Object() {"Nuevo", "Bueno", "Desgastado", "Deporable", "Defectuoso*"})
-		cbEstadoElemento.Location = New Point(188, 285)
+		cbEstadoElemento.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta", "Cola °|°"})
+		cbEstadoElemento.Location = New Point(128, 46)
 		cbEstadoElemento.Name = "cbEstadoElemento"
 		cbEstadoElemento.Size = New Size(183, 23)
 		cbEstadoElemento.TabIndex = 24
-		cbEstadoElemento.Text = "Nuevo"
 		' 
 		' Label10
 		' 
@@ -249,57 +120,198 @@ Partial Class FormPagopopup
 		Label10.TabIndex = 3
 		Label10.Text = "Formulario de Pago"
 		' 
+		' dtpNac
+		' 
+		dtpNac.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		dtpNac.Format = DateTimePickerFormat.Short
+		dtpNac.Location = New Point(191, 17)
+		dtpNac.MaxDate = New Date(2024, 8, 17, 0, 0, 0, 0)
+		dtpNac.Name = "dtpNac"
+		dtpNac.Size = New Size(120, 23)
+		dtpNac.TabIndex = 37
+		dtpNac.Value = New Date(2024, 8, 17, 0, 0, 0, 0)
+		' 
+		' GroupBox1
+		' 
+		GroupBox1.Controls.Add(RichTextBox1)
+		GroupBox1.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+		GroupBox1.ForeColor = Color.White
+		GroupBox1.Location = New Point(610, 435)
+		GroupBox1.Name = "GroupBox1"
+		GroupBox1.Size = New Size(257, 130)
+		GroupBox1.TabIndex = 39
+		GroupBox1.TabStop = False
+		GroupBox1.Text = "   Detalles"
+		' 
+		' RichTextBox1
+		' 
+		RichTextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+		RichTextBox1.Location = New Point(50, 17)
+		RichTextBox1.Name = "RichTextBox1"
+		RichTextBox1.Size = New Size(128, 95)
+		RichTextBox1.TabIndex = 38
+		RichTextBox1.Text = ""
+		' 
+		' CheckBox1
+		' 
+		CheckBox1.AutoSize = True
+		CheckBox1.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+		CheckBox1.ForeColor = Color.White
+		CheckBox1.Location = New Point(134, 18)
+		CheckBox1.Name = "CheckBox1"
+		CheckBox1.Size = New Size(51, 21)
+		CheckBox1.TabIndex = 0
+		CheckBox1.Text = "Hoy"
+		CheckBox1.UseVisualStyleBackColor = True
+		' 
+		' TabControl1
+		' 
+		TabControl1.Controls.Add(TabPage2)
+		TabControl1.Location = New Point(532, 12)
+		TabControl1.Name = "TabControl1"
+		TabControl1.SelectedIndex = 0
+		TabControl1.Size = New Size(394, 372)
+		TabControl1.TabIndex = 39
+		' 
+		' TabPage2
+		' 
+		TabPage2.BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
+		TabPage2.Controls.Add(CheckedListBox1)
+		TabPage2.Location = New Point(4, 24)
+		TabPage2.Name = "TabPage2"
+		TabPage2.Padding = New Padding(3)
+		TabPage2.Size = New Size(386, 344)
+		TabPage2.TabIndex = 1
+		TabPage2.Text = "TabPage2"
+		' 
+		' CheckedListBox1
+		' 
+		CheckedListBox1.FormattingEnabled = True
+		CheckedListBox1.IntegralHeight = False
+		CheckedListBox1.Items.AddRange(New Object() {"f", "f", "f", "f", "f"})
+		CheckedListBox1.Location = New Point(139, 192)
+		CheckedListBox1.Name = "CheckedListBox1"
+		CheckedListBox1.Size = New Size(166, 121)
+		CheckedListBox1.TabIndex = 1
+		' 
+		' ListBox1
+		' 
+		ListBox1.FormattingEnabled = True
+		ListBox1.ItemHeight = 15
+		ListBox1.Items.AddRange(New Object() {"hola", "como", "tamos"})
+		ListBox1.Location = New Point(32, 236)
+		ListBox1.Name = "ListBox1"
+		ListBox1.Size = New Size(153, 94)
+		ListBox1.TabIndex = 0
+		' 
+		' Panel2
+		' 
+		Panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink
+		Panel2.Controls.Add(lbInscripciones)
+		Panel2.Controls.Add(DataGridView1)
+		Panel2.Controls.Add(ListBox1)
+		Panel2.Controls.Add(dtpNac)
+		Panel2.Controls.Add(Label2)
+		Panel2.Controls.Add(TextBox1)
+		Panel2.Controls.Add(Label3)
+		Panel2.Controls.Add(cbEstadoElemento)
+		Panel2.Controls.Add(Label8)
+		Panel2.Controls.Add(CheckBox1)
+		Panel2.Dock = DockStyle.Top
+		Panel2.Location = New Point(0, 0)
+		Panel2.Name = "Panel2"
+		Panel2.Size = New Size(426, 337)
+		Panel2.TabIndex = 0
+		' 
+		' DataGridView1
+		' 
+		DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		DataGridView1.Location = New Point(0, 104)
+		DataGridView1.Name = "DataGridView1"
+		DataGridView1.ReadOnly = True
+		DataGridView1.Size = New Size(426, 103)
+		DataGridView1.TabIndex = 38
+		' 
+		' TextBox1
+		' 
+		TextBox1.Location = New Point(128, 75)
+		TextBox1.Name = "TextBox1"
+		TextBox1.Size = New Size(183, 23)
+		TextBox1.TabIndex = 7
+		' 
+		' Label3
+		' 
+		Label3.AutoSize = True
+		Label3.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+		Label3.ForeColor = Color.WhiteSmoke
+		Label3.Location = New Point(48, 76)
+		Label3.Name = "Label3"
+		Label3.Size = New Size(72, 17)
+		Label3.TabIndex = 19
+		Label3.Text = "Miembro:"
+		' 
+		' lbInscripciones
+		' 
+		lbInscripciones.AutoSize = True
+		lbInscripciones.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+		lbInscripciones.ForeColor = Color.WhiteSmoke
+		lbInscripciones.Location = New Point(12, 216)
+		lbInscripciones.Name = "lbInscripciones"
+		lbInscripciones.Size = New Size(120, 17)
+		lbInscripciones.TabIndex = 19
+		lbInscripciones.Text = "Inscripciones:"
+		' 
+		' Panel1
+		' 
+		Panel1.AutoScroll = True
+		Panel1.Controls.Add(Panel2)
+		Panel1.Location = New Point(45, 12)
+		Panel1.Name = "Panel1"
+		Panel1.Size = New Size(426, 521)
+		Panel1.TabIndex = 40
+		' 
 		' FormPagopopup
 		' 
 		AutoScaleDimensions = New SizeF(7F, 15F)
 		AutoScaleMode = AutoScaleMode.Font
 		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-		ClientSize = New Size(790, 571)
-		Controls.Add(cbEstadoElemento)
-		Controls.Add(tbDetalleElemento)
-		Controls.Add(tbMarcaElemento)
-		Controls.Add(Label9)
-		Controls.Add(Label8)
-		Controls.Add(Label7)
+		ClientSize = New Size(998, 609)
+		Controls.Add(Panel1)
+		Controls.Add(TabControl1)
+		Controls.Add(GroupBox1)
 		Controls.Add(btnCancelar)
 		Controls.Add(btnGuardar)
-		Controls.Add(Label6)
-		Controls.Add(tbStockElemeto)
-		Controls.Add(Label5)
-		Controls.Add(Label3)
-		Controls.Add(Label4)
-		Controls.Add(Label2)
-		Controls.Add(tbFechaCompraElemento)
-		Controls.Add(tbTipoElemento)
-		Controls.Add(tbPrecioElemento)
-		Controls.Add(tbModeloElemento)
 		Controls.Add(Label10)
-		Controls.Add(Label1)
-		Controls.Add(tbNombreElemento)
 		Name = "FormPagopopup"
 		Text = "FormPagospopup"
+		GroupBox1.ResumeLayout(False)
+		TabControl1.ResumeLayout(False)
+		TabPage2.ResumeLayout(False)
+		Panel2.ResumeLayout(False)
+		Panel2.PerformLayout()
+		CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+		Panel1.ResumeLayout(False)
 		ResumeLayout(False)
 		PerformLayout()
 	End Sub
-	Friend WithEvents tbNombreElemento As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents tbModeloElemento As TextBox
-    Friend WithEvents tbTipoElemento As TextBox
-    Friend WithEvents tbPrecioElemento As TextBox
-    Friend WithEvents tbFechaCompraElemento As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents tbStockElemeto As TextBox
+	Friend WithEvents Label2 As Label
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnCancelar As Button
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents tbDetalleElemento As TextBox
-    Friend WithEvents tbMarcaElemento As TextBox
     Friend WithEvents cbEstadoElemento As ComboBox
 	Friend WithEvents Label10 As Label
+	Friend WithEvents dtpNac As DateTimePicker
+	Friend WithEvents CheckBox1 As CheckBox
+	Friend WithEvents GroupBox1 As GroupBox
+	Friend WithEvents RichTextBox1 As RichTextBox
+	Friend WithEvents TabControl1 As TabControl
+	Friend WithEvents TabPage2 As TabPage
+	Friend WithEvents Panel2 As Panel
+	Friend WithEvents Panel1 As Panel
+	Friend WithEvents TextBox1 As TextBox
+	Friend WithEvents Label3 As Label
+	Friend WithEvents ListBox1 As ListBox
+	Friend WithEvents lbInscripciones As Label
+	Friend WithEvents CheckedListBox1 As CheckedListBox
+	Friend WithEvents DataGridView1 As DataGridView
 End Class

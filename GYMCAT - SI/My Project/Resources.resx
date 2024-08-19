@@ -118,76 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="equalizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_opciones2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\equalizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="customer-support" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_opciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer-support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GYM CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="logo_nombre_GYMCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GYM CAT1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="view_show_icon_124811" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_mostrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view_show_icon_124811.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GYMCAT logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="logo_imagen_GYMCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GYMCAT logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="repeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_repetir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\repeat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_ordenar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="music-player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_musica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\music-player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="view_hide_icon_124813" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_ocultar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view_hide_icon_124813.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GYM_CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="logo_nombre2_GYMCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GYM CAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shuffle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_mezclar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shuffle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GYM CAT (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="logo_nombre_imagen_GYMCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GYM CAT (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_pink_ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_item_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar__1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_item_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar__1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar-usuario_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_user_agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-usuario_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton-editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_item_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton-editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quitar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_user_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quitar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quitar-usuario__2_-removebg-preview_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_user_editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quitar-usuario__2_-removebg-preview_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="avance_rapidof" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_flecha_derecha_grande" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avance-rapidof.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="avance_rapido__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_flecha_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avance-rapido (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="avance_rapido__3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_flecha_izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avance-rapido (3) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton_guardar__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="icono_item_guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton-guardar (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_imagenlince_logobienfacherofacheritoponedorterrordefeminaspussydestroyer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_imagenPNG_GYMCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GYMCAT_logo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_imagenlince_logobienfacherofacheritoponedorterrordefeminaspussydestroyer_pero_en_blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SIMON_GHOST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIMON_GHOST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -117,4 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReducirMeses.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAJ
+        5wAACecBalIm6QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABBSURBVDhPpdCx
+        CQBACATB67/C7+Ye8w1cFCbZQMS0PcFoYDQwGhgNjMbMO8qsucBo4Fl79BgDo4HRwGhgNDDuNR8a+ni/
+        hdEaygAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAumentarMeses.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        ogAAAKIBIoB4KgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABcSURBVDhP7ZNB
+        CsAgDAT9/xN9hT9IM8VKaeeg9FgDA7LsLiRgiQglpyY8oJoHVIScdito5gEV4U8FOVwb85MrPEoEsi/j
+        Kiqu8HEFOwx0wwibB1SEXXAWTHznKAcMOhp/ybf3TwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
