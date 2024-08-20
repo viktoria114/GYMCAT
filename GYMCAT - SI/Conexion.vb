@@ -8,6 +8,10 @@ Public Class Conexion
     Public esNuevo As Boolean
     Public idFila As Integer
 
+    Public Sub New()
+        Me.miConexion = New MySqlConnection()
+        Me.miConexion.ConnectionString = "Server=localhost; Database=gymcat; Uid=root; Pwd=;"
+    End Sub
 
     Public Sub New(consulta As String, tabla As String)
         Me.miConexion = New MySqlConnection()

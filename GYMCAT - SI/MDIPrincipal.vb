@@ -11,19 +11,33 @@ Public Class MDIPrincipal
 	End Sub
 
 
+	Sub colorearboton(botonSeleccionado As Button)
+		' Recorre todos los controles dentro del formulario
+		For Each ctrl As Control In Me.Controls
+			' Verifica si el control es un botón
+			If TypeOf ctrl Is Button Then
+				' Cambia el color de fondo del botón a gris
+				ctrl.BackColor = Color.FromArgb(35, 32, 39)
+			End If
+		Next
 
-	Sub colorearboton(boton As Button)
-		btnEmpleados.BackColor = Color.FromArgb(35, 32, 39)
-		btnCursos.BackColor = Color.FromArgb(35, 32, 39)
-		btnMembresias.BackColor = Color.FromArgb(35, 32, 39)
-		btnFinanzas.BackColor = Color.FromArgb(35, 32, 39)
-		btnInventario.BackColor = Color.FromArgb(35, 32, 39)
-		BtnHorario.BackColor = Color.FromArgb(35, 32, 39)
-		btnInscripciones.BackColor = Color.FromArgb(35, 32, 39)
-		BtnIngresos.BackColor = Color.FromArgb(35, 32, 39)
-		btnEgresos.BackColor = Color.FromArgb(35, 32, 39)
-		boton.BackColor = Color.FromArgb(239, 84, 41)
+		' Cambia el color del botón seleccionado a rosa
+		botonSeleccionado.BackColor = Color.FromArgb(239, 41, 84)
 	End Sub
+
+
+	'Sub colorearboton(boton As Button)
+	'	btnEmpleados.BackColor = Color.FromArgb(35, 32, 39)
+	'	btnCursos.BackColor = Color.FromArgb(35, 32, 39)
+	'	btnMembresias.BackColor = Color.FromArgb(35, 32, 39)
+	'	btnFinanzas.BackColor = Color.FromArgb(35, 32, 39)
+	'	btnInventario.BackColor = Color.FromArgb(35, 32, 39)
+	'	BtnHorario.BackColor = Color.FromArgb(35, 32, 39)
+	'	btnInscripciones.BackColor = Color.FromArgb(35, 32, 39)
+	'	BtnIngresos.BackColor = Color.FromArgb(35, 32, 39)
+	'	btnEgresos.BackColor = Color.FromArgb(35, 32, 39)
+	'	boton.BackColor = Color.FromArgb(239, 84, 41)
+	'End Sub
 
 	Sub abrirform(formulario As Form)
 		formulario.MdiParent = Me
@@ -61,12 +75,12 @@ Public Class MDIPrincipal
 		mostrar_submenu(PanelMembresias)
 		Panel4.Visible = False
 		colorearboton(btnMembresias)
-
 		CrudMiembros.BringToFront()
 	End Sub
 
 	Private Sub btnCursos_Click(sender As Object, e As EventArgs) Handles btnCursos.Click
 		Panel4.Visible = False
+		colorearboton(btnCursos)
 		FormCursos.BringToFront()
 	End Sub
 
@@ -80,6 +94,7 @@ Public Class MDIPrincipal
 
 	Private Sub btnInscripciones_Click(sender As Object, e As EventArgs) Handles btnInscripciones.Click
 		Panel4.Visible = False
+		colorearboton(btnInscripciones)
 		FormInscripciones.BringToFront()
 		FormInscripciones.CargarDatosForm()
 	End Sub
