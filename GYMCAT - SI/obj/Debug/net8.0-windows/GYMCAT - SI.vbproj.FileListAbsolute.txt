@@ -238,3 +238,31 @@ C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\ref
 C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.pdb
 C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\GYMCAT - SI.genruntimeconfig.cache
 C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\obj\Debug\net8.0-windows\ref\GYMCAT - SI.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.barcodes.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.bouncy-castle-connector.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.forms.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.io.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.kernel.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.layout.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.pdfa.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.pdfua.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.sign.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.styledxmlparser.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.svg.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.commons.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\Irony.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\itext.bouncy-castle-adapter.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\Gaming\Documents\GitHub\GYMCAT\GYMCAT - SI\bin\Debug\net8.0-windows\XLParser.dll

@@ -14,7 +14,7 @@ Public Class FormInscripciones
 	Private PrevFila As DataGridViewCell
 	Private PopUp As FormPagopopup
 
-	Private listaIns As New List(Of DataGridViewRow)
+	Public Shared listaIns As New List(Of Curso_Pago)
 
 #Region "FUNCIONES <<<"
 
@@ -34,7 +34,7 @@ Public Class FormInscripciones
 		dgvCursosInscritos.DataSource = _Conexion.GymcatDataSet.Tables("TInscritos").DefaultView
 
 		'Llenar la tabla de Cursos a los que el miembro no esta Inscrito
-		Dim ComandoNoInscritos As New MySqlCommand("Select ID_cursos, nombre AS 'Curso' From cursos Where ID_cursos " +
+		Dim ComandoNoInscritos As New MySqlCommand("Select ID_cursos, nombre AS 'Curso', precio FROM cursos Where ID_cursos " +
 						"Not In (Select FK_cursos FROM miembros_cursos WHERE FK_miembros = @num)", _Conexion.miConexion)
 		ComandoNoInscritos.Parameters.AddWithValue("@num", IDMiembro)
 		_Conexion.TablaDataAdapter.SelectCommand = ComandoNoInscritos
@@ -42,8 +42,10 @@ Public Class FormInscripciones
 		_Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables("TNoInscritos"))
 		dgvCursosDisponibles.DataSource = _Conexion.GymcatDataSet.Tables("TNoInscritos").DefaultView
 
-		dgvCursosDisponibles.Columns(0).Visible = False
 		dgvCursosInscritos.Columns(0).Visible = False
+		dgvCursosDisponibles.Columns(0).Visible = False
+		dgvCursosDisponibles.Columns(2).Visible = False
+
 
 		dgvCursosInscritos.ClearSelection()
 		dgvCursosDisponibles.ClearSelection()
@@ -86,7 +88,7 @@ Public Class FormInscripciones
 			btnGuardar.Enabled = True
 			lbInscripciones.Visible = True
 			lbInscripciones.Text += vbCrLf + "    - " + FilaCurso.Cells(1).Value.ToString
-			listaIns.Add(FilaCurso)
+			listaIns.Add(New Curso_Pago(FilaCurso.Cells(0).Value, FilaCurso.Cells(1).Value.ToString, FilaCurso.Cells(2).Value, tbMeses.Text))
 			SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
 		End If
 	End Sub
@@ -235,12 +237,13 @@ Public Class FormInscripciones
 			lbInscripciones.Text = "Inscripciones:"
 			lbDesinscripciones.Visible = False
 			lbDesinscripciones.Text = vbCrLf + "Desisncripciones:"
-			PopUp = New FormPagopopup(listaIns)
-			PopUp.ShowDialog()
-			listaIns.Clear()
+			If listaIns.Count <> 0 Then
+				PopUp = New FormPagopopup(listaIns)
+				PopUp.ShowDialog()
+			End If
 			SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
-		End If
-	End Sub
+			End If
+    End Sub
 
 
 

@@ -10,9 +10,6 @@
     <Compile Update="CrudMiembros.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormInscripciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormFinanzas.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -29,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormEmpleadospopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormInscripciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormPagopopup.vb">

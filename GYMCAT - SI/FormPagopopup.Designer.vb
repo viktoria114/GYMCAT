@@ -29,7 +29,7 @@ Partial Class FormPagopopup
 		dtpFechaMov = New DateTimePicker()
 		Label2 = New Label()
 		Label3 = New Label()
-		cbEstadoElemento = New ComboBox()
+		cbFormaPago = New ComboBox()
 		Label8 = New Label()
 		lbTitulo = New Label()
 		GroupBox1 = New GroupBox()
@@ -38,7 +38,6 @@ Partial Class FormPagopopup
 		Label9 = New Label()
 		ComboBox2 = New ComboBox()
 		Panel1 = New Panel()
-		Panel2 = New Panel()
 		GroupBox2 = New GroupBox()
 		cbDeudor = New CheckBox()
 		tbIDUltimoPago = New TextBox()
@@ -48,16 +47,17 @@ Partial Class FormPagopopup
 		Label4 = New Label()
 		dtpVencimiento = New DateTimePicker()
 		dtpUltimoPago = New DateTimePicker()
+		Panel2 = New Panel()
 		CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
 		GroupBox1.SuspendLayout()
 		Panel1.SuspendLayout()
-		Panel2.SuspendLayout()
 		GroupBox2.SuspendLayout()
+		Panel2.SuspendLayout()
 		SuspendLayout()
 		' 
 		' btnPagar
 		' 
-		btnPagar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		btnPagar.BackColor = Color.FromArgb(239, 41, 84)
 		btnPagar.FlatStyle = FlatStyle.Popup
 		btnPagar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
 		btnPagar.ForeColor = Color.WhiteSmoke
@@ -71,7 +71,7 @@ Partial Class FormPagopopup
 		' 
 		' btnImprimir
 		' 
-		btnImprimir.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		btnImprimir.BackColor = Color.FromArgb(239, 41, 84)
 		btnImprimir.FlatStyle = FlatStyle.Popup
 		btnImprimir.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
 		btnImprimir.ForeColor = Color.WhiteSmoke
@@ -105,7 +105,7 @@ Partial Class FormPagopopup
 		' 
 		' dtpFechaMov
 		' 
-		dtpFechaMov.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		dtpFechaMov.CalendarTitleBackColor = Color.FromArgb(239, 41, 84)
 		dtpFechaMov.Format = DateTimePickerFormat.Short
 		dtpFechaMov.Location = New Point(189, 27)
 		dtpFechaMov.Name = "dtpFechaMov"
@@ -135,14 +135,15 @@ Partial Class FormPagopopup
 		Label3.TabIndex = 19
 		Label3.Text = "Miembro:"
 		' 
-		' cbEstadoElemento
+		' cbFormaPago
 		' 
-		cbEstadoElemento.FormattingEnabled = True
-		cbEstadoElemento.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta"})
-		cbEstadoElemento.Location = New Point(187, 54)
-		cbEstadoElemento.Name = "cbEstadoElemento"
-		cbEstadoElemento.Size = New Size(185, 24)
-		cbEstadoElemento.TabIndex = 24
+		cbFormaPago.AutoCompleteSource = AutoCompleteSource.CustomSource
+		cbFormaPago.FormattingEnabled = True
+		cbFormaPago.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta"})
+		cbFormaPago.Location = New Point(187, 54)
+		cbFormaPago.Name = "cbFormaPago"
+		cbFormaPago.Size = New Size(185, 24)
+		cbFormaPago.TabIndex = 24
 		' 
 		' Label8
 		' 
@@ -170,7 +171,7 @@ Partial Class FormPagopopup
 		' 
 		GroupBox1.Controls.Add(Label2)
 		GroupBox1.Controls.Add(Label8)
-		GroupBox1.Controls.Add(cbEstadoElemento)
+		GroupBox1.Controls.Add(cbFormaPago)
 		GroupBox1.Controls.Add(dtpFechaMov)
 		GroupBox1.Dock = DockStyle.Top
 		GroupBox1.Font = New Font("Cascadia Mono", 9F)
@@ -234,16 +235,6 @@ Partial Class FormPagopopup
 		Panel1.Size = New Size(416, 479)
 		Panel1.TabIndex = 45
 		' 
-		' Panel2
-		' 
-		Panel2.Controls.Add(cbMiembros)
-		Panel2.Controls.Add(Label3)
-		Panel2.Dock = DockStyle.Top
-		Panel2.Location = New Point(0, 103)
-		Panel2.Name = "Panel2"
-		Panel2.Size = New Size(416, 67)
-		Panel2.TabIndex = 44
-		' 
 		' GroupBox2
 		' 
 		GroupBox2.Controls.Add(cbDeudor)
@@ -267,7 +258,7 @@ Partial Class FormPagopopup
 		' cbDeudor
 		' 
 		cbDeudor.AutoSize = True
-		cbDeudor.Font = New Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+		cbDeudor.Font = New Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
 		cbDeudor.ForeColor = Color.White
 		cbDeudor.Location = New Point(189, 81)
 		cbDeudor.Name = "cbDeudor"
@@ -329,7 +320,7 @@ Partial Class FormPagopopup
 		' 
 		' dtpVencimiento
 		' 
-		dtpVencimiento.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		dtpVencimiento.CalendarTitleBackColor = Color.FromArgb(239, 41, 84)
 		dtpVencimiento.Format = DateTimePickerFormat.Short
 		dtpVencimiento.Location = New Point(189, 107)
 		dtpVencimiento.Name = "dtpVencimiento"
@@ -339,7 +330,7 @@ Partial Class FormPagopopup
 		' 
 		' dtpUltimoPago
 		' 
-		dtpUltimoPago.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+		dtpUltimoPago.CalendarTitleBackColor = Color.FromArgb(239, 41, 84)
 		dtpUltimoPago.Format = DateTimePickerFormat.Short
 		dtpUltimoPago.Location = New Point(189, 54)
 		dtpUltimoPago.Name = "dtpUltimoPago"
@@ -347,11 +338,21 @@ Partial Class FormPagopopup
 		dtpUltimoPago.TabIndex = 37
 		dtpUltimoPago.Value = New Date(2024, 8, 17, 0, 0, 0, 0)
 		' 
+		' Panel2
+		' 
+		Panel2.Controls.Add(cbMiembros)
+		Panel2.Controls.Add(Label3)
+		Panel2.Dock = DockStyle.Top
+		Panel2.Location = New Point(0, 103)
+		Panel2.Name = "Panel2"
+		Panel2.Size = New Size(416, 67)
+		Panel2.TabIndex = 44
+		' 
 		' FormPagopopup
 		' 
 		AutoScaleDimensions = New SizeF(7F, 15F)
 		AutoScaleMode = AutoScaleMode.Font
-		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
+		BackColor = Color.FromArgb(33, 31, 45)
 		ClientSize = New Size(1081, 587)
 		Controls.Add(Panel1)
 		Controls.Add(Label7)
@@ -367,10 +368,10 @@ Partial Class FormPagopopup
 		GroupBox1.PerformLayout()
 		Panel1.ResumeLayout(False)
 		Panel1.PerformLayout()
-		Panel2.ResumeLayout(False)
-		Panel2.PerformLayout()
 		GroupBox2.ResumeLayout(False)
 		GroupBox2.PerformLayout()
+		Panel2.ResumeLayout(False)
+		Panel2.PerformLayout()
 		ResumeLayout(False)
 		PerformLayout()
 	End Sub
@@ -381,7 +382,7 @@ Partial Class FormPagopopup
     Friend WithEvents dtpFechaMov As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents cbEstadoElemento As ComboBox
+    Friend WithEvents cbFormaPago As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents lbTitulo As Label
     Friend WithEvents GroupBox1 As GroupBox
