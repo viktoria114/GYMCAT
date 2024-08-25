@@ -17,6 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+DROP SCHEMA IF EXISTS gymcat;
+CREATE SCHEMA IF NOT EXISTS gymcat 
+    DEFAULT CHARACTER SET utf8mb4 
+    DEFAULT COLLATE utf8mb4_spanish2_ci;
+USE gymcat;
+
 --
 -- Base de datos: `gymcat`
 --

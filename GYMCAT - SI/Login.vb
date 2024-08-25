@@ -28,6 +28,8 @@ Public Class Login
         End If
         miConexion.Close()
 
+        MDIPrincipal.CargarUsuario()
+
 
     End Sub
 

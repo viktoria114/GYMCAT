@@ -34,6 +34,7 @@ Partial Class CrudMiembros
         btnBorrar = New Button()
         Label1 = New Label()
         GroupBox1 = New GroupBox()
+        btnPagoCuota = New Button()
         CType(dgvListadoMiembros, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
@@ -169,6 +170,22 @@ Partial Class CrudMiembros
         GroupBox1.TabStop = False
         GroupBox1.Text = "Listado de Miembros"
         ' 
+        ' btnPagoCuota
+        ' 
+        btnPagoCuota.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
+        btnPagoCuota.FlatStyle = FlatStyle.Popup
+        btnPagoCuota.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+        btnPagoCuota.ForeColor = SystemColors.ButtonFace
+        btnPagoCuota.Image = My.Resources.Resources.icono_flecha_derecha
+        btnPagoCuota.ImageAlign = ContentAlignment.MiddleRight
+        btnPagoCuota.Location = New Point(638, 84)
+        btnPagoCuota.Name = "btnPagoCuota"
+        btnPagoCuota.Size = New Size(147, 44)
+        btnPagoCuota.TabIndex = 5
+        btnPagoCuota.Text = "Pagar Cuota"
+        btnPagoCuota.TextAlign = ContentAlignment.MiddleLeft
+        btnPagoCuota.UseVisualStyleBackColor = False
+        ' 
         ' CrudMiembros
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -177,6 +194,7 @@ Partial Class CrudMiembros
         ClientSize = New Size(833, 646)
         Controls.Add(Label1)
         Controls.Add(GroupBox1)
+        Controls.Add(btnPagoCuota)
         Controls.Add(btnBorrar)
         Controls.Add(btnEditar)
         Controls.Add(btnAgregar)
@@ -198,6 +216,7 @@ Partial Class CrudMiembros
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents tbBuscar As TextBox
+    Friend WithEvents btnPagoCuota As Button
 
 End Class
 

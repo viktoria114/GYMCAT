@@ -142,6 +142,10 @@ Public Class CrudMiembros
     End Sub
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Agregar()
+
+        Dim miFormularioPago As New FormPagopopup(nuevoMiembro.tbDNI.Text, "Membresia")
+        miFormularioPago.ShowDialog()
+
     End Sub
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Editar()
@@ -151,6 +155,12 @@ Public Class CrudMiembros
     End Sub
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs)
         Buscar()
+    End Sub
+
+    Private Sub btnPagoCuota_Click(sender As Object, e As EventArgs) Handles btnPagoCuota.Click
+        Dim miembro As DataGridViewRow = dgvListadoMiembros.CurrentRow
+        Dim miFormularioPago As New FormPagopopup(miembro.Cells(1).Value, "Cuota")
+        miFormularioPago.ShowDialog()
     End Sub
 
 End Class
