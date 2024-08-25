@@ -30,11 +30,26 @@ Public Class FormPagopopup
     Private total As Decimal
     Public TablaDataAdapter As MySqlDataAdapter
     Public GymcatDataSet As DataSet
+    Public IDMovActual As Integer
+    Public IdMiembro As Integer
+    Public TipoMov As String
+    Public NomCompleto As String
 
     Public Sub New(DNI_miembro1 As Integer, modo1 As String)
         InitializeComponent()
         Modo = modo1
         DNI_Miembro = DNI_miembro1
+    End Sub
+
+    Public Sub New(TipoMov1 As String)
+        InitializeComponent()
+        Modo = "Generico"
+        If TipoMov1 = "Ingresos" Then
+            TipoMov = "Ingreso"
+        End If
+        If TipoMov1 = "Egresos" Then
+            TipoMov = "Egreso"
+        End If
     End Sub
 
     Public Sub New(Lista As List(Of Curso_Pago))
@@ -54,29 +69,36 @@ Public Class FormPagopopup
 
         Dim lector = comando.ExecuteReader
         lector.Read()
-        Dim IDMovActual As Int32 = lector("ID_ingresos") + 1
+        IDMovActual = lector("ID_ingresos") + 1
+        lector.Close()
+
+        Dim comando1 As New MySqlCommand("SELECT * FROM miembros WHERE dni = @dni", _Conexion.miConexion)
+        comando1.Parameters.AddWithValue("@dni", DNI_Miembro)
+
+        Dim lector1 = comando1.ExecuteReader
+        lector1.Read()
+        If lector1.HasRows Then
+            IdMiembro = lector1("ID_miembro")
+            NomCompleto = lector1("nombre") + " " + lector1("apellido") + ", " + lector1("DNI").ToString
+        End If
+        lector1.Close()
+
+        GroupBox1.Height = 103
+        btnPagar.Location = New Point(446, 483)
+        btnImprimir.Location = New Point(566, 483)
+        Me.Height = 626
+        Me.Width = 969
+        Panel1.Height = 455
 
         Select Case Modo
             Case "Cuota"
                 lbTitulo.Text = "Couta de Miembro, ID " + IDMovActual.ToString
-                lector.Close()
 
-                Dim comando1 As New MySqlCommand("SELECT * FROM miembros WHERE dni = @dni", _Conexion.miConexion)
-                comando1.Parameters.AddWithValue("@dni", DNI_Miembro)
-
-                Dim lector1 = comando1.ExecuteReader
-                lector1.Read()
-
-                dtpFechaMov.Text = Today
-
-                cbMiembros.Text = lector1("nombre") + " " + lector1("apellido") + ", " + lector1("DNI").ToString
                 cbMiembros.Enabled = False
+                dtpFechaMov.Text = Today
+                cbMiembros.Text = NomCompleto
 
                 Cuota()
-
-                lector.Close()
-                lector1.Close()
-
 
                 'cbMiembros.Items.Clear()
 
@@ -95,8 +117,37 @@ Public Class FormPagopopup
 
             Case "Inscripcion"
 
+
+
             Case "Membresia"
 
+                GroupBox2.Hide()
+
+                lbTitulo.Text = "Membresia de nuevo Miembro, ID " + IDMovActual.ToString
+                lector.Close()
+                dtpFechaMov.Enabled = False
+                dtpFechaMov.Text = nuevoMiembro.dtpInscripcion.Text
+                cbMiembros.Text = nuevoMiembro.tbNombre.Text + " " + nuevoMiembro.tbApellido.Text + ", " + nuevoMiembro.tbDNI.Text
+                cbMiembros.Enabled = False
+
+                cbMeses.Text = nuevoMiembro.cbDuracMemb.Text
+                cbMeses.Enabled = False
+
+            Case "Generico"
+                'Panel2.Hide()
+                'GroupBox2.Hide()
+                GroupBox1.Height = 190
+                'Label9.Hide()
+                'cbMeses.Hide()
+                Label7.Hide()
+                dgvFactura.Hide()
+                btnPagar.Location = New Point(82, 314)
+                btnImprimir.Location = New Point(214, 314)
+                Me.Height = 478
+                Me.Width = 475
+                Panel1.Height = 190
+
+                lbTitulo.Text = "Nuevo " + TipoMov + ", ID " + IDMovActual.ToString
         End Select
 
 
@@ -113,36 +164,7 @@ Public Class FormPagopopup
             Select Case Modo
                 Case "Cuota"
 
-                    Tabla = "TIngresos"
-                    Dim consulta As String = "SELECT * FROM ingresos"
-
-                    _Conexion = New Conexion(consulta, Tabla)
-
-                    Dim fila As DataRow
-                    Dim cmd As String
-
-                    '1. Crear una nueva fila 
-                    fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
-                    '2. Rellenar la fila con información
-                    fila("fecha_pago") = dtpFechaMov.Text
-                    fila("forma_pago") = cbFormaPago.Text
-                    fila("monto") = total
-                    fila("concepto") = "Cuota de Miembro " + DNI_Miembro + " por " + cbMeses.Text + " mes/es"
-
-                    '3. Agregar fila a la tabla del DataSet
-                    _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
-
-                    '4. Crear Comando para agregar a la BD la fila nueva cmd
-                    cmd = "INSERT INTO ingresos (fecha_pago, forma_pago, monto, concepto) VALUES (@fecha, @forma, @mon, @con)"
-                    _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
-                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
-                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
-                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
-                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
-
-                    '5. Guardar los cambios en la base de datos
-                    _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
-
+                    ActualizarIngresos("Cuota de Miembro")
 
                     Dim comando2 As New MySqlCommand("SELECT * FROM miembros WHERE dni = @dni", _Conexion.miConexion)
                     comando2.Parameters.AddWithValue("@dni", DNI_Miembro)
@@ -164,12 +186,18 @@ Public Class FormPagopopup
                     _Conexion.miConexion.Close()
 
                     Me.Close()
-
+                    FormFinanzas.actualizardvg()
+                    actualizarMiembroMesIngreso()
 
 
                 Case "Inscripcion"
 
                 Case "Membresia"
+
+                    ActualizarIngresos("Membresia de nuevo Miembro")
+                    Me.Close()
+                    FormFinanzas.actualizardvg()
+                    actualizarMiembroMesIngreso()
 
             End Select
         End If
@@ -284,6 +312,82 @@ Public Class FormPagopopup
         lector.Close()
         miConexion.Close()
     End Sub
+
+    Sub ActualizarIngresos(modo As String)
+        Tabla = "TIngresos"
+        Dim consulta As String = "SELECT * FROM ingresos"
+
+        _Conexion = New Conexion(consulta, Tabla)
+
+        Dim fila As DataRow
+        Dim cmd As String
+
+        '1. Crear una nueva fila 
+        fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
+        '2. Rellenar la fila con información
+        fila("fecha_pago") = dtpFechaMov.Text
+        fila("forma_pago") = cbFormaPago.Text
+        fila("monto") = total
+        fila("concepto") = modo + DNI_Miembro + " por " + cbMeses.Text + " mes/es"
+
+        '3. Agregar fila a la tabla del DataSet
+        _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
+
+        '4. Crear Comando para agregar a la BD la fila nueva cmd
+        cmd = "INSERT INTO ingresos (fecha_pago, forma_pago, monto, concepto) VALUES (@fecha, @forma, @mon, @con)"
+        _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+
+        '5. Guardar los cambios en la base de datos
+        _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+    End Sub
+
+    Sub actualizarMiembroMesIngreso()
+
+        Dim comando As New MySqlCommand("SELECT * FROM mes WHERE mes = @mes", _Conexion.miConexion)
+        comando.Parameters.AddWithValue("@mes", Format(Now, "MMMM"))
+
+        _Conexion.miConexion.Open()
+
+        Dim lector = comando.ExecuteReader
+        lector.Read()
+        Dim mesactual As Integer = lector("ID_mes")
+
+        _Conexion.miConexion.Close()
+
+
+        Tabla = "TMiembroMesIngreso"
+        Dim consulta As String = "SELECT * FROM miembros_mes_ingresos"
+
+        _Conexion = New Conexion(consulta, Tabla)
+
+        Dim fila As DataRow
+        Dim cmd As String
+
+        '1. Crear una nueva fila 
+        fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
+        '2. Rellenar la fila con información
+        fila("FK_miembros") = IdMiembro
+        fila("FK_mes") = mesactual
+        fila("FK_ingresos") = IDMovActual
+
+        '3. Agregar fila a la tabla del DataSet
+        _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
+
+        '4. Crear Comando para agregar a la BD la fila nueva cmd
+        cmd = "INSERT INTO miembros_mes_ingresos (FK_miembros, FK_mes, FK_ingresos) VALUES (@miem, @mes, @ing)"
+        _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@miem", MySqlDbType.Int32, 20, "FK_miembros")
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mes", MySqlDbType.Int32, 20, "FK_mes")
+        _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@ing", MySqlDbType.Int32, 20, "FK_ingresos")
+
+        '5. Guardar los cambios en la base de datos
+        _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+    End Sub
+
 
     'Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
     '	Dim pdfWriter As New PdfWriter("C:\Users\Gaming\Desktop\GYMCAT_Factura.pdf")

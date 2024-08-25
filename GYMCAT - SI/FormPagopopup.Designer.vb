@@ -31,12 +31,14 @@ Partial Class FormPagopopup
         colMeses = New DataGridViewTextBoxColumn()
         dtpFechaMov = New DateTimePicker()
         Label2 = New Label()
-        Label3 = New Label()
         cbFormaPago = New ComboBox()
         Label8 = New Label()
         lbTitulo = New Label()
         GroupBox1 = New GroupBox()
-        cbMiembros = New ComboBox()
+        tbConcepto = New TextBox()
+        tbMonto = New TextBox()
+        Label12 = New Label()
+        Label11 = New Label()
         Label7 = New Label()
         Label9 = New Label()
         cbMeses = New ComboBox()
@@ -51,6 +53,8 @@ Partial Class FormPagopopup
         dtpVencimiento = New DateTimePicker()
         dtpUltimoPago = New DateTimePicker()
         Panel2 = New Panel()
+        cbMiembros = New ComboBox()
+        Label3 = New Label()
         CType(dgvFactura, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         Panel1.SuspendLayout()
@@ -65,7 +69,7 @@ Partial Class FormPagopopup
         btnPagar.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
         btnPagar.ForeColor = Color.WhiteSmoke
         btnPagar.ImageAlign = ContentAlignment.MiddleRight
-        btnPagar.Location = New Point(446, 483)
+        btnPagar.Location = New Point(82, 314)
         btnPagar.Name = "btnPagar"
         btnPagar.Size = New Size(114, 59)
         btnPagar.TabIndex = 16
@@ -79,7 +83,7 @@ Partial Class FormPagopopup
         btnImprimir.Font = New Font("Cascadia Mono SemiBold", 12F, FontStyle.Bold)
         btnImprimir.ForeColor = Color.WhiteSmoke
         btnImprimir.ImageAlign = ContentAlignment.MiddleRight
-        btnImprimir.Location = New Point(566, 483)
+        btnImprimir.Location = New Point(214, 314)
         btnImprimir.Name = "btnImprimir"
         btnImprimir.Size = New Size(114, 59)
         btnImprimir.TabIndex = 17
@@ -131,9 +135,9 @@ Partial Class FormPagopopup
         ' 
         dtpFechaMov.CalendarTitleBackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         dtpFechaMov.Format = DateTimePickerFormat.Short
-        dtpFechaMov.Location = New Point(189, 27)
+        dtpFechaMov.Location = New Point(187, 27)
         dtpFechaMov.Name = "dtpFechaMov"
-        dtpFechaMov.Size = New Size(183, 21)
+        dtpFechaMov.Size = New Size(185, 21)
         dtpFechaMov.TabIndex = 37
         dtpFechaMov.Value = New Date(2024, 8, 17, 0, 0, 0, 0)
         ' 
@@ -147,17 +151,6 @@ Partial Class FormPagopopup
         Label2.Size = New Size(56, 17)
         Label2.TabIndex = 10
         Label2.Text = "Fecha:"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-        Label3.ForeColor = Color.WhiteSmoke
-        Label3.Location = New Point(34, 28)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(72, 17)
-        Label3.TabIndex = 19
-        Label3.Text = "Miembro:"
         ' 
         ' cbFormaPago
         ' 
@@ -193,7 +186,11 @@ Partial Class FormPagopopup
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(tbConcepto)
+        GroupBox1.Controls.Add(tbMonto)
+        GroupBox1.Controls.Add(Label12)
         GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(Label11)
         GroupBox1.Controls.Add(Label8)
         GroupBox1.Controls.Add(cbFormaPago)
         GroupBox1.Controls.Add(dtpFechaMov)
@@ -202,19 +199,47 @@ Partial Class FormPagopopup
         GroupBox1.ForeColor = Color.White
         GroupBox1.Location = New Point(0, 0)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(416, 103)
+        GroupBox1.Size = New Size(416, 190)
         GroupBox1.TabIndex = 42
         GroupBox1.TabStop = False
         GroupBox1.Text = "Detalles"
         ' 
-        ' cbMiembros
+        ' tbConcepto
         ' 
-        cbMiembros.FormattingEnabled = True
-        cbMiembros.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta", "Cola °|°"})
-        cbMiembros.Location = New Point(112, 28)
-        cbMiembros.Name = "cbMiembros"
-        cbMiembros.Size = New Size(264, 23)
-        cbMiembros.TabIndex = 24
+        tbConcepto.Location = New Point(187, 132)
+        tbConcepto.Name = "tbConcepto"
+        tbConcepto.ScrollBars = ScrollBars.Vertical
+        tbConcepto.Size = New Size(185, 21)
+        tbConcepto.TabIndex = 38
+        ' 
+        ' tbMonto
+        ' 
+        tbMonto.Location = New Point(187, 103)
+        tbMonto.Name = "tbMonto"
+        tbMonto.Size = New Size(185, 21)
+        tbMonto.TabIndex = 38
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+        Label12.ForeColor = Color.WhiteSmoke
+        Label12.Location = New Point(126, 105)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(56, 17)
+        Label12.TabIndex = 10
+        Label12.Text = "Monto:"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+        Label11.ForeColor = Color.WhiteSmoke
+        Label11.Location = New Point(102, 132)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(80, 17)
+        Label11.TabIndex = 19
+        Label11.Text = "Concepto:"
         ' 
         ' Label7
         ' 
@@ -256,7 +281,7 @@ Partial Class FormPagopopup
         Panel1.Controls.Add(Label9)
         Panel1.Location = New Point(14, 96)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(416, 479)
+        Panel1.Size = New Size(416, 195)
         Panel1.TabIndex = 45
         ' 
         ' GroupBox2
@@ -272,9 +297,9 @@ Partial Class FormPagopopup
         GroupBox2.Dock = DockStyle.Top
         GroupBox2.Font = New Font("Cascadia Mono", 9F)
         GroupBox2.ForeColor = Color.White
-        GroupBox2.Location = New Point(0, 170)
+        GroupBox2.Location = New Point(0, 272)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(416, 151)
+        GroupBox2.Size = New Size(416, 150)
         GroupBox2.TabIndex = 45
         GroupBox2.TabStop = False
         GroupBox2.Text = "Información del Miembro"
@@ -367,23 +392,43 @@ Partial Class FormPagopopup
         Panel2.Controls.Add(cbMiembros)
         Panel2.Controls.Add(Label3)
         Panel2.Dock = DockStyle.Top
-        Panel2.Location = New Point(0, 103)
+        Panel2.Location = New Point(0, 190)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(416, 67)
+        Panel2.Size = New Size(416, 82)
         Panel2.TabIndex = 44
+        ' 
+        ' cbMiembros
+        ' 
+        cbMiembros.FormattingEnabled = True
+        cbMiembros.Items.AddRange(New Object() {"Transferencia", "Efectivo", "Tarjeta", "Cola °|°"})
+        cbMiembros.Location = New Point(112, 28)
+        cbMiembros.Name = "cbMiembros"
+        cbMiembros.Size = New Size(264, 23)
+        cbMiembros.TabIndex = 24
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
+        Label3.ForeColor = Color.WhiteSmoke
+        Label3.Location = New Point(34, 28)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(72, 17)
+        Label3.TabIndex = 19
+        Label3.Text = "Miembro:"
         ' 
         ' FormPagopopup
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-        ClientSize = New Size(953, 587)
+        ClientSize = New Size(930, 563)
         Controls.Add(Panel1)
         Controls.Add(Label7)
-        Controls.Add(lbTitulo)
-        Controls.Add(dgvFactura)
         Controls.Add(btnImprimir)
         Controls.Add(btnPagar)
+        Controls.Add(lbTitulo)
+        Controls.Add(dgvFactura)
         Controls.Add(Label10)
         Name = "FormPagopopup"
         Text = "FormPagospopup"
@@ -405,12 +450,10 @@ Partial Class FormPagopopup
     Friend WithEvents dgvFactura As DataGridView
     Friend WithEvents dtpFechaMov As DateTimePicker
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents cbFormaPago As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents lbTitulo As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents cbMiembros As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents cbMeses As ComboBox
@@ -424,8 +467,14 @@ Partial Class FormPagopopup
 	Friend WithEvents Label4 As Label
 	Friend WithEvents dtpVencimiento As DateTimePicker
 	Friend WithEvents dtpUltimoPago As DateTimePicker
-	Friend WithEvents Panel2 As Panel
     Friend WithEvents colDescripción As DataGridViewTextBoxColumn
     Friend WithEvents colMonto As DataGridViewTextBoxColumn
     Friend WithEvents colMeses As DataGridViewTextBoxColumn
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents tbMonto As TextBox
+    Friend WithEvents tbConcepto As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents cbMiembros As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

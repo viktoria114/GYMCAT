@@ -8,19 +8,7 @@ Public Class FormFinanzas
     Public vistaDatos3 As DataView
 
     Private Sub FormFinanzas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim consulta As String = "SELECT * FROM ingresos"
-        Dim consulta2 As String = "SELECT * FROM gastos"
-        Dim consulta3 As String = "SELECT ID_ingresos as 'ID Pago', fecha_pago, monto, forma_pago, concepto FROM ingresos UNION SELECT ID_gastos, fecha_gasto, monto, forma_pago, concepto FROM gastos ORDER BY fecha_pago"
-
-        _Conexion = New Conexion(consulta, consulta2, consulta3, Tabla, Tabla2, Tabla3)
-
-
-        ' Mostrar ingresos por defecto
-        dgvListadoFinanzas.DataSource = _Conexion.vistaDatos
-        dgvListadoFinanzas.Columns(0).Visible = False
-
-
-        cbMostrar.SelectedIndex = 0
+        actualizardvg()
 
     End Sub
 
@@ -38,4 +26,25 @@ Public Class FormFinanzas
         End Select
     End Sub
 
+    Sub actualizardvg()
+        Dim consulta As String = "SELECT * FROM ingresos"
+        Dim consulta2 As String = "SELECT * FROM gastos"
+        Dim consulta3 As String = "SELECT ID_ingresos as 'ID Pago', fecha_pago, monto, forma_pago, concepto FROM ingresos UNION SELECT ID_gastos, fecha_gasto, monto, forma_pago, concepto FROM gastos ORDER BY fecha_pago"
+
+        _Conexion = New Conexion(consulta, consulta2, consulta3, Tabla, Tabla2, Tabla3)
+
+
+        ' Mostrar ingresos por defecto
+        dgvListadoFinanzas.DataSource = _Conexion.vistaDatos
+        dgvListadoFinanzas.Columns(0).Visible = False
+
+
+        cbMostrar.SelectedIndex = 0
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Dim miFormularioPago As New FormPagopopup(cbMostrar.Text)
+        miFormularioPago.ShowDialog()
+
+    End Sub
 End Class
