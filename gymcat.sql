@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-08-2024 a las 21:13:06
+-- Tiempo de generación: 25-08-2024 a las 04:18:33
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -68,6 +68,24 @@ INSERT INTO `cursos` (`ID_cursos`, `nombre`, `horario`, `precio`, `dias_clase`, 
 (6, 'Musculación2', '8:00 10:00', 5000, 'martes, jueves, sábado', 5, 'Mañana'),
 (7, 'Crossfit', '15:00 17:00', 6500, 'miércoles, viernes', 7, 'Tarde');
 
+--
+-- Disparadores `cursos`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_CURSOS` AFTER DELETE ON `cursos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se elimino un Curso: ', OLD.nombre, ' ID: ', OLD.ID_cursos),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_CURSOS` AFTER INSERT ON `cursos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se agrego un Curso: ', NEW.nombre, ' ID: ', NEW.ID_cursos),NOW());
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -84,6 +102,7 @@ CREATE TABLE `cursos_elementos_maquinas` (
 --
 
 INSERT INTO `cursos_elementos_maquinas` (`FK_cursos`, `FK_elementos`) VALUES
+(1, 1),
 (1, 1);
 
 -- --------------------------------------------------------
@@ -127,6 +146,24 @@ INSERT INTO `elementos deportivos` (`ID_elementos_deportivos`, `nombre`, `modelo
 (3, 'Bandas elásticas', 'Tubulares', 15000, 'Ligeras', '2024-06-27', 4, 'TheraBand', 'Desgastados', ''),
 (4, 'Cuerdas para saltar', 'Ajustable', 5000, 'PVC', '2019-08-17', 13, 'Decathlon', 'Viejo', '');
 
+--
+-- Disparadores `elementos deportivos`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_ELEMENTOS` AFTER DELETE ON `elementos deportivos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se elimino el elemento deportvo: ', OLD.nombre, ' ID: ', OLD.ID_elementos_deportivos),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_ELEMENTOS` AFTER INSERT ON `elementos deportivos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se agrego el elemento deportvo: ', NEW.nombre, ' ID: ', NEW.ID_elementos_deportivos),NOW());
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -160,6 +197,24 @@ INSERT INTO `empleados` (`ID_empleados`, `nombre`, `apellido`, `fecha_nacimiento
 (7, 'Roberto', 'Pardo', '1984-11-18', 150000, 'Tarde', 'Instructor', 325363, 325423754, 'rpardo@gmail.com'),
 (8, 'Oliver', 'Fruit', '2000-02-05', 45000, 'Noche', 'Instructor', 98234541, 3804985, 'olivafrut@gmail.com');
 
+--
+-- Disparadores `empleados`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_EMPLEADOS` AFTER DELETE ON `empleados` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se elimino Empleado: ', OLD.nombre,' ', OLD.apellido, ' ID: ', OLD.ID_empleados),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_EMPLEADOS` AFTER INSERT ON `empleados` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se agrego un nuevo Empleado: ', NEW.nombre,' ', NEW.apellido, ' ID: ', NEW.ID_empleados),NOW());
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -177,7 +232,41 @@ CREATE TABLE `empleados_mes_gastos` (
 --
 
 INSERT INTO `empleados_mes_gastos` (`FK_empleados`, `FK_mes`, `FK_gastos`) VALUES
+(2, 1, 2),
 (2, 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `id` int(11) NOT NULL,
+  `accion` varchar(255) NOT NULL,
+  `fecha` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `eventos`
+--
+
+INSERT INTO `eventos` (`id`, `accion`, `fecha`) VALUES
+(1, 'Se agrego un nuevo Empleado: 1 1ID: 10', '2024-08-24 22:45:49'),
+(2, 'Se elimino Empleado: 1 1ID: 10', '2024-08-24 22:45:54'),
+(3, 'Se agrego un nuevo Miembro: aMOR 1ID: 11', '2024-08-24 22:46:41'),
+(4, 'Se elimino Miembro: aMOR 1ID: 11', '2024-08-24 22:46:45'),
+(5, 'Se elimino Miembro: aMOR 1ID: 11', '2024-08-24 22:46:45'),
+(6, 'Se agrego un nuevo Miembro: lol 1ID: 12', '2024-08-24 22:49:53'),
+(7, 'Se elimino Miembro: lol 1ID: 12', '2024-08-24 22:49:56'),
+(8, 'Se elimino Miembro: lol 1ID: 12', '2024-08-24 22:49:56'),
+(9, 'Se agrego un nuevo Miembro: lel 1ID: 13', '2024-08-24 22:50:55'),
+(10, 'Se elimino Miembro: lel 1ID: 13', '2024-08-24 22:50:58'),
+(11, 'Se elimino Miembro: lel 1ID: 13', '2024-08-24 22:50:58'),
+(12, 'Se agrego un Curso: 1ID: 9', '2024-08-24 22:52:33'),
+(13, 'Se elimino un Curso: 1ID: 9', '2024-08-24 22:52:37'),
+(14, 'Se agrego el elemento deportvo: 1ID: 5', '2024-08-24 22:54:18'),
+(15, 'Se elimino el elemento deportvo: 1ID: 5', '2024-08-24 22:54:21');
 
 -- --------------------------------------------------------
 
@@ -200,6 +289,24 @@ CREATE TABLE `gastos` (
 INSERT INTO `gastos` (`ID_gastos`, `fecha_gasto`, `monto`, `forma_pago`, `concepto`) VALUES
 (1, '2024-07-22', 840000, 'transferencia', 'caminadora'),
 (2, '2024-07-22', 400000, 'transferencia', 'sueldo');
+
+--
+-- Disparadores `gastos`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_GASTOS` AFTER DELETE ON `gastos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Gasto Eliminado, ID: ', OLD.ID_gastos),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_GASTOS` AFTER INSERT ON `gastos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Nuevo Gasto, ID: ', NEW.ID_gastos),NOW());
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -227,6 +334,24 @@ INSERT INTO `ingresos` (`ID_ingresos`, `fecha_pago`, `forma_pago`, `monto`, `con
 (5, '2024-07-17', 'transferencia', 17000, 'cuota'),
 (6, '2024-08-01', 'efectivo', 20000, 'cuota'),
 (7, '2024-08-19', 'transferencia', 15000, 'couta');
+
+--
+-- Disparadores `ingresos`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_Ingresos` AFTER DELETE ON `ingresos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Ingreso ELiminado, ID: ', OLD.ID_ingresos),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_Ingresos` AFTER INSERT ON `ingresos` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Nuevo Ingreso, ID: ', NEW.ID_ingresos),NOW());
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -307,6 +432,24 @@ INSERT INTO `miembros` (`ID_miembro`, `DNI`, `nombre`, `apellido`, `edad`, `fech
 (7, 5435234, 'Luis Manuel', 'Guerra', 27, '2024-07-16', 5, 15000, 0, 34762477, 'luisitoguerra@gmail.com', 235),
 (8, 43523465, 'Julián', 'Algañaraz', 26, '2022-08-03', 12, 5000, 1, 380493821, 'julia@gmail.com', 5000);
 
+--
+-- Disparadores `miembros`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_MIEMBROS` AFTER DELETE ON `miembros` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se elimino Miembro: ', OLD.nombre,' ', OLD.apellido, ' ID: ', OLD.ID_miembro),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_MIEMBRO` AFTER INSERT ON `miembros` FOR EACH ROW BEGIN
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se agrego un nuevo Miembro: ', NEW.nombre,' ', NEW.apellido, ' ID: ', NEW.ID_miembro),NOW());
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -334,6 +477,46 @@ INSERT INTO `miembros_cursos` (`FK_miembros`, `FK_cursos`, `ID_inscripción`, `f
 (8, 3, 11, '2024-01-11'),
 (1, 1, 12, '2024-08-19'),
 (7, 4, 13, '2024-08-19');
+
+--
+-- Disparadores `miembros_cursos`
+--
+DELIMITER $$
+CREATE TRIGGER `DEL_EVENTO_INCRIPCIONES` AFTER DELETE ON `miembros_cursos` FOR EACH ROW BEGIN
+	DECLARE miembro_nombre VARCHAR(255);
+    DECLARE curso_nombre VARCHAR(255);
+    
+    SELECT CONCAT(miembros.nombre,' ', miembros.apellido)  INTO miembro_nombre
+    FROM miembros
+    WHERE ID_miembro = OLD.FK_miembros;
+    
+    SELECT nombre_curso INTO curso_nombre
+    FROM cursos
+    WHERE ID_cursos = OLD.FK_cursos;
+    
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se dio de baja el Miembro: ', miembro_nombre ,' del curso: ', curso_nombre),NOW());
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `INS_EVENTO_INCRIPCIONES` AFTER INSERT ON `miembros_cursos` FOR EACH ROW BEGIN
+	DECLARE miembro_nombre VARCHAR(255);
+    DECLARE curso_nombre VARCHAR(255);
+    
+    SELECT CONCAT(miembros.nombre,' ', miembros.apellido)  INTO miembro_nombre
+    FROM miembros
+    WHERE ID_miembro = NEW.FK_miembros;
+    
+    SELECT nombre_curso INTO curso_nombre
+    FROM cursos
+    WHERE ID_cursos = NEW.FK_cursos;
+    
+	INSERT INTO eventos(accion, fecha)
+    VALUES(CONCAT('Se Inscribio ', miembro_nombre ,' al curso ', curso_nombre),NOW());
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -414,6 +597,12 @@ ALTER TABLE `empleados_mes_gastos`
   ADD KEY `FK_mes` (`FK_mes`);
 
 --
+-- Indices de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `gastos`
 --
 ALTER TABLE `gastos`
@@ -475,19 +664,25 @@ ALTER TABLE `año`
 -- AUTO_INCREMENT de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `ID_cursos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_cursos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `elementos deportivos`
 --
 ALTER TABLE `elementos deportivos`
-  MODIFY `ID_elementos_deportivos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_elementos_deportivos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `ID_empleados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID_empleados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `gastos`
@@ -517,7 +712,7 @@ ALTER TABLE `mes`
 -- AUTO_INCREMENT de la tabla `miembros`
 --
 ALTER TABLE `miembros`
-  MODIFY `ID_miembro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID_miembro` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `miembros_cursos`
