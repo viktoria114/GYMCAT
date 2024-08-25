@@ -4,6 +4,7 @@ Public Class FormFinanzas
 	Private _Conexion As Conexion
 	Public Tabla As String = "Tingresos"
 	Public Tabla2 As String = "Tgastos"
+
 	Private Sub FormFinanzas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Dim consulta As String = "SELECT * FROM ingresos"
 		Dim consulta2 As String = "SELECT * FROM gastos"
@@ -14,7 +15,9 @@ Public Class FormFinanzas
 		dgvListadoFinanzas.DataSource = _Conexion.vistaDatos
 		dgvListadoFinanzas.Columns(0).Visible = False
 
+
 		cbMostrar.SelectedIndex = 0
+
 	End Sub
 
 	Private Sub cbMostrar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMostrar.SelectedIndexChanged
@@ -31,7 +34,5 @@ Public Class FormFinanzas
 		End Select
 	End Sub
 
-	Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
-	End Sub
 End Class

@@ -161,6 +161,10 @@ Public Class CrudMiembros
         Dim miembro As DataGridViewRow = dgvListadoMiembros.CurrentRow
         Dim miFormularioPago As New FormPagopopup(miembro.Cells(1).Value, "Cuota")
         miFormularioPago.ShowDialog()
+
+        _Conexion.GymcatDataSet.Tables(Tabla).Clear()
+        _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
+
     End Sub
 
 End Class

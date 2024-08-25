@@ -81,7 +81,7 @@ Partial Class FormFinanzas
         GroupBox2.Size = New Size(785, 456)
         GroupBox2.TabIndex = 5
         GroupBox2.TabStop = False
-        GroupBox2.Text = "Listado de Empleados"
+        GroupBox2.Text = "Listado de Movimientos"
         ' 
         ' Label2
         ' 

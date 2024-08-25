@@ -9,19 +9,20 @@ Public Class MDIPrincipal
         PanelMembresias.Visible = False
     End Sub
 
+    Dim botonesSI = New Control() {btnEmpleados, btnCursos, btnMembresias, btnFinanzas, btnInventario, BtnHorario, btnInscripciones, btnConsultas}
 
     Sub colorearBoton(botonSeleccionado As Button)
         ' Recorre todos los controles de forma recursiva
-        ResetearColores(Me)
+        ResetearColores(PanelLateral)
 
         ' Cambia el color del botón principal seleccionado a rosa
         botonSeleccionado.BackColor = Color.FromArgb(239, 41, 84)
     End Sub
 
     ' Método recursivo para resetear los colores de los botones
-    Sub ResetearColores(contenedor As Control)
+    Sub ResetearColores(botonesSI As Control)
         ' Recorre todos los controles dentro del contenedor
-        For Each ctrl As Control In contenedor.Controls
+        For Each ctrl As Control In botonesSI.Controls
             ' Si el control es un botón, restablece su color
             If TypeOf ctrl Is Button Then
                 ctrl.BackColor = Color.FromArgb(35, 32, 39) ' Color original gris
@@ -33,21 +34,6 @@ Public Class MDIPrincipal
             End If
         Next
     End Sub
-
-
-
-    'Sub colorearboton(boton As Button)
-    '	btnEmpleados.BackColor = Color.FromArgb(35, 32, 39)
-    '	btnCursos.BackColor = Color.FromArgb(35, 32, 39)
-    '	btnMembresias.BackColor = Color.FromArgb(35, 32, 39)
-    '	btnFinanzas.BackColor = Color.FromArgb(35, 32, 39)
-    '	btnInventario.BackColor = Color.FromArgb(35, 32, 39)
-    '	BtnHorario.BackColor = Color.FromArgb(35, 32, 39)
-    '	btnInscripciones.BackColor = Color.FromArgb(35, 32, 39)
-    '	BtnIngresos.BackColor = Color.FromArgb(35, 32, 39)
-    '	btnEgresos.BackColor = Color.FromArgb(35, 32, 39)
-    '	boton.BackColor = Color.FromArgb(239, 84, 41)
-    'End Sub
 
     Sub abrirform(formulario As Form)
         formulario.MdiParent = Me
@@ -193,7 +179,6 @@ Public Class MDIPrincipal
 
 
     End Sub
-
 
 End Class
 

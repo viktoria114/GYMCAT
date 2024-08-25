@@ -14,6 +14,7 @@ Imports iText.Kernel.Pdf.Canvas.Draw
 Imports iText.Layout
 Imports iText.Layout.Element
 Imports iText.Layout.Properties
+Imports DocumentFormat.OpenXml.Vml
 
 
 Public Class FormPagopopup
@@ -25,7 +26,10 @@ Public Class FormPagopopup
     Private Nombre_Miembro As String
     Private DNI_Miembro As String
     Private Correo_Miembro As String
-
+    Private Tabla As String
+    Private total As Decimal
+    Public TablaDataAdapter As MySqlDataAdapter
+    Public GymcatDataSet As DataSet
 
     Public Sub New(DNI_miembro1 As Integer, modo1 As String)
         InitializeComponent()
@@ -109,6 +113,57 @@ Public Class FormPagopopup
             Select Case Modo
                 Case "Cuota"
 
+                    Tabla = "TIngresos"
+                    Dim consulta As String = "SELECT * FROM ingresos"
+
+                    _Conexion = New Conexion(consulta, Tabla)
+
+                    Dim fila As DataRow
+                    Dim cmd As String
+
+                    '1. Crear una nueva fila 
+                    fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
+                    '2. Rellenar la fila con información
+                    fila("fecha_pago") = dtpFechaMov.Text
+                    fila("forma_pago") = cbFormaPago.Text
+                    fila("monto") = total
+                    fila("concepto") = "Cuota de Miembro " + DNI_Miembro + " por " + cbMeses.Text + " mes/es"
+
+                    '3. Agregar fila a la tabla del DataSet
+                    _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
+
+                    '4. Crear Comando para agregar a la BD la fila nueva cmd
+                    cmd = "INSERT INTO ingresos (fecha_pago, forma_pago, monto, concepto) VALUES (@fecha, @forma, @mon, @con)"
+                    _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
+                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
+                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
+                    _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+
+                    '5. Guardar los cambios en la base de datos
+                    _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+
+
+                    Dim comando2 As New MySqlCommand("SELECT * FROM miembros WHERE dni = @dni", _Conexion.miConexion)
+                    comando2.Parameters.AddWithValue("@dni", DNI_Miembro)
+
+                    _Conexion.miConexion.Open()
+
+                    Dim lector2 = comando2.ExecuteReader
+                    lector2.Read()
+                    Dim durmem As Integer = lector2("duracion_membresia") + cbMeses.Text
+
+                    _Conexion.miConexion.Close()
+
+                    Dim comando3 As New MySqlCommand("UPDATE miembros SET duracion_membresia = @mem WHERE dni = @dni", _Conexion.miConexion)
+                    comando3.Parameters.AddWithValue("@dni", DNI_Miembro)
+                    comando3.Parameters.AddWithValue("@mem", durmem)
+
+                    _Conexion.miConexion.Open()
+                    comando3.ExecuteNonQuery()
+                    _Conexion.miConexion.Close()
+
+                    Me.Close()
 
 
 
@@ -172,7 +227,6 @@ Public Class FormPagopopup
     Private Sub cbMeses_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMeses.SelectedIndexChanged
         dgvFactura.Rows.Clear()
 
-        Dim total As Decimal = 0
         Dim precio As Integer = 15000 * cbMeses.Text
 
         Dim n As Integer = dgvFactura.Rows.Add()
@@ -191,12 +245,12 @@ Public Class FormPagopopup
         Dim lector = comando.ExecuteReader
         lector.Read()
 
-        precio = lector("costo_total") * cbMeses.Text
+        total = lector("costo_total") * cbMeses.Text
 
         dgvFactura.Rows.Add()
         n = dgvFactura.Rows.Add()
         dgvFactura.Rows(n).Cells(0).Value = "Total"
-        dgvFactura.Rows(n).Cells(1).Value = precio.ToString
+        dgvFactura.Rows(n).Cells(1).Value = total.ToString
         dgvFactura.Rows(n).Cells(2).Value = "*" + cbMeses.Text + " mes/es"
 
         lector.Close()
