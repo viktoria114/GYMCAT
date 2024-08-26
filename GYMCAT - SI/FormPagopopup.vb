@@ -44,11 +44,44 @@ Public Class FormPagopopup
     Public Sub New(TipoMov1 As String)
         InitializeComponent()
         Modo = "Generico"
+        btnPagar.Text = "Guardar"
         If TipoMov1 = "Ingresos" Then
             TipoMov = "Ingreso"
+            If FormFinanzas._Conexion.esNuevo Then
+                Me.Text = ("Nuevo Ingreso")
+                dtpFechaMov.Text = ""
+                cbFormaPago.Text = ""
+                total = 0
+                tbConcepto.Text = ""
+                'fila("concepto") = modo + DNI_Miembro + " por " + cbMeses.Text + " mes/es"
+            Else
+                Dim fila As DataGridViewRow = FormFinanzas.dgvListadoFinanzas.CurrentRow
+                Me.Text = ("Editar Empleado")
+                FormFinanzas._Conexion.idFila = fila.Cells(0).Value
+                dtpFechaMov.Text = fila.Cells(1).Value
+                cbFormaPago.Text = fila.Cells(2).Value
+                tbMonto.Text = fila.Cells(3).Value.ToString()
+                tbConcepto.Text = fila.Cells(4).Value
+            End If
         End If
         If TipoMov1 = "Egresos" Then
             TipoMov = "Egreso"
+            If FormFinanzas._Conexion.esNuevo Then
+                Me.Text = ("Nuevo Gasto")
+                dtpFechaMov.Text = ""
+                cbFormaPago.Text = ""
+                total = 0
+                tbConcepto.Text = ""
+                'fila("concepto") = modo + DNI_Miembro + " por " + cbMeses.Text + " mes/es"
+            Else
+                Dim fila As DataGridViewRow = FormFinanzas.dgvListadoFinanzas.CurrentRow
+                Me.Text = ("Editar Egreso")
+                FormFinanzas._Conexion.idFila = fila.Cells(0).Value
+                dtpFechaMov.Text = fila.Cells(1).Value
+                tbMonto.Text = fila.Cells(2).Value.ToString()
+                cbFormaPago.Text = fila.Cells(3).Value
+                tbConcepto.Text = fila.Cells(4).Value
+            End If
         End If
     End Sub
 
@@ -158,12 +191,19 @@ Public Class FormPagopopup
     End Sub
 
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
-        If cbMeses.Text = "" Then
-            MsgBox("Elegir cantidad de meses!")
-        Else
-            Select Case Modo
-                Case "Cuota"
 
+        Select Case Modo
+                Case "Generico"
+                If TipoMov = "Ingreso" Then
+                    FormFinanzas.GuardarIngresos()
+                ElseIf TipoMov = "Egreso" Then
+                    FormFinanzas.GuardarEgresos()
+                End If
+                Me.Close()
+            Case "Cuota"
+                If cbMeses.Text = "" Then
+                    MsgBox("Elegir cantidad de meses!")
+                Else
                     ActualizarIngresos("Cuota de Miembro")
 
                     Dim comando2 As New MySqlCommand("SELECT * FROM miembros WHERE dni = @dni", _Conexion.miConexion)
@@ -189,18 +229,22 @@ Public Class FormPagopopup
                     FormFinanzas.actualizardvg()
                     actualizarMiembroMesIngreso()
 
+                End If
 
-                Case "Inscripcion"
+            Case "Inscripcion"
 
-                Case "Membresia"
+            Case "Membresia"
+                If cbMeses.Text = "" Then
+                    MsgBox("Elegir cantidad de meses!")
+                Else
 
                     ActualizarIngresos("Membresia de nuevo Miembro")
                     Me.Close()
                     FormFinanzas.actualizardvg()
                     actualizarMiembroMesIngreso()
+                End If
+        End Select
 
-            End Select
-        End If
 
     End Sub
 

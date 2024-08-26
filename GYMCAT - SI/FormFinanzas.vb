@@ -1,11 +1,13 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports DocumentFormat.OpenXml.Vml
+Imports MySql.Data.MySqlClient
 
 Public Class FormFinanzas
-    Private _Conexion As Conexion
+    Public _Conexion As Conexion
     Public Tabla As String = "Tingresos"
     Public Tabla2 As String = "Tgastos"
     Public Tabla3 As String = "TTodo"
     Public NumData As Integer
+    Public miFormularioPago As FormPagopopup
     Private Sub FormFinanzas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualizardvg()
     End Sub
@@ -25,6 +27,7 @@ Public Class FormFinanzas
             Case "Egresos"
                 dgvListadoFinanzas.DataSource = _Conexion.vistaDatos2
                 dgvListadoFinanzas.Columns(0).Visible = False
+                dgvListadoFinanzas.Rows(0).Selected = True
                 NumData = 2
                 btnAgregar.Enabled = True
                 btnAgregar.BackColor = Color.FromArgb(239, 41, 84)
@@ -110,9 +113,126 @@ Public Class FormFinanzas
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Dim miFormularioPago As New FormPagopopup(cbMostrar.Text)
+        _Conexion.esNuevo = True
+        miFormularioPago = New FormPagopopup(cbMostrar.Text)
         miFormularioPago.ShowDialog()
-
     End Sub
 
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        _Conexion.esNuevo = False
+        miFormularioPago = New FormPagopopup(cbMostrar.Text)
+        miFormularioPago.ShowDialog()
+    End Sub
+
+    Sub GuardarIngresos()
+        Dim fila As DataRow
+        Dim cmd As String
+        If _Conexion.esNuevo Then
+            '1. Crear una nueva fila 
+            fila = _Conexion.GymcatDataSet.Tables(Tabla).NewRow
+            '2. Rellenar la fila con información
+            fila("fecha_pago") = miFormularioPago.dtpFechaMov.Text
+            fila("forma_pago") = miFormularioPago.cbFormaPago.Text
+            fila("monto") = miFormularioPago.tbMonto.Text
+            fila("concepto") = miFormularioPago.tbConcepto.Text
+
+            '3. Agregar fila a la tabla del DataSet
+            _Conexion.GymcatDataSet.Tables(Tabla).Rows.Add(fila)
+
+            '4. Crear Comando para agregar a la BD la fila nueva cmd
+            cmd = "INSERT INTO ingresos (fecha_pago, forma_pago, monto, concepto) VALUES (@fecha, @forma, @mon, @con)"
+            _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+
+            '5. Guardar los cambios en la base de datos
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+
+            '6. V1olver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
+            _Conexion.GymcatDataSet.Tables(Tabla).Clear()
+            _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
+        Else
+            '1 seleccionar fila editar
+            fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
+            '2. Rellenar la fila con información
+            fila("fecha_pago") = miFormularioPago.dtpFechaMov.Text
+            fila("forma_pago") = miFormularioPago.cbFormaPago.Text
+            fila("monto") = miFormularioPago.tbMonto.Text
+            fila("concepto") = miFormularioPago.tbConcepto.Text
+
+            '3. Crear el comando para odificar la Fila
+            cmd = "UPDATE ingresos 
+                       SET fecha_pago=@fecha, forma_pago=@forma, monto=@mon, concepto=@con
+                       WHERE ID_ingresos=@id"
+            _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_ingresos")
+
+            '4. Guardar los cambios en la base de datos
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
+        End If
+    End Sub
+
+    Sub GuardarEgresos()
+        Dim fila As DataRow
+        Dim cmd As String
+        If _Conexion.esNuevo Then
+            '1. Crear una nueva fila 
+            fila = _Conexion.GymcatDataSet.Tables(Tabla2).NewRow
+            '2. Rellenar la fila con información
+            fila("fecha_gasto") = miFormularioPago.dtpFechaMov.Text
+            fila("monto") = miFormularioPago.tbMonto.Text
+            fila("forma_pago") = miFormularioPago.cbFormaPago.Text
+            fila("concepto") = miFormularioPago.tbConcepto.Text
+
+            '3. Agregar fila a la tabla del DataSet
+            _Conexion.GymcatDataSet.Tables(Tabla2).Rows.Add(fila)
+
+            '4. Crear Comando para agregar a la BD la fila nueva cmd
+            cmd = "INSERT INTO gastos (fecha_gasto, monto, forma_pago, concepto) VALUES (@fecha, @mon, @forma, @con)"
+            _Conexion.TablaDataAdapter.InsertCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_gasto")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+
+            '5. Guardar los cambios en la base de datos
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
+
+            '6. V1olver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
+            _Conexion.GymcatDataSet.Tables(Tabla2).Clear()
+            _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla2))
+        Else
+            '1 seleccionar fila editar
+            fila = _Conexion.GymcatDataSet.Tables(Tabla2).Rows.Find(_Conexion.idFila)
+            '2. Rellenar la fila con información
+            fila("fecha_gasto") = miFormularioPago.dtpFechaMov.Text
+            fila("monto") = miFormularioPago.tbMonto.Text
+            fila("forma_pago") = miFormularioPago.cbFormaPago.Text
+            fila("concepto") = miFormularioPago.tbConcepto.Text
+
+            '3. Crear el comando para odificar la Fila
+            cmd = "UPDATE gastos 
+                       SET fecha_gasto=@fecha, monto=@mon, forma_pago=@forma, concepto=@con
+                       WHERE ID_gastos=@id"
+            _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_gasto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_gastos")
+
+            '4. Guardar los cambios en la base de datos
+            _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
+        End If
+    End Sub
+
+    Private Sub dgvListadoFinanzas_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListadoFinanzas.RowEnter
+
+    End Sub
 End Class
