@@ -28,6 +28,8 @@
             tbCorreo.Text = fila.Cells(10).Value
             tbPuntos.Text = fila.Cells(11).Value
         End If
+
+        AddHandler cbDuracMemb.SelectedIndexChanged, AddressOf CalcularCostoTotal
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -37,6 +39,17 @@
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
+    End Sub
+
+    Private Sub CalcularCostoTotal(sender As Object, e As EventArgs) Handles cbDuracMemb.SelectedIndexChanged
+        Dim duracion As Integer
+        Dim costoPorMes = 15000
+
+        ' Convierte la duración seleccionada a un número entero
+        If Integer.TryParse(cbDuracMemb.Text, duracion) Then
+            ' Calcula el costo total
+            tbCostoTotal.Text = (duracion * costoPorMes).ToString
+        End If
     End Sub
 End Class
 

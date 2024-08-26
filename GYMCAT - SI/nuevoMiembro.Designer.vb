@@ -182,7 +182,7 @@ Partial Class nuevoMiembro
         ' 
         btnGuardar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnGuardar.FlatStyle = FlatStyle.Popup
-        btnGuardar.Font = New Font("Cascadia Mono", 12.0F)
+        btnGuardar.Font = New Font("Cascadia Mono", 12F)
         btnGuardar.ForeColor = SystemColors.ButtonFace
         btnGuardar.ImageAlign = ContentAlignment.MiddleRight
         btnGuardar.Location = New Point(67, 392)
@@ -197,7 +197,7 @@ Partial Class nuevoMiembro
         ' 
         btnCancelar.BackColor = Color.FromArgb(CByte(239), CByte(41), CByte(84))
         btnCancelar.FlatStyle = FlatStyle.Popup
-        btnCancelar.Font = New Font("Cascadia Mono", 12.0F)
+        btnCancelar.Font = New Font("Cascadia Mono", 12F)
         btnCancelar.ForeColor = SystemColors.ButtonFace
         btnCancelar.ImageAlign = ContentAlignment.MiddleRight
         btnCancelar.Location = New Point(252, 392)
@@ -212,6 +212,7 @@ Partial Class nuevoMiembro
         ' 
         tbCostoTotal.Location = New Point(171, 272)
         tbCostoTotal.Name = "tbCostoTotal"
+        tbCostoTotal.ReadOnly = True
         tbCostoTotal.Size = New Size(192, 23)
         tbCostoTotal.TabIndex = 0
         ' 
@@ -258,7 +259,7 @@ Partial Class nuevoMiembro
         ' cbDeudor
         ' 
         cbDeudor.AutoSize = True
-        cbDeudor.Font = New Font("Cascadia Code", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        cbDeudor.Font = New Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbDeudor.ForeColor = Color.White
         cbDeudor.Location = New Point(172, 307)
         cbDeudor.Name = "cbDeudor"
@@ -286,7 +287,7 @@ Partial Class nuevoMiembro
         ' 
         ' nuevoMiembro
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
         ClientSize = New Size(431, 484)

@@ -1,46 +1,118 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\",
+  "WorkspaceRootPath": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\gaming\\documents\\github\\gymcat\\gymcat - si\\formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:nuevomiembro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\gaming\\documents\\github\\gymcat\\gymcat - si\\curso_pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\curso_pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:curso_pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\icrud.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:icrud.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:crudmiembros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\my project\\crudempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:my project\\crudempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formconsultas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formconsultas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formempleados.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formfinanzas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formfinanzas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\inscripciones2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:inscripciones2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\inscripciones1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:inscripciones1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:forminscripciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formfinanzas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formfinanzas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\formconsultas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formconsultas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formcursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:horarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formpagopopup.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\crudelementos1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:crudelementos1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\conexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:conexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:mdiprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|c:\\users\\spawn070\\documents\\github\\gymcat\\gymcat - si\\formconsultas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95F2D373-AA0B-473D-A59D-13253BFB6F85}|GYMCAT - SI.vbproj|solutionrelative:formconsultas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,19 +122,314 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 14,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormPagopopup.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb",
+              "RelativeDocumentMoniker": "FormPagopopup.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormPagopopup.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-17T22:13:39.619Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormInscripciones.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb",
+              "RelativeDocumentMoniker": "FormInscripciones.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormInscripciones.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-13T22:00:47.714Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MDIPrincipal.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb",
+              "RelativeDocumentMoniker": "MDIPrincipal.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb [Dise\u00F1o]",
+              "RelativeToolTip": "MDIPrincipal.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-07-24T07:25:00.987Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormCursos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormCursos.vb",
+              "RelativeDocumentMoniker": "FormCursos.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormCursos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormCursos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-12T15:20:56.296Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Inscripciones1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Inscripciones1.vb",
+              "RelativeDocumentMoniker": "Inscripciones1.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Inscripciones1.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Inscripciones1.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:28:52.658Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Inscripciones2.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Inscripciones2.vb",
+              "RelativeDocumentMoniker": "Inscripciones2.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Inscripciones2.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Inscripciones2.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:28:51.777Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Horarios.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Horarios.vb",
+              "RelativeDocumentMoniker": "Horarios.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Horarios.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Horarios.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:44:54.51Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Login.vb",
+              "RelativeDocumentMoniker": "Login.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Login.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Login.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:28:50.24Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CrudElementos1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\CrudElementos1.vb",
+              "RelativeDocumentMoniker": "CrudElementos1.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\CrudElementos1.vb [Dise\u00F1o]",
+              "RelativeToolTip": "CrudElementos1.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:44:45.603Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CrudMiembros.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\CrudMiembros.vb",
+              "RelativeDocumentMoniker": "CrudMiembros.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\CrudMiembros.vb [Dise\u00F1o]",
+              "RelativeToolTip": "CrudMiembros.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:44:48.907Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CRUDEMPLEADOS.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\My Project\\CRUDEMPLEADOS.vb",
+              "RelativeDocumentMoniker": "My Project\\CRUDEMPLEADOS.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\My Project\\CRUDEMPLEADOS.vb [Dise\u00F1o]",
+              "RelativeToolTip": "My Project\\CRUDEMPLEADOS.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:46:15.253Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormConsultas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormConsultas.vb",
+              "RelativeDocumentMoniker": "FormConsultas.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormConsultas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormConsultas.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:44:50.407Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormEmpleados.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormEmpleados.vb",
+              "RelativeDocumentMoniker": "FormEmpleados.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormEmpleados.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormEmpleados.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:44:51.24Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormFinanzas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormFinanzas.vb",
+              "RelativeDocumentMoniker": "FormFinanzas.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormFinanzas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormFinanzas.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:44:52.392Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "nuevoMiembro.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\nuevoMiembro.vb",
+              "RelativeDocumentMoniker": "nuevoMiembro.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\nuevoMiembro.vb [Dise\u00F1o]",
+              "RelativeToolTip": "nuevoMiembro.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:51:13.41Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrudMiembros.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\CrudMiembros.vb",
+              "RelativeDocumentMoniker": "CrudMiembros.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\CrudMiembros.vb",
+              "RelativeToolTip": "CrudMiembros.vb",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAcwBYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:54:53.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "nuevoMiembro.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\nuevoMiembro.vb",
+              "RelativeDocumentMoniker": "nuevoMiembro.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\nuevoMiembro.vb",
+              "RelativeToolTip": "nuevoMiembro.vb",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCAAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:51:19.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormInscripciones.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb",
+              "RelativeDocumentMoniker": "FormInscripciones.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb",
+              "RelativeToolTip": "FormInscripciones.vb",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAnwPAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-26T11:47:49.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormFinanzas.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormFinanzas.vb",
+              "RelativeDocumentMoniker": "FormFinanzas.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormFinanzas.vb",
+              "RelativeToolTip": "FormFinanzas.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:30:51.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Horarios.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Horarios.vb",
+              "RelativeDocumentMoniker": "Horarios.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Horarios.vb",
+              "RelativeToolTip": "Horarios.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:29:11.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICRUD.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\ICRUD.vb",
+              "RelativeDocumentMoniker": "ICRUD.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\ICRUD.vb",
+              "RelativeToolTip": "ICRUD.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:28:54.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Conexion.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Conexion.vb",
+              "RelativeDocumentMoniker": "Conexion.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Conexion.vb",
+              "RelativeToolTip": "Conexion.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:27:39.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Login.vb",
+              "RelativeDocumentMoniker": "Login.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Login.vb",
+              "RelativeToolTip": "Login.vb",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T22:22:37.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Curso_Pago.vb",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Curso_Pago.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Curso_Pago.vb",
               "RelativeDocumentMoniker": "Curso_Pago.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Curso_Pago.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\Curso_Pago.vb",
               "RelativeToolTip": "Curso_Pago.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -71,112 +438,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 16,
               "Title": "FormPagopopup.vb",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb",
               "RelativeDocumentMoniker": "FormPagopopup.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb",
               "RelativeToolTip": "FormPagopopup.vb",
-              "ViewState": "AQIAAIIAAAAAAAAAAAA7wMIAAAA7AAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwBcAAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-08-17T22:13:46.724Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormPagopopup.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb",
-              "RelativeDocumentMoniker": "FormPagopopup.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormPagopopup.vb [Dise\u00F1o]",
-              "RelativeToolTip": "FormPagopopup.vb [Dise\u00F1o]",
+              "DocumentIndex": 27,
+              "Title": "FormConsultas.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormConsultas.vb",
+              "RelativeDocumentMoniker": "FormConsultas.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormConsultas.vb",
+              "RelativeToolTip": "FormConsultas.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-17T22:13:39.619Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormInscripciones.vb",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb",
-              "RelativeDocumentMoniker": "FormInscripciones.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb",
-              "RelativeToolTip": "FormInscripciones.vb",
-              "ViewState": "AQIAAEcAAAAAAAAAAAArwFgAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-20T01:38:43.812Z",
+              "WhenOpened": "2024-08-12T15:35:30.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormInscripciones.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb",
-              "RelativeDocumentMoniker": "FormInscripciones.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormInscripciones.vb [Dise\u00F1o]",
-              "RelativeToolTip": "FormInscripciones.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-13T22:00:47.714Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormConsultas.vb",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormConsultas.vb",
-              "RelativeDocumentMoniker": "FormConsultas.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormConsultas.vb",
-              "RelativeToolTip": "FormConsultas.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-12T15:35:30.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormCursos.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormCursos.vb",
-              "RelativeDocumentMoniker": "FormCursos.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\FormCursos.vb [Design]",
-              "RelativeToolTip": "FormCursos.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-12T15:20:56.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MDIPrincipal.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb",
-              "RelativeDocumentMoniker": "MDIPrincipal.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb [Dise\u00F1o]",
-              "RelativeToolTip": "MDIPrincipal.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-07-24T07:25:00.987Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "MDIPrincipal.vb",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb",
               "RelativeDocumentMoniker": "MDIPrincipal.vb",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\MDIPrincipal.vb",
               "RelativeToolTip": "MDIPrincipal.vb",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAwwAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIsAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-07-24T05:34:10.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\My Project\\Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\My Project\\Resources.resx",
               "RelativeDocumentMoniker": "My Project\\Resources.resx",
-              "ToolTip": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\My Project\\Resources.resx",
+              "ToolTip": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\My Project\\Resources.resx",
               "RelativeToolTip": "My Project\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-08-16T19:32:59.558Z"
+              "WhenOpened": "2024-08-16T19:32:59.558Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -186,7 +495,11 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

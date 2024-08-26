@@ -6829,24 +6829,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gaming\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Spawn070\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+      "projectUniqueName": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
       "projectName": "GYMCAT - SI",
-      "projectPath": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
-      "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gaming\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\obj\\",
+      "projectPath": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\GYMCAT - SI.vbproj",
+      "packagesPath": "C:\\Users\\Spawn070\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Spawn070\\Documents\\GitHub\\GYMCAT\\GYMCAT - SI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Spawn070\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6913,7 +6908,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
