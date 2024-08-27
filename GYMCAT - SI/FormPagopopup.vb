@@ -385,7 +385,7 @@ Public Class FormPagopopup
 		_Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
 		_Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
 		_Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
-		_Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+		_Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 250, "concepto")
 
 		'5. Guardar los cambios en la base de datos
 		_Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))

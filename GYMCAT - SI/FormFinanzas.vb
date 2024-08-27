@@ -145,7 +145,7 @@ Public Class FormFinanzas
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
-            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 250, "concepto")
 
             '5. Guardar los cambios en la base de datos
             _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
@@ -170,7 +170,7 @@ Public Class FormFinanzas
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_pago")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
-            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@con", MySqlDbType.VarChar, 250, "concepto")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_ingresos")
 
             '4. Guardar los cambios en la base de datos
@@ -199,7 +199,7 @@ Public Class FormFinanzas
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_gasto")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
             _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
-            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+            _Conexion.TablaDataAdapter.InsertCommand.Parameters.Add("@con", MySqlDbType.VarChar, 250, "concepto")
 
             '5. Guardar los cambios en la base de datos
             _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
@@ -225,7 +225,7 @@ Public Class FormFinanzas
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@fecha", MySqlDbType.Date, 20, "fecha_gasto")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@mon", MySqlDbType.Int32, 50, "monto")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@forma", MySqlDbType.VarChar, 20, "forma_pago")
-            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@con", MySqlDbType.VarChar, 50, "concepto")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@con", MySqlDbType.VarChar, 250, "concepto")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "ID_gastos")
 
             '4. Guardar los cambios en la base de datos
