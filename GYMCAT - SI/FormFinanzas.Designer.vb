@@ -22,9 +22,9 @@ Partial Class FormFinanzas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
         dgvListadoFinanzas = New DataGridView()
         GroupBox2 = New GroupBox()
         Label2 = New Label()
@@ -41,29 +41,29 @@ Partial Class FormFinanzas
         ' 
         dgvListadoFinanzas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListadoFinanzas.BackgroundColor = SystemColors.ButtonShadow
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListadoFinanzas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = SystemColors.Control
+        DataGridViewCellStyle13.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle13.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = Color.Black
+        DataGridViewCellStyle13.WrapMode = DataGridViewTriState.True
+        dgvListadoFinanzas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         dgvListadoFinanzas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.White
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvListadoFinanzas.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = SystemColors.Window
+        DataGridViewCellStyle14.Font = New Font("Cascadia Mono", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle14.ForeColor = Color.White
+        DataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = DataGridViewTriState.False
+        dgvListadoFinanzas.DefaultCellStyle = DataGridViewCellStyle14
         dgvListadoFinanzas.Location = New Point(19, 64)
         dgvListadoFinanzas.MultiSelect = False
         dgvListadoFinanzas.Name = "dgvListadoFinanzas"
         dgvListadoFinanzas.ReadOnly = True
-        DataGridViewCellStyle3.ForeColor = Color.Black
-        dgvListadoFinanzas.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.ForeColor = Color.Black
+        dgvListadoFinanzas.RowsDefaultCellStyle = DataGridViewCellStyle15
         dgvListadoFinanzas.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListadoFinanzas.Size = New Size(739, 379)
         dgvListadoFinanzas.TabIndex = 3
@@ -108,10 +108,11 @@ Partial Class FormFinanzas
         btnAgregar.FlatStyle = FlatStyle.Popup
         btnAgregar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnAgregar.ForeColor = Color.WhiteSmoke
+        btnAgregar.Image = My.Resources.Resources.icono_item_agregar
         btnAgregar.ImageAlign = ContentAlignment.MiddleRight
-        btnAgregar.Location = New Point(27, 91)
+        btnAgregar.Location = New Point(27, 84)
         btnAgregar.Name = "btnAgregar"
-        btnAgregar.Size = New Size(94, 44)
+        btnAgregar.Size = New Size(101, 44)
         btnAgregar.TabIndex = 6
         btnAgregar.Text = "Agregar"
         btnAgregar.TextAlign = ContentAlignment.MiddleLeft
@@ -123,8 +124,9 @@ Partial Class FormFinanzas
         btnBorrar.FlatStyle = FlatStyle.Popup
         btnBorrar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnBorrar.ForeColor = Color.White
+        btnBorrar.Image = My.Resources.Resources.icono_item_eliminar
         btnBorrar.ImageAlign = ContentAlignment.MiddleRight
-        btnBorrar.Location = New Point(127, 91)
+        btnBorrar.Location = New Point(241, 84)
         btnBorrar.Name = "btnBorrar"
         btnBorrar.Size = New Size(101, 44)
         btnBorrar.TabIndex = 7
@@ -138,8 +140,9 @@ Partial Class FormFinanzas
         btnEditar.FlatStyle = FlatStyle.Popup
         btnEditar.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
         btnEditar.ForeColor = Color.White
+        btnEditar.Image = My.Resources.Resources.icono_item_editar
         btnEditar.ImageAlign = ContentAlignment.MiddleRight
-        btnEditar.Location = New Point(234, 91)
+        btnEditar.Location = New Point(134, 84)
         btnEditar.Name = "btnEditar"
         btnEditar.Size = New Size(101, 44)
         btnEditar.TabIndex = 8
