@@ -45,8 +45,6 @@ Partial Class FormPagopopup
 		PanelBotones = New Panel()
 		Panel1 = New Panel()
 		PanelMeses = New Panel()
-		Panel2 = New Panel()
-		LabelInscripciones = New Label()
 		gbInfoMiembro = New GroupBox()
 		cbDeudor = New CheckBox()
 		tbIDUltimoPago = New TextBox()
@@ -64,7 +62,6 @@ Partial Class FormPagopopup
 		PanelBotones.SuspendLayout()
 		Panel1.SuspendLayout()
 		PanelMeses.SuspendLayout()
-		Panel2.SuspendLayout()
 		gbInfoMiembro.SuspendLayout()
 		PanelSelectorMiembro.SuspendLayout()
 		SuspendLayout()
@@ -266,7 +263,7 @@ Partial Class FormPagopopup
 		Label9.AutoSize = True
 		Label9.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
 		Label9.ForeColor = Color.WhiteSmoke
-		Label9.Location = New Point(220, 9)
+		Label9.Location = New Point(121, 12)
 		Label9.Name = "Label9"
 		Label9.Size = New Size(56, 17)
 		Label9.TabIndex = 19
@@ -276,7 +273,7 @@ Partial Class FormPagopopup
 		' 
 		cbMeses.FormattingEnabled = True
 		cbMeses.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
-		cbMeses.Location = New Point(282, 6)
+		cbMeses.Location = New Point(183, 9)
 		cbMeses.Name = "cbMeses"
 		cbMeses.Size = New Size(120, 23)
 		cbMeses.TabIndex = 24
@@ -309,7 +306,6 @@ Partial Class FormPagopopup
 		' PanelMeses
 		' 
 		PanelMeses.AutoSize = True
-		PanelMeses.Controls.Add(Panel2)
 		PanelMeses.Controls.Add(cbMeses)
 		PanelMeses.Controls.Add(Label9)
 		PanelMeses.Dock = DockStyle.Top
@@ -317,26 +313,6 @@ Partial Class FormPagopopup
 		PanelMeses.Name = "PanelMeses"
 		PanelMeses.Size = New Size(429, 35)
 		PanelMeses.TabIndex = 46
-		' 
-		' Panel2
-		' 
-		Panel2.AutoSize = True
-		Panel2.Controls.Add(LabelInscripciones)
-		Panel2.Location = New Point(0, 0)
-		Panel2.Name = "Panel2"
-		Panel2.Size = New Size(129, 32)
-		Panel2.TabIndex = 25
-		' 
-		' LabelInscripciones
-		' 
-		LabelInscripciones.AutoSize = True
-		LabelInscripciones.Font = New Font("Cascadia Mono SemiBold", 9.75F, FontStyle.Bold)
-		LabelInscripciones.ForeColor = Color.WhiteSmoke
-		LabelInscripciones.Location = New Point(3, 6)
-		LabelInscripciones.Name = "LabelInscripciones"
-		LabelInscripciones.Size = New Size(120, 17)
-		LabelInscripciones.TabIndex = 19
-		LabelInscripciones.Text = "Inscripciones:"
 		' 
 		' gbInfoMiembro
 		' 
@@ -477,7 +453,7 @@ Partial Class FormPagopopup
 		AutoScaleMode = AutoScaleMode.Font
 		AutoSizeMode = AutoSizeMode.GrowAndShrink
 		BackColor = Color.FromArgb(CByte(33), CByte(31), CByte(45))
-		ClientSize = New Size(916, 546)
+		ClientSize = New Size(964, 565)
 		Controls.Add(PanelBotones)
 		Controls.Add(Label7)
 		Controls.Add(lbTitulo)
@@ -493,8 +469,6 @@ Partial Class FormPagopopup
 		Panel1.ResumeLayout(False)
 		PanelMeses.ResumeLayout(False)
 		PanelMeses.PerformLayout()
-		Panel2.ResumeLayout(False)
-		Panel2.PerformLayout()
 		gbInfoMiembro.ResumeLayout(False)
 		gbInfoMiembro.PerformLayout()
 		PanelSelectorMiembro.ResumeLayout(False)
@@ -536,7 +510,5 @@ Partial Class FormPagopopup
     Friend WithEvents cbMiembros As ComboBox
     Friend WithEvents Label3 As Label
 	Friend WithEvents PanelMeses As Panel
-	Friend WithEvents Panel2 As Panel
-	Friend WithEvents LabelInscripciones As Label
 	Friend WithEvents Panel1 As Panel
 End Class

@@ -93,11 +93,13 @@ Public Class FormPagopopup
 			ListaInscripciones.Add(New Curso_Pago(n.ID_Curso, n.Nombre, n.Precio, n.Meses))
 		Next
 		Modo = "Inscripcion"
+		Me.Width = 500
+		Me.Height = 400
 	End Sub
 
 
 	Private Sub FormPagopopup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+		gbInfoPago.Height = 83
 		_Conexion = New Conexion()
 		_Conexion.miConexion.Open()
 		Dim comando As New MySqlCommand("SELECT * FROM ingresos order by ID_ingresos DESC", _Conexion.miConexion)
@@ -154,13 +156,8 @@ Public Class FormPagopopup
 			Case "Inscripcion"
 				cbMiembros.Items.Add(NomCompleto)
 				cbMiembros.Enabled = False
-				Me.Width = 500
-				Me.Height = 400
-				For Each curso As Curso_Pago In ListaInscripciones
-					LabelInscripciones.Text += vbCrLf + "  - " + curso.Nombre + "    " + curso.Meses.ToString + " meses"
-				Next
 
-
+				Cuota()
 
 			Case "Membresia"
 
@@ -177,6 +174,7 @@ Public Class FormPagopopup
 				cbMeses.Enabled = False
 
 			Case "Generico"
+				gbInfoPago.Height = 151
 				gbInfoMiembro.Hide()
 				PanelSelectorMiembro.Hide()
 				PanelMeses.Hide()

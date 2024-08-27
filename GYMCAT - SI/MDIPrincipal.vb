@@ -9,7 +9,7 @@ Public Class MDIPrincipal
         PanelMembresias.Visible = False
     End Sub
 
-    Dim botonesSI = New Control() {btnEmpleados, btnCursos, btnMembresias, btnFinanzas, btnInventario, BtnHorario, btnInscripciones, btnConsultas}
+
 
     Sub colorearBoton(botonSeleccionado As Button)
         btnEmpleados.BackColor = Color.FromArgb(11, 7, 17)

@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("GYMCAT - SI"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fa2f568a0b86d72d2b82787c7e6766dbaf40dd4"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0525e116e3a6059c6667bf148c132f37cb734fcc"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("GYMCAT - SI"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("GYMCAT - SI"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

@@ -72,6 +72,9 @@ Public Class CrudMiembros
             '6. Volver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
             _Conexion.GymcatDataSet.Tables(Tabla).Clear()
             _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
+
+            Dim miFormularioPago As New FormPagopopup(nuevoMiembro.tbDNI.Text, "Membresia")
+            miFormularioPago.ShowDialog()
         Else
             '1 seleccionar fila editar
             fila = _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila)
@@ -91,8 +94,8 @@ Public Class CrudMiembros
 
             '3. Crear el comando para modificar la Fila
             cmd = "UPDATE miembros 
-                   SET nombre=@nom, apellido=@ape, edad=@edad, fecha_inscripcion=@fec, duracion_membresia=@dur, costo_total=@cos, deudor=@deu, telefono=@tel, correo=@cor, puntos=@pun
-                   WHERE DNI=@dni"
+                   SET nombre=@nom, apellido=@ape, edad=@edad, fecha_inscripcion=@fec, duracion_membresia=@dur, costo_total=@cos, deudor=@deu, telefono=@tel, correo=@cor, puntos=@pun, DNI=@dni
+                   WHERE ID_miembro=@id"
             _Conexion.TablaDataAdapter.UpdateCommand = New MySqlCommand(cmd, _Conexion.miConexion)
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
@@ -105,24 +108,32 @@ Public Class CrudMiembros
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@cor", MySqlDbType.VarChar, 50, "correo")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@pun", MySqlDbType.Int32, 50, "puntos")
             _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 10, "DNI")
+            _Conexion.TablaDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 10, "ID_miembro")
 
             '4. Guardar los cambios en la base de datos
             _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
 
-        Dim miFormularioPago As New FormPagopopup(nuevoMiembro.tbDNI.Text, "Membresia")
-        miFormularioPago.ShowDialog()
+
     End Sub
 
     Private Sub Borrar() Implements ICRUD.Borrar
-        Dim fila = dgvListadoMiembros.CurrentRow
+        _Conexion.miConexion.Open()
+
+        Dim fila As DataGridViewRow = dgvListadoMiembros.CurrentRow
         _Conexion.idFila = fila.Cells(0).Value
-        If MessageBox.Show("¿Está seguro de eliminar este Miembro?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
+        If (MessageBox.Show("¿Está seguro de eliminar este Ingreso?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
+            Dim deleteDependentRecordsCommand As New MySqlCommand("DELETE FROM miembros_mes_ingresos WHERE FK_miembros = @id", _Conexion.miConexion)
+            deleteDependentRecordsCommand.Parameters.Add("@id", MySqlDbType.Int64).Value = _Conexion.idFila
+            deleteDependentRecordsCommand.ExecuteNonQuery()
+
+            ' Luego elimina el registro en la tabla gastos
             _Conexion.GymcatDataSet.Tables(Tabla).Rows.Find(_Conexion.idFila).Delete()
-            _Conexion.TablaDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM miembros WHERE DNI = @dni", _Conexion.miConexion)
-            _Conexion.TablaDataAdapter.DeleteCommand.Parameters.Add("@dni", SqlDbType.BigInt, 0, "DNI")
+            _Conexion.TablaDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM miembros WHERE ID_miembro = @id", _Conexion.miConexion)
+            _Conexion.TablaDataAdapter.DeleteCommand.Parameters.Add("@id", MySqlDbType.Int64).Value = _Conexion.idFila
             _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
+        _Conexion.miConexion.Close()
     End Sub
 
     Private Sub Buscar() Implements ICRUD.Buscar
