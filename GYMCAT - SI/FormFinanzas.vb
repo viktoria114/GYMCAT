@@ -205,6 +205,7 @@ Public Class FormFinanzas
             _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
 
             '6. V1olver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
+            _Conexion.TablaDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM gastos", _Conexion.miConexion)
             _Conexion.GymcatDataSet.Tables(Tabla2).Clear()
             _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla2))
         Else
