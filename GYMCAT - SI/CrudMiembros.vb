@@ -21,6 +21,7 @@ Public Class CrudMiembros
     Private Sub Agregar() Implements ICRUD.Agregar
         _Conexion.esNuevo = True
         nuevoMiembro.ShowDialog()
+
     End Sub
 
     Private Sub Editar() Implements ICRUD.Editar
@@ -108,6 +109,9 @@ Public Class CrudMiembros
             '4. Guardar los cambios en la base de datos
             _Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla))
         End If
+
+        Dim miFormularioPago As New FormPagopopup(nuevoMiembro.tbDNI.Text, "Membresia")
+        miFormularioPago.ShowDialog()
     End Sub
 
     Private Sub Borrar() Implements ICRUD.Borrar
@@ -142,6 +146,7 @@ Public Class CrudMiembros
     End Sub
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Agregar()
+
     End Sub
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Editar()
@@ -151,6 +156,16 @@ Public Class CrudMiembros
     End Sub
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs)
         Buscar()
+    End Sub
+
+    Private Sub btnPagoCuota_Click(sender As Object, e As EventArgs) Handles btnPagoCuota.Click
+        Dim miembro As DataGridViewRow = dgvListadoMiembros.CurrentRow
+        Dim miFormularioPago As New FormPagopopup(miembro.Cells(1).Value, "Cuota")
+        miFormularioPago.ShowDialog()
+
+        _Conexion.GymcatDataSet.Tables(Tabla).Clear()
+        _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
+
     End Sub
 
 End Class

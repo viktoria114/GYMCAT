@@ -64,7 +64,6 @@ Public Class Horarios
         Dim comando As New MySqlCommand(consulta, miConexion)
         comando.Parameters.AddWithValue("@turno", Cajita.SelectedTab.Text)
 
-
         Dim lector = comando.ExecuteReader
 
         CursoLista = "Cursos:" + vbCrLf
