@@ -229,6 +229,10 @@ Public Class FormInscripciones
 		If (MessageBox.Show("Desea Guardar las Inscripciones realizadas?", "Guardar Cambios",
 				MessageBoxButtons.YesNo) = DialogResult.Yes) Then
 
+			If listaIns.Count <> 0 Then
+				PopUp = New FormPagopopup(listaIns, dgvListadoMiembros.CurrentRow.Cells(3).Value.ToString)
+				PopUp.ShowDialog()
+			End If
 			_Conexion.TablaDataAdapter.Update(_Conexion.GymcatDataSet.Tables(Tabla2))
 			btnGuardar.Enabled = False
 			btnCancelar.Enabled = False
@@ -237,13 +241,10 @@ Public Class FormInscripciones
 			lbInscripciones.Text = "Inscripciones:"
 			lbDesinscripciones.Visible = False
 			lbDesinscripciones.Text = vbCrLf + "Desisncripciones:"
-			If listaIns.Count <> 0 Then
-				PopUp = New FormPagopopup(listaIns)
-				PopUp.ShowDialog()
-			End If
+
 			SeleccionarMiembro(dgvListadoMiembros.CurrentRow.Cells(0).Value)
-			End If
-    End Sub
+		End If
+	End Sub
 
 
 

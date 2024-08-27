@@ -3,6 +3,10 @@ Public Class Login
     Private miConexion As MySqlConnection
     Public nivelAcceso As Integer
 
+    Public Sub CerrarMDI(mdi As MDIPrincipal)
+        mdi.Close()
+    End Sub
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         miConexion = New MySqlConnection("Server=localhost; Database=gymcat; Uid=root; Pwd=;")
 

@@ -159,10 +159,9 @@ Public Class CrudMiembros
     End Sub
 
     Private Sub btnPagoCuota_Click(sender As Object, e As EventArgs) Handles btnPagoCuota.Click
-        Dim miembro As DataGridViewRow = dgvListadoMiembros.CurrentRow
-        Dim miFormularioPago As New FormPagopopup(miembro.Cells(1).Value, "Cuota")
-        miFormularioPago.ShowDialog()
 
+        Dim miFormularioPago As New FormPagopopup(dgvListadoMiembros.CurrentRow.Cells(1).Value.ToString, "Cuota")
+        miFormularioPago.ShowDialog()
         _Conexion.GymcatDataSet.Tables(Tabla).Clear()
         _Conexion.TablaDataAdapter.Fill(_Conexion.GymcatDataSet.Tables(Tabla))
 

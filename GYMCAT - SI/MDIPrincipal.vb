@@ -12,28 +12,17 @@ Public Class MDIPrincipal
     Dim botonesSI = New Control() {btnEmpleados, btnCursos, btnMembresias, btnFinanzas, btnInventario, BtnHorario, btnInscripciones, btnConsultas}
 
     Sub colorearBoton(botonSeleccionado As Button)
-        ' Recorre todos los controles de forma recursiva
-        ResetearColores(PanelLateral)
-
-        ' Cambia el color del botón principal seleccionado a rosa
+        btnEmpleados.BackColor = Color.FromArgb(11, 7, 17)
+        BtnHorario.BackColor = Color.FromArgb(35, 32, 39)
+        btnMembresias.BackColor = Color.FromArgb(11, 7, 17)
+        btnInscripciones.BackColor = Color.FromArgb(35, 32, 39)
+        btnCursos.BackColor = Color.FromArgb(11, 7, 17)
+        btnInventario.BackColor = Color.FromArgb(11, 7, 17)
+        btnFinanzas.BackColor = Color.FromArgb(11, 7, 17)
+        btnConsultas.BackColor = Color.FromArgb(11, 7, 17)
         botonSeleccionado.BackColor = Color.FromArgb(239, 41, 84)
     End Sub
 
-    ' Método recursivo para resetear los colores de los botones
-    Sub ResetearColores(botonesSI As Control)
-        ' Recorre todos los controles dentro del contenedor
-        For Each ctrl As Control In botonesSI.Controls
-            ' Si el control es un botón, restablece su color
-            If TypeOf ctrl Is Button Then
-                ctrl.BackColor = Color.FromArgb(35, 32, 39) ' Color original gris
-            End If
-
-            ' Si el control contiene otros controles (como un Panel), llamamos a la función recursiva
-            If ctrl.HasChildren Then
-                ResetearColores(ctrl)
-            End If
-        Next
-    End Sub
 
     Sub abrirform(formulario As Form)
         formulario.MdiParent = Me
@@ -138,9 +127,10 @@ Public Class MDIPrincipal
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        Login.Show()
-        Hide()
-
+        If (MessageBox.Show("Esta Seguro de Cerrar Sesion?", "Cerrar Sesion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes) Then
+            Login.Show()
+            Hide()
+        End If
     End Sub
 
     Sub CargarUsuario()
